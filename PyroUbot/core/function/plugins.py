@@ -28,6 +28,15 @@ async def loadPlugins():
 
 <b>👤 ᴜsᴇʀʙᴏᴛ: {len(ubot._ubot)}</b>
 """,
+   reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton("ʟɪꜱᴛ ᴜꜱᴇʀʙᴏᴛ", callback_data="cek_ubot"),
+                ],
+            ]
+        ),
+                          )
+    
 @PY.CALLBACK("0_cls")
 async def _(client, callback_query):
     await callback_query.message.delete()
