@@ -209,8 +209,8 @@ async def _(client, message):
         if file_info:
             text += f"media id: {file_info.file_id}\n\n"
         text += (
-            f"<emoji id=6026257381678124710>✅</emoji> ʀᴇᴘʟɪᴇᴅ ᴍᴇꜱꜱᴀɢᴇ ɪᴅ: {message.reply_to_message.id}\n"
-            f"<emoji id=6026257381678124710>✅</emoji> ʀᴇᴘʟɪᴇᴅ ᴜꜱᴇʀ ɪᴅ: {id_}"
+            f"<emoji id=6026257381678124710>✅</emoji> ʀᴇᴘʟɪᴇᴅ ᴍᴇꜱꜱᴀɢᴇ ɪᴅ: `{message.reply_to_message.id}`\n"
+            f"<emoji id=6026257381678124710>✅</emoji> ʀᴇᴘʟɪᴇᴅ ᴜꜱᴇʀ ɪᴅ: `{id_}`"
         )
 
     return await message.reply(text, disable_web_page_preview=True)
