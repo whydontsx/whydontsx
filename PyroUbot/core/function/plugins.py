@@ -1,5 +1,5 @@
 import importlib
-
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from PyroUbot import bot, ubot
 from PyroUbot.core.helpers import PY
 from PyroUbot.modules import loadModule
