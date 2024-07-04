@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 
 load_dotenv(".env")
 
-MAX_BOT = int(os.getenv("MAX_BOT", "50"))
+MAX_BOT = int(os.getenv("MAX_BOT", "60"))
 
 DEVS = list(map(int, os.getenv("DEVS", "1344553362").split()))
 
