@@ -17,8 +17,17 @@ async def loadPlugins():
         module_name = getattr(imported_module, "__MODULE__", "").replace(" ", "_").lower()
         if module_name:
             HELP_COMMANDS[module_name] = imported_module
-    print(f"[🔥 TELAH BERHASIL DIAKTIFKAN! 🔥]")
-    await bot.send_message(OWNER_ID, "aktif")
+    print(f"[🤖 @{bot.me.username} 🤖] [💠 TELAH BERHASIL DIAKTIFKAN! 💠]")
+    await bot.send_message(OWNER_ID, 
+       f"""                    
+<b>🤖 {bot.me.mention} ʙᴇʀʜᴀsɪʟ ᴅɪᴀᴋᴛɪꜰᴋᴀɴ</b>
+
+<b>📁 ᴍᴏᴅᴜʟᴇs: {len(HELP_COMMANDS)}</b>
+<b>📘 ᴘʏᴛʜᴏɴ: {python_version()}</b>
+<b>📙 ᴘʏʀᴏɢʀᴀᴍ: {__version__}</b>
+
+<b>👤 ᴜsᴇʀʙᴏᴛ: {len(ubot._ubot)}</b>
+""",
 @PY.CALLBACK("0_cls")
 async def _(client, callback_query):
     await callback_query.message.delete()
