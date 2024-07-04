@@ -44,12 +44,13 @@ class MSG:
 
     async def UBOT(count):
         return f"""
-🤖 userbot ke {int(count) + 1}/{len(ubot._ubot)}
-👤 akun: <a href=tg://user?id={ubot._ubot[int(count)].me.id}>{ubot._ubot[int(count)].me.first_name} {ubot._ubot[int(count)].me.last_name or ''}</a> 
-📍 id: {ubot._ubot[int(count)].me.id}
+<b>❏ ᴜsᴇʀʙᴏᴛ ᴋᴇ</b> <code>{int(count) + 1}/{len(ubot._ubot)}</code>
+<b> ├ ᴀᴋᴜɴ:</b> <a href=tg://user?id={ubot._ubot[int(count)].me.id}>{ubot._ubot[int(count)].me.first_name} {ubot._ubot[int(count)].me.last_name or ''}</a> 
+<b> ├ ɪᴅ:</b> <code>{ubot._ubot[int(count)].me.id}</code>
+<b> ╰ ᴇxᴘɪʀᴇᴅ</b> <code>{expired_date.strftime('%d-%m-%Y')}</code>
 """
 
     def POLICY():
         return """
-Jika Ada Masalah Laporkan Ke Owner Saya ! @Anonymousx888
+ᴊɪᴋᴀ ᴀᴅᴀ ᴍᴀꜱᴀʟᴀʜ ʟᴀᴘᴏʀᴋᴀɴ ᴋᴇ ᴏᴡɴᴇʀ ꜱᴀʏᴀ ! @wannoffc08
 """
