@@ -24,26 +24,27 @@ async def _(client, callback_query):
     user_id = callback_query.from_user.id
     if user_id in ubot._get_my_id:
         buttons = [
-            [InlineKeyboardButton("reꜱtart", callback_data=f"ress_ubot")],
-            [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
+            [InlineKeyboardButton("🔃 ʀᴇꜱᴛᴀʀᴛ", callback_data=f"ress_ubot")],
+            [InlineKeyboardButton("ᴋᴇᴍʙᴀʟɪ", callback_data=f"home {user_id}")],
         ]
         return await callback_query.edit_message_text(
             f"""
-<blockquote><b>🔴anda ꜱudah membuat/memiliki uꜱerbot!\njika uꜱerbot tidak dapat di gunakan/mereꜱpon ꜱilahkan pencet tombol reꜱtart di bawah ini</b></blockquote>
+<blockquote><b>ᴀɴᴅᴀ ꜱᴜᴅᴀʜ ᴍᴇᴍʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ\n\nᴊɪᴋᴀ ᴜꜱᴇʀʙᴏᴛ ᴀɴᴅᴀ ᴛɪᴅᴀᴋ ʙɪꜱᴀ ᴅɪɢᴜɴᴀᴋᴀɴ ꜱɪʟᴀʜᴋᴀɴ ᴛᴇᴋᴇɴ ᴛᴏᴍʙᴏʟ ʀᴇꜱᴛᴀʀᴛ ᴅɪ ᴀᴛᴀꜱ</b></blockquote>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     elif len(ubot._ubot) + 1 > MAX_BOT:
         buttons = [
-            [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
+            [InlineKeyboardButton("ᴋᴇᴍʙᴀʟɪ", callback_data=f"home {user_id}")],
         ]
         return await callback_query.edit_message_text(
             f"""
-<blockquote><b>❌ tidak bisa membuat userbot!
-karena maksimal userbot adalah {Fonts.smallcap(str(len(ubot._ubot)))}
+<blockquote><b><b>❌ ᴛɪᴅᴀᴋ ʙɪsᴀ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ!</b>
 
-☎️ hubungi: <a href=tg://openmessage?user_id={OWNER_ID}>admin</a></b></blockquote>
+<b>📚 ᴋᴀʀᴇɴᴀ ᴍᴀᴋsɪᴍᴀʟ ᴜsᴇʀʙᴏᴛ ᴀᴅᴀʟᴀʜ {Fonts.smallcap(str(len(ubot._ubot)))} ᴛᴇʟᴀʜ ᴛᴇʀᴄᴀᴘᴀɪ</b>
+
+<b>☎️ sɪʟᴀʜᴋᴀɴ ʜᴜʙᴜɴɢɪ: <a href=tg://openmessage?user_id={OWNER_ID}>ᴀᴅᴍɪɴ</a>ᴊɪᴋᴀ ᴍᴀᴜ ᴅɪʙᴜᴀᴛᴋᴀɴ ʙᴏᴛ sᴇᴘᴇʀᴛɪ sᴀʏᴀ </b></blockquote>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -51,8 +52,8 @@ karena maksimal userbot adalah {Fonts.smallcap(str(len(ubot._ubot)))}
     premium_users, ultra_premium_users = await get_list_from_vars(client.me.id, "PREM_USERS"), await get_list_from_vars(client.me.id, "ULTRA_PREM")
     if user_id not in premium_users and user_id not in ultra_premium_users:
         buttons = [
-            [InlineKeyboardButton("lanjutkan", callback_data="bayar_dulu")],
-            [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
+            [InlineKeyboardButton("ʟᴀɴᴊᴜᴛᴋᴀɴ", callback_data="bayar_dulu")],
+            [InlineKeyboardButton("ᴋᴇᴍʙᴀʟɪ", callback_data=f"home {user_id}")],
         ]
         return await callback_query.edit_message_text(
             MSG.POLICY(),
@@ -60,10 +61,10 @@ karena maksimal userbot adalah {Fonts.smallcap(str(len(ubot._ubot)))}
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
-        buttons = [[InlineKeyboardButton("✅ lanjutkan", callback_data="buat_ubot")]]
+        buttons = [[InlineKeyboardButton("✅ ʟᴀɴᴊᴜᴛᴋᴀɴ", callback_data="buat_ubot")]]
         return await callback_query.edit_message_text(
             """
-‼️ anda telah melakukan pembelian uꜱerbot!\nꜱilahkan lanjutkan ꜱaja untuk melakukan pemaꜱangan uꜱerbot
+<blockquote><b>ᴀɴᴅᴀ ᴛᴇʟᴀʜ ᴍᴇᴍʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ ꜱɪʟᴀʜᴋᴀɴ ᴘᴇɴᴄᴇᴛ ᴛᴏᴍʙᴏʟ ʟᴀɴᴊᴜᴛᴋᴀɴ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ</b></blockquote>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -75,17 +76,14 @@ async def _(client, callback_query):
     user_id = callback_query.from_user.id
     if user_id in ubot._get_my_id:
         buttons = [
-            [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
+            [InlineKeyboardButton("ᴋᴇᴍʙᴀʟɪ", callback_data=f"home {user_id}")],
         ]
         exp = await get_expired_date(user_id)
         prefix = await get_pref(user_id)
         waktu = exp.strftime("%d-%m-%Y") if exp else "None"
         return await callback_query.edit_message_text(
             f"""
-<blockquote><b>tango userbot
- status : premium
- prefixes : {prefix[0]}
- expired_on : {waktu}</b></blockquote>
+<blockquote><b>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
