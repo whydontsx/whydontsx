@@ -1,6 +1,6 @@
 import importlib
 
-from PyroUbot import bot
+from PyroUbot import bot, ubot
 from PyroUbot.core.helpers import PY
 from PyroUbot.modules import loadModule
 from PyroUbot.core.database import *
