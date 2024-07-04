@@ -1,24 +1,15 @@
 ## Vii Userbot
 ```
-sudo apt-get update && sudo apt-get upgrade -y 
+apt update && apt upgrade -y
 ```
-
-```
-sudo apt-get install python3-pip -y
-```
-
-```
-sudo apt install ffmpeg -y
-```
-
-```
-git clone https://githubtoken@github.com/usngithub/usnrepo
-```
-
-```
-screen -S 
-```
-
-```
+git clone https://github.com/wndrzzka/gayoubotwann
+cd gayoubotwan
+screen -S gayoubotwan
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
+sudo apt-get install -y nodejs
+apt install python3.10-venv
+python3 -m venv venv && source venv/bin/activate
+pip3 install -r requirements.txt
+cp sample.env .env
+nano .env
 python3 -m PyroUbot
-```
