@@ -311,7 +311,6 @@ async def _(client, callback_query):
             reply_markup=InlineKeyboardMarkup(buttons))
     await bash("rm -rf *session*")
     await install_my_peer(new_client)
-     try:
         await new_client.join_chat("GayoUbotSupport")
         await new_client.join_chat("TestiByWann")
     
