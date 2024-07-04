@@ -6,28 +6,40 @@ from PyroUbot import OWNER_ID, bot, get_expired_date, ubot
 class MSG:     
     def EXP_MSG_UBOT(X):
         return f"""
-🔴 pemberitahuan
-akun: <a href=tg://user?id={X.me.id}>{X.me.first_name} {X.me.last_name or ''}</a>
-id: {X.me.id}
-reason: uꜱerbot telah habis
+<blockquote><b>❏ ᴘᴇᴍʙᴇʀɪᴛᴀʜᴜᴀɴ</b>
+<b>├ ᴀᴋᴜɴ:</b> <a href=tg://user?id={X.me.id}>{X.me.first_name} {X.me.last_name or ''}</a>
+<b>├ ɪᴅ:</b> <code>{X.me.id}</code>
+<b>╰ ᴍᴀsᴀ ᴀᴋᴛɪꜰ ᴛᴇʟᴀʜ ʜᴀʙɪs</b></blockquote>
 """
 
     def START(message):
         return f"""
-Selamat Datang Di Bot Saya !
-Saya Adalah Bot Yang Dapat Membantu Anda Untuk Membuat Userbot
+<blockquote><b>👋🏻 ʜᴀʟᴏ <a href=tg://user?id={message.from_user.id}>{message.from_user.first_name} {message.from_user.last_name or ''}</a>!
+
+<b>💬 @{bot.me.username} ᴀᴅᴀʟᴀʜ ʙᴏᴛ ʏᴀɴɢ ᴅᴀᴘᴀᴛ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ</b>
+
+🚀 ꜱɪʟᴀʜᴋᴀɴ ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 
+• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>ᴡᴀɴɴꜰʏʏ</a> 
+
+👉🏻 ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪʙᴀᴡᴀʜ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ</b></blockquote>
 """
 
     def TEXT_PAYMENT(harga, total, bulan):
         return f"""
-💬 Silahkan order terlebih dahulu
+<blockquote><b>💬 sɪʟᴀʜᴋᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴛᴇʀʟᴇʙɪʜ ᴅᴀʜᴜʟᴜ</b>
 
-🎟️ Harga Perbulan: {harga}.000
+<b>🎟️ ʜᴀʀɢᴀ ᴘᴇʀʙᴜʟᴀɴ: {harga}.000</b>
 
-🔖 Total Harga: rp {total}.000
-🗓️ Total Bulan: {bulan} 
+<b>💳 ᴍᴏᴛᴏᴅᴇ ᴘᴇᴍʙᴀʏᴀʀᴀɴ:</b>
+ <b>├ Qʀɪꜱ ᴀʟʟ ᴘᴀʏᴍᴇɴᴛ </b>
+ <b>├ <code>https://telegra.ph//file/ed34c4a4ff423bace1543.jpg</code></b>
+<b>🔖 ᴛᴏᴛᴀʟ ʜᴀʀɢᴀ: ʀᴘ {total}.000</b>
+<b>🗓️ ᴛᴏᴛᴀʟ ʙᴜʟᴀɴ: {bulan}</b> 
 
-✅ Konfirmasi untuk melakukan pembayaran
+ 🚀 ꜱɪʟᴀʜᴋᴀɴ ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 
+• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>ᴡᴀɴɴꜰʏʏ</a> 
+
+<b>✅ ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴋᴏɴꜰɪʀᴍᴀsɪ ᴜɴᴛᴜᴋ ᴋɪʀɪᴍ ʙᴜᴋᴛɪ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ</b></blockquote>
 """
 
     async def UBOT(count):
