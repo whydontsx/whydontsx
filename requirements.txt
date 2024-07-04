@@ -1,3 +1,4 @@
+python-dotenv
 git+https://github.com/hakutakaid/TeleXGram
 telegraph==2.2.0
 TgCrypto==1.2.5

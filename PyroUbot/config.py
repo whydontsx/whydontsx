@@ -1,6 +1,7 @@
 import os
-import sys
+from dotenv import load_dotenv
 
+load_dotenv(".env")
 
 MAX_BOT = int(os.getenv("MAX_BOT", "200"))
 
@@ -18,11 +19,4 @@ BLACKLIST_CHAT = list(map(int, os.getenv("BLACKLIST_CHAT", "-1001921519384 -1002
 
 RMBG_API = os.getenv("RMBG_API", "a6qxsmMJ3CsNo7HyxuKGsP1o")
 
-MONGO_URL = os.getenv(
-    "MONGO_URL",
-    "",
-)
-OPENAI_KEY = os.getenv(
-    "OPENAI_KEY",
-    "",
-)
+MONGO_URL = os.getenv("MONGO_URL", "")
