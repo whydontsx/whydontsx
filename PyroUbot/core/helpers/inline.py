@@ -106,7 +106,7 @@ class BTN:
         for X in range(1, 13):
             keyboard.append(
                 InlineKeyboardButton(
-                    f"{X} Bulan",
+                    f"{X} ʙᴜʟᴀɴ ",
                     callback_data=f"success {user_id} {X}",
                 )
             )
@@ -131,10 +131,10 @@ class BTN:
 
     def START(message):
         button = [
-            [InlineKeyboardButton("🔥 beli userbot 🔥", callback_data="bahan")],
-            [InlineKeyboardButton("buat userbot 👥", callback_data="buat_ubot"),
-            InlineKeyboardButton("📁 modul 📁", callback_data="help_back")],
-            [InlineKeyboardButton("💬 livechat", callback_data="support")],
+            [InlineKeyboardButton("🔥 ʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 🔥", callback_data="bahan")],
+            [InlineKeyboardButton("🏆 ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ 🏆", callback_data="buat_ubot"),
+            InlineKeyboardButton("📁 ʜᴇʟᴘ ᴍᴇɴᴜ 📁", callback_data="help_back")],
+            [InlineKeyboardButton("💬 sᴜᴘᴘᴏʀᴛ 💬", callback_data="support")],
         ]
         return button
 
@@ -150,8 +150,8 @@ class BTN:
                     callback_data=f"tambah {query}",
                 ),
             ],
-            [InlineKeyboardButton("✅ konfirmasi", callback_data="confirm")],
-            [InlineKeyboardButton("🔙 kembali", callback_data=f"home {user_id}")],
+            [InlineKeyboardButton("✅ ᴋᴏɴꜰɪʀᴍᴀsɪ", callback_data="confirm")],
+            [InlineKeyboardButton("🔙 ʙᴀᴛᴀʟᴋᴀɴ", callback_data=f"home {user_id}")],
         ]
         return button
 
@@ -160,13 +160,13 @@ class BTN:
         button = [
             [
                 InlineKeyboardButton(
-                    "hapus ubot",
+                    "📁 ʜᴀᴘᴜs ᴅᴀʀɪ ᴅᴀᴛᴀʙᴀsᴇ 📁",
                     callback_data=f"del_ubot {int(user_id)}",
                 )
             ],
             [
                 InlineKeyboardButton(
-                    "cek kadaluarꜱa",
+                    "⏳ ᴄᴇᴋ ᴍᴀsᴀ ᴀᴋᴛɪғ ⏳",
                     callback_data=f"cek_masa_aktif {int(user_id)}",
                 )
             ],
