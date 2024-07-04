@@ -83,19 +83,22 @@ async def _(client, callback_query):
         waktu = exp.strftime("%d-%m-%Y") if exp else "None"
         return await callback_query.edit_message_text(
             f"""
-<blockquote><b>
+<blockquote>ɢᴀʏᴏᴜʙᴏᴛᴡᴀɴɴ
+  ꜱᴛᴀᴛᴜꜱ : ᴘʀᴇᴍɪᴜᴍ
+  ᴘʀᴇꜰɪxᴇꜱ : {prefix[0]}
+  ᴇxᴘɪʀᴇᴅ_ᴏɴ : {waktu}</b></blockquote>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
         buttons = [
-            [InlineKeyboardButton("beli userbot", callback_data=f"bahan")],
-            [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
+            [InlineKeyboardButton("💵 ʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ", callback_data=f"bahan")],
+            [InlineKeyboardButton("ᴋᴇᴍʙᴀʟɪ", callback_data=f"home {user_id}")],
         ]
         return await callback_query.edit_message_text(
             f"""
-<blockquote><b>‼️ anda belum memiliki/membeli uꜱerbot ini!\nꜱilahkan membeli uꜱerbot terlebih dahulu agar memiliki ubot</b></blockquote>
+<blockquote><b>❌ ᴍᴀᴀꜰ ᴀɴᴅᴀ ʙᴇʟᴜᴍ ᴍᴇᴍʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ, ꜱɪʟᴀᴋᴀɴ ᴍᴇᴍʙᴇʟɪ ᴛᴇʀʟᴇʙɪʜ ᴅᴀʜᴜʟᴜ.</b></blockquote>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -107,26 +110,27 @@ async def _(client, callback_query):
     user_id = callback_query.from_user.id
     if user_id in ubot._get_my_id:
         buttons = [
-            [InlineKeyboardButton("✅ reꜱtart", callback_data=f"ress_ubot")],
-            [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
+            [InlineKeyboardButton("✅ ʀᴇꜱᴛᴀʀᴛ", callback_data=f"ress_ubot")],
+            [InlineKeyboardButton("ᴋᴇᴍʙᴀʟɪ", callback_data=f"home {user_id}")],
         ]
         return await callback_query.edit_message_text(
             f"""
-<blockquote><b>🔴anda ꜱudah membuat/memiliki uꜱerbot!\njika uꜱerbot tidak dapat di gunakan/mereꜱpon ꜱilahkan pencet tombol reꜱtart di bawah ini</b></blockquote>
+<blockquote><b>ᴀɴᴅᴀ ꜱᴜᴅᴀʜ ᴍᴇᴍʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ\n\nᴊɪᴋᴀ ᴜꜱᴇʀʙᴏᴛ ᴀɴᴅᴀ ᴛɪᴅᴀᴋ ʙɪꜱᴀ ᴅɪɢᴜɴᴀᴋᴀɴ ꜱɪʟᴀʜᴋᴀɴ ᴛᴇᴋᴇɴ ᴛᴏᴍʙᴏʟ ʀᴇꜱᴛᴀʀᴛ ᴅɪ ᴀᴛᴀꜱ</b></blockquote>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     elif len(ubot._ubot) + 1 > MAX_BOT:
         buttons = [
-            [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
+            [InlineKeyboardButton("ᴋᴇᴍʙᴀʟɪ", callback_data=f"home {user_id}")],
         ]
         return await callback_query.edit_message_text(
             f"""
-<blockquote><b>❌ tidak bisa membuat userbot!
-karena maksimal userbot adalah {Fonts.smallcap(str(len(ubot._ubot)))}
+<blockquote><b><b>❌ ᴛɪᴅᴀᴋ ʙɪsᴀ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ!</b>
 
-☎️ hubungi: <a href=tg://openmessage?user_id={OWNER_ID}>admin</a></b></blockquote>
+<b>📚 ᴋᴀʀᴇɴᴀ ᴍᴀᴋsɪᴍᴀʟ ᴜsᴇʀʙᴏᴛ ᴀᴅᴀʟᴀʜ {Fonts.smallcap(str(len(ubot._ubot)))} ᴛᴇʟᴀʜ ᴛᴇʀᴄᴀᴘᴀɪ</b>
+
+<b>☎️ sɪʟᴀʜᴋᴀɴ ʜᴜʙᴜɴɢɪ: <a href=tg://openmessage?user_id={OWNER_ID}>ᴀᴅᴍɪɴ</a>ᴊɪᴋᴀ ᴍᴀᴜ ᴅɪʙᴜᴀᴛᴋᴀɴ ʙᴏᴛ sᴇᴘᴇʀᴛɪ sᴀʏᴀ </b></blockquote>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -134,25 +138,25 @@ karena maksimal userbot adalah {Fonts.smallcap(str(len(ubot._ubot)))}
     premium_users, ultra_premium_users = await get_list_from_vars(client.me.id, "PREM_USERS"), await get_list_from_vars(client.me.id, "ULTRA_PREM")
     if user_id not in premium_users and user_id not in ultra_premium_users:
         buttons = [
-            [InlineKeyboardButton("💸 beli userbot 💸", callback_data="bahan")],
-            [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
+            [InlineKeyboardButton("💸 ʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 💸", callback_data="bahan")],
+            [InlineKeyboardButton("ᴋᴇᴍʙᴀʟɪ", callback_data=f"home {user_id}")],
         ]
         return await callback_query.edit_message_text(
             f"""
-<blockquote><b>❌ maaf anda belum malakukan pembelian uꜱerbot!\nꜱilahkan membeli terlebih dahulu lalu buatlah uꜱerbot</b></blockquote>
+<blockquote><b>❌ ᴍᴀᴀꜰ ᴀɴᴅᴀ ʙᴇʟᴜᴍ ᴍᴇᴍʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ, ꜱɪʟᴀᴋᴀɴ ᴍᴇᴍʙᴇʟɪ ᴛᴇʀʟᴇʙɪʜ ᴅᴀʜᴜʟᴜ</b></blockquote>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
-        buttons = [[InlineKeyboardButton("✅ lanjutkan", callback_data="add_ubot")]]
+        buttons = [[InlineKeyboardButton("✅ ʟᴀɴᴊᴜᴛᴋᴀɴ", callback_data="add_ubot")]]
         return await callback_query.edit_message_text(
             """
-<blockquote><b>💬 untuk membuat userbot siapkan bahan berikut
+<blockquote><b>✅ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ sɪᴀᴘᴋᴀɴ ʙᴀʜᴀɴ ʙᴇʀɪᴋᴜᴛ
 
-    >• phone_number: nomer hp akun telegram
+    • <code>ᴘʜᴏɴᴇ_ɴᴜᴍʙᴇʀ</code>: ɴᴏᴍᴇʀ ʜᴘ ᴀᴋᴜɴ ᴛᴇʟᴇɢʀᴀᴍ
 
-☑️ jika sudah tersedia silahkan klik tomboi dibawah</b></blockquote>
+☑️ ᴊɪᴋᴀ sᴜᴅᴀʜ ᴛᴇʀsᴇᴅɪᴀ sɪʟᴀʜᴋᴀɴ ᴋʟɪᴋ ᴛᴏᴍʙᴏɪ ᴅɪʙᴀᴡᴀʜ</b></blockquote>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -178,15 +182,13 @@ async def _(client, callback_query):
         phone = await bot.ask(
             user_id,
             (
-                "silahkan masukkan nomor telepon telegram anda dengan format kode negara!\ncontoh: +628xxxxxxx\n"
-                "\ngunakan /cancel untuk membatalkan proses\n"
-                "demi keamanan pengguna saya tidak akan tau apapun tentang privacy anda !\n"
-                "useebot ini di desaign sangat aman dan pastinya privacy terjaga\n"
+                "<b>sɪʟᴀʜᴋᴀɴ ᴍᴀsᴜᴋᴋᴀɴ ɴᴏᴍᴏʀ ᴛᴇʟᴇᴘᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ꜰᴏʀᴍᴀᴛ ᴋᴏᴅᴇ ɴᴇɢᴀʀᴀ.\nᴄᴏɴᴛᴏʜ: +628xxxxxxx</b>\n"
+                "\n<b>ɢᴜɴᴀᴋᴀɴ /cancel ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴀᴛᴀʟᴋᴀɴ ᴘʀᴏsᴇs ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ</b>"
             ),
             timeout=300,
         )
     except asyncio.TimeoutError:
-        return await bot.send_message(user_id, "pembatalan otomatiꜱ!\ngunakan /ꜱtart untuk memulai ulang")
+        return await bot.send_message(user_id, "<blockquote>ᴘᴇᴍʙᴀᴛᴀʟᴀɴ ᴏᴛᴏᴍᴀᴛɪꜱ!\nɴɢᴜɴᴀᴋᴀɴ /ꜱᴛᴀʀᴛ ᴜɴᴛᴜᴋ ᴍᴇᴍᴜʟᴀɪ ᴜʟᴀɴɢ</blockquote>")
     if await is_cancel(callback_query, phone.text):
         return
     phone_number = phone.text
@@ -196,7 +198,7 @@ async def _(client, callback_query):
         api_hash=API_HASH,
         in_memory=False,
     )
-    get_otp = await bot.send_message(user_id, "mengirim kode otp...")
+    get_otp = await bot.send_message(user_id, "<blockquote><b>ᴍᴇɴɢɪʀɪᴍ ᴋᴏᴅᴇ ᴏᴛᴘ...</b></blockquote>")
     await new_client.connect()
     try:
         code = await new_client.send_code(phone_number.strip())
@@ -220,25 +222,25 @@ async def _(client, callback_query):
         return await bot.send_message(user_id, f"ERROR: {error}")
     try:
         sent_code = {
-            SentCodeType.APP: "<a href=tg://openmessage?user_id=777000>akun telegram</a> resmi",
-            SentCodeType.SMS: "sms anda",
-            SentCodeType.CALL: "panggilan telpon",
-            SentCodeType.FLASH_CALL: "panggilan kilat telepon",
-            SentCodeType.FRAGMENT_SMS: "fragment sms",
-            SentCodeType.EMAIL_CODE: "email anda",
+            SentCodeType.APP: "<a href=tg://openmessage?user_id=777000>ᴀᴋᴜɴ ᴛᴇʟᴇɢʀᴀᴍ</a> ʀᴇsᴍɪ",
+            SentCodeType.SMS: "sᴍs ᴀɴᴅᴀ",
+            SentCodeType.CALL: "ᴘᴀɴɢɢɪʟᴀɴ ᴛᴇʟᴘᴏɴ",
+            SentCodeType.FLASH_CALL: "ᴘᴀɴɢɢɪʟᴀɴ ᴋɪʟᴀᴛ ᴛᴇʟᴇᴘᴏɴ",
+            SentCodeType.FRAGMENT_SMS: "ꜰʀᴀɢᴍᴇɴᴛ sᴍs",
+            SentCodeType.EMAIL_CODE: "ᴇᴍᴀɪʟ ᴀɴᴅᴀ",
         }
         await get_otp.delete()
         otp = await bot.ask(
             user_id,
             (
-                f"silakan periksa kode otp dari {sent_code[code.type]}. kirim kode otp ke sini setelah membaca format di bawah ini.\n"
-                "jika kode otp adalah: 12345\nkirimkan seperti ini: 1 2 3 4 5\n"
-                "\ngunakan /cancel untuk membatalkan proses"
+                "<b>sɪʟᴀᴋᴀɴ ᴘᴇʀɪᴋsᴀ ᴋᴏᴅᴇ ᴏᴛᴘ ᴅᴀʀɪ ᴀᴋᴜɴ ʀᴇꜱᴍɪ ᴛᴇʟᴇɢʀᴀᴍ. ᴋɪʀɪᴍ ᴋᴏᴅᴇ ᴏᴛᴘ ᴋᴇ sɪɴɪ sᴇᴛᴇʟᴀʜ ᴍᴇᴍʙᴀᴄᴀ ꜰᴏʀᴍᴀᴛ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ.</b>\n"
+                "\nᴊɪᴋᴀ ᴋᴏᴅᴇ ᴏᴛᴘ ᴀᴅᴀʟᴀʜ <ᴄᴏᴅᴇ>12345</ᴄᴏᴅᴇ> ᴛᴏʟᴏɴɢ <b>[ ᴛᴀᴍʙᴀʜᴋᴀɴ sᴘᴀsɪ ]</b> ᴋɪʀɪᴍᴋᴀɴ sᴇᴘᴇʀᴛɪ ɪɴɪ <code>1 2 3 4 5</code>\n"
+                "\n<b>ɢᴜɴᴀᴋᴀɴ /cancel ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴀᴛᴀʟᴋᴀɴ ᴘʀᴏsᴇs ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ</b>"
             ),
             timeout=300,
         )
     except asyncio.TimeoutError:
-        return await bot.send_message(user_id, "pembatalan otomatiꜱ!\ngunakan /ꜱtart untuk memulai ulang")
+        return await bot.send_message(user_id, "<blockquote>ᴘᴇᴍʙᴀᴛᴀʟᴀɴ ᴏᴛᴏᴍᴀᴛɪꜱ!\nɴɢᴜɴᴀᴋᴀɴ /ꜱᴛᴀʀᴛ ᴜɴᴛᴜᴋ ᴍᴇᴍᴜʟᴀɪ ᴜʟᴀɴɢ</blockquote>")
     if await is_cancel(callback_query, otp.text):
         return
     otp_code = otp.text
@@ -258,11 +260,11 @@ async def _(client, callback_query):
         try:
             two_step_code = await bot.ask(
                 user_id,
-                "akun anda telah mengaktifkan verifikasi dua langkah. silahkan kirimkan passwordnya.\n\ngunakan /cancel untuk membatalkan proses",
+                "ᴀᴋᴜɴ ᴀɴᴅᴀ ᴛᴇʟᴀʜ ᴍᴇɴɢᴀᴋᴛɪꜰᴋᴀɴ ᴠᴇʀɪꜰɪᴋᴀsɪ ᴅᴜᴀ ʟᴀɴɢᴋᴀʜ. sɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍᴋᴀɴ ᴘᴀssᴡᴏʀᴅɴʏᴀ.\n\nɢᴜɴᴀᴋᴀɴ /cancel ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴀᴛᴀʟᴋᴀɴ ᴘʀᴏsᴇs ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ</b>",
                 timeout=300,
             )
         except asyncio.TimeoutError:
-            return await bot.send_message(user_id, "pembatalan otomatiꜱ!\ngunakan /ꜱtart untuk memulai ulang")
+            return await bot.send_message(user_id, "<blockquote>ᴘᴇᴍʙᴀᴛᴀʟᴀɴ ᴏᴛᴏᴍᴀᴛɪꜱ!\nɴɢᴜɴᴀᴋᴀɴ /ꜱᴛᴀʀᴛ ᴜɴᴛᴜᴋ ᴍᴇᴍᴜʟᴀɪ ᴜʟᴀɴɢ</blockquote>")
         if await is_cancel(callback_query, two_step_code.text):
             return
         new_code = two_step_code.text
@@ -276,14 +278,14 @@ async def _(client, callback_query):
     new_client.in_memory = False
     bot_msg = await bot.send_message(
         user_id,
-        "sedang memproses....\n\nsilahkan tunggu sebentar",
+        "sᴇᴅᴀɴɢ ᴍᴇᴍᴘʀᴏsᴇs....\n\nsɪʟᴀʜᴋᴀɴ ᴛᴜɴɢɢᴜ sᴇʙᴇɴᴛᴀʀ",
         disable_web_page_preview=True,
     )
     await new_client.start()
     if not user_id == new_client.me.id:
         ubot._ubot.remove(new_client)
         return await bot_msg.edit(
-            "harap gunakan nomer telegram akun anda!\ndan bukan nomer telegram dari akun lain</>"
+            "<b>ʜᴀʀᴀᴘ ɢᴜɴᴀᴋᴀɴ ɴᴏᴍᴇʀ ᴛᴇʟᴇɢʀᴀᴍ ᴀɴᴅᴀ ᴅɪ ᴀᴋᴜɴ ᴀɴᴅᴀ sᴀᴀᴛ ɪɴɪ ᴅᴀɴ ʙᴜᴋᴀɴ ɴᴏᴍᴇʀ ᴛᴇʟᴇɢʀᴀᴍ ᴅᴀʀɪ ᴀᴋᴜɴ ʟᴀɪɴ</>"
         )
     await add_ubot(
         user_id=int(new_client.me.id),
@@ -296,26 +298,28 @@ async def _(client, callback_query):
         importlib.reload(importlib.import_module(f"PyroUbot.modules.{mod}"))
     SH = await ubot.get_prefix(new_client.me.id)
     buttons = [
-            [InlineKeyboardButton("kembali", callback_data=f"home {user_id}")],
+            [InlineKeyboardButton("ᴋᴇᴍʙᴀʟɪ", callback_data=f"home {user_id}")],
         ]
     text_done = f"""
 <blockquote><b>userbot berhasil diaktifkan
 name : <a href=tg://user?id={new_client.me.id}>{new_client.me.first_name} {new_client.me.last_name or ''}</a>
 id : {new_client.me.id}
 prefixes : {' '.join(SH)}
-expired :
-harap join : @logubotx untuk info" terbaru</b></blockquote>
+harap join : @GayoUbotSupport untuk info" terbaru</b></blockquote>
         """
     await bot_msg.edit(text_done, disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons))
     await bash("rm -rf *session*")
     await install_my_peer(new_client)
+     try:
+        await new_client.join_chat("GayoUbotSupport")
+        await new_client.join_chat("TestiByWann")
     
 
 async def is_cancel(callback_query, text):
     if text.startswith("/cancel"):
         await bot.send_message(
-            callback_query.from_user.id, "membatalkan proꜱeꜱ!\n\ngunakan: /ꜱtart untuk mualai kembali"
+            callback_query.from_user.id, "<blockquote>ᴘᴇᴍʙᴀᴛᴀʟᴀɴ ᴏᴛᴏᴍᴀᴛɪꜱ!\nɴɢᴜɴᴀᴋᴀɴ /ꜱᴛᴀʀᴛ ᴜɴᴛᴜᴋ ᴍᴇᴍᴜʟᴀɪ ᴜʟᴀɴɢ</blockquote>"
         )
         return True
     return False
@@ -324,12 +328,11 @@ async def is_cancel(callback_query, text):
 @PY.BOT("control")
 async def _(client, message):
     buttons = [
-            [InlineKeyboardButton("reꜱtart", callback_data=f"ress_ubot")],
+            [InlineKeyboardButton("ʀᴇꜱᴛᴀʀᴛ", callback_data=f"ress_ubot")],
         ]
     await message.reply(
             f"""
-<blockquote><b>anda akan melakukan reꜱtart?!
-jika iya pencet tombol di bawah ini</b></blockquote>
+<blockquote><b>ᴀɴᴅᴀ ᴀᴋᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ ʀᴇꜱᴛᴀʀᴛ?!\n ᴊɪᴋᴀ ɪʏᴀ ᴘᴇɴᴄᴇᴛ ᴛᴏᴍʙᴏʟ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ</b></blockquote>
 """,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -357,7 +360,7 @@ async def _(client, callback_query):
                                 importlib.import_module(f"PyroUbot.modules.{mod}")
                             )
                         return await callback_query.edit_message_text(
-                            f"reꜱtart berhaꜱil di lakukan!\n\n name: {UB.me.first_name} {UB.me.last_name or ''} | {UB.me.id}"
+                            f"ʀᴇꜱᴛᴀʀᴛ ʙᴇʀʜᴀꜱɪʟ ᴅɪʟᴀᴋᴜᴋᴀɴ !\n\n ɴᴀᴍᴇ: {UB.me.first_name} {UB.me.last_name or ''} | {UB.me.id}"
                         )
                     except Exception as error:
                         return await callback_query.edit_message_text(f"{error}")
@@ -378,16 +381,16 @@ async def _(client, callback_query):
     expired = await get_expired_date(user_id)
     try:
         xxxx = (expired - datetime.now()).days
-        return await callback_query.answer(f"⏳ tinggal {xxxx} hari lagi", True)
+        return await callback_query.answer(f"⏳ ᴛɪɴɢɢᴀʟ {xxxx} ʜᴀʀɪ ʟᴀɢɪ", True)
     except:
-        return await callback_query.answer("✅ sudah tidak aktif", True)
+        return await callback_query.answer("✅ sᴜᴅᴀʜ ᴛɪᴅᴀᴋ ᴀᴋᴛɪғ", True)
 
 @PY.CALLBACK("del_ubot")
 async def _(client, callback_query):
     user_id = callback_query.from_user.id
     if user_id not in await get_list_from_vars(client.me.id, "ADMIN_USERS"):
         return await callback_query.answer(
-            f"❌ tombol ini bukan untuk mu {callback_query.from_user.first_name} {callback_query.from_user.last_name or ''}",
+            f"❌ ᴛᴏᴍʙᴏʟ ɪɴɪ ʙᴜᴋᴀɴ ᴜɴᴛᴜᴋ ᴍᴜ {callback_query.from_user.first_name} {callback_query.from_user.last_name or ''}",
             True,
         )
     try:
@@ -405,7 +408,7 @@ async def _(client, callback_query):
             ubot._ubot.remove(X)
             await X.log_out()
             await callback_query.answer(
-                f"✅ {get_mention} berhasil dihapus dari database", True
+                f"✅ {get_mention} ʙᴇʀʜᴀsɪʟ ᴅɪʜᴀᴘᴜs ᴅᴀʀɪ ᴅᴀᴛᴀʙᴀsᴇ", True
             )
             await callback_query.edit_message_text(
                 await MSG.UBOT(0),
