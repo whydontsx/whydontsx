@@ -2,8 +2,12 @@
 ```
 apt update && apt upgrade -y
 ```
+```
 git clone https://github.com/wndrzzka/gayoubotwann
+```
+```
 cd gayoubotwan
+```
 screen -S gayoubotwan
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
 sudo apt-get install -y nodejs
