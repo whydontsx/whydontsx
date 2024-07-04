@@ -183,21 +183,21 @@ async def _(client, message):
 @PY.UBOT("id")
 @PY.TOP_CMD
 async def _(client, message):
-    text = f"<emoji id=6026218958900695642>💎</emoji> message id: `{message.id}`\n"
+    text = f"<emoji id=6026218958900695642>💎</emoji> ᴍᴇꜱꜱᴀɢᴇ ɪᴅ: `{message.id}`\n"
 
     if message.chat.type == ChatType.CHANNEL:
-        text += f"<emoji id=6026056450223116307>⏺</emoji> chat id: `{message.sender_chat.id}`\n"
+        text += f"<emoji id=6026056450223116307>⏺</emoji> ᴄʜᴀᴛ ɪᴅ: `{message.sender_chat.id}`\n"
     else:
-        text += f"<emoji id=6026292029179301727>👑</emoji> your id: `{message.from_user.id}`\n\n"
+        text += f"<emoji id=6026292029179301727>👑</emoji> ʏᴏᴜʀ ɪᴅ: `{message.from_user.id}`\n\n"
 
         if len(message.command) > 1:
             try:
                 user = await client.get_chat(message.text.split()[1])
-                text += f"<emoji id=6026056450223116307>⏺</emoji> user id: `{user.id}`\n\n"
+                text += f"<emoji id=6026056450223116307>⏺</emoji> ᴜꜱᴇʀ ɪᴅ: `{user.id}`\n\n"
             except:
-                return await message.reply("<emoji id=6113891550788324241>❌</emoji>pengguna tidak ditemukan")
+                return await message.reply("<emoji id=6113891550788324241>❌</emoji>ᴘᴇɴɢɢᴜɴᴀ ᴛɪᴅᴀᴋ ᴅɪᴛᴇᴍᴜᴋᴀɴ")
 
-        text += f"<emoji id=6026056450223116307>⏺</emoji> chat id: `{message.chat.id}`\n\n"
+        text += f"<emoji id=6026056450223116307>⏺</emoji> ᴄʜᴀᴛ ɪᴅ: `{message.chat.id}`\n\n"
 
     if message.reply_to_message:
         id_ = (
@@ -209,8 +209,8 @@ async def _(client, message):
         if file_info:
             text += f"media id: {file_info.file_id}\n\n"
         text += (
-            f"<emoji id=6026257381678124710>✅</emoji> replied message id: {message.reply_to_message.id}\n"
-            f"<emoji id=6026257381678124710>✅</emoji> replied user id: {id_}"
+            f"<emoji id=6026257381678124710>✅</emoji> ʀᴇᴘʟɪᴇᴅ ᴍᴇꜱꜱᴀɢᴇ ɪᴅ: {message.reply_to_message.id}\n"
+            f"<emoji id=6026257381678124710>✅</emoji> ʀᴇᴘʟɪᴇᴅ ᴜꜱᴇʀ ɪᴅ: {id_}"
         )
 
     return await message.reply(text, disable_web_page_preview=True)
