@@ -301,11 +301,11 @@ async def _(client, callback_query):
             [InlineKeyboardButton("ᴋᴇᴍʙᴀʟɪ", callback_data=f"home {user_id}")],
         ]
     text_done = f"""
-<blockquote><b>userbot berhasil diaktifkan
-name : <a href=tg://user?id={new_client.me.id}>{new_client.me.first_name} {new_client.me.last_name or ''}</a>
-id : {new_client.me.id}
-prefixes : {' '.join(SH)}
-harap join : @GayoUbotSupport untuk info" terbaru</b></blockquote>
+<blockquote><b>ʙᴇʀʜᴀꜱɪʟ ᴅɪᴀᴋᴛɪꜰᴋᴀɴ
+ɴᴀᴍᴇ : <a href=tg://user?id={new_client.me.id}>{new_client.me.first_name} {new_client.me.last_name or ''}</a>
+ɪᴅ : {new_client.me.id}
+ᴘʀᴇꜰɪxᴇꜱ : {' '.join(SH)}
+ʜᴀʀᴀᴘ ᴊᴏɪɴ : @GayoUbotSupport ᴜɴᴛᴜᴋ ɪɴꜰᴏ" ᴛᴇʀʙᴀʀᴜ</b></blockquote>
         """
     await bot_msg.edit(text_done, disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons))
