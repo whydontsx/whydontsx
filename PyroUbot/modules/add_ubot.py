@@ -366,6 +366,7 @@ async def _(client, callback_query):
                         return await callback_query.edit_message_text(f"{error}")
 
 
+@PY.CALLBACK("cek_ubot")
 @PY.BOT("getubot")
 @PY.ADMIN
 async def _(client, callback_query):
