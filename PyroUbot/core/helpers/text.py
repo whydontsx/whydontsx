@@ -1,6 +1,7 @@
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from PyroUbot import OWNER_ID, bot, get_expired_date, ubot
+from PyroUbot import OWNER_ID, bot, ubot
+from PyroUbot.core.database import get_expired_date
 
 
 class MSG:     
@@ -47,7 +48,7 @@ class MSG:
 <b>❏ ᴜsᴇʀʙᴏᴛ ᴋᴇ</b> <code>{int(count) + 1}/{len(ubot._ubot)}</code>
 <b> ├ ᴀᴋᴜɴ:</b> <a href=tg://user?id={ubot._ubot[int(count)].me.id}>{ubot._ubot[int(count)].me.first_name} {ubot._ubot[int(count)].me.last_name or ''}</a> 
 <b> ├ ɪᴅ:</b> <code>{ubot._ubot[int(count)].me.id}</code>
-<b> ╰ ᴇxᴘɪʀᴇᴅ</b> <code>{get_expired_date.strftime('%d-%m-%Y')}</code>
+<b> ╰ ᴇxᴘɪʀᴇᴅ</b> <code>{expired_date.strftime('%d-%m-%Y')}</code>
 """
 
     def POLICY():
