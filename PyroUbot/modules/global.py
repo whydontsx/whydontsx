@@ -8,7 +8,7 @@ from pyrogram.types import ChatPermissions
 from PyroUbot import *
 
 
-__MODULE__ = "Global"
+__MODULE__ = "ɢʟᴏʙᴀʟ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Global
 
