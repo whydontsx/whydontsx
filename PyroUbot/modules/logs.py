@@ -1,4 +1,4 @@
-__MODULE__ = "Logs"
+__MODULE__ = "ʟᴏɢ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Logs
 
