@@ -72,7 +72,7 @@ async def _(client, message):
 
 @PY.UBOT("unprem")
 async def _(client, message):
-    msg = await message.reply("sedang memproses...")
+    msg = await message.reply("ꜱᴇᴅᴀɴɢ ᴍᴇᴍᴘʀᴏꜱᴇꜱ...")
     user_id = await extract_user(message)
     if not user_id:
         return await msg.edit(
@@ -155,20 +155,19 @@ async def _(client, message):
 
     if user.id in sudo_users:
         return await msg.edit(f"""
-💬 INFORMATION
- name: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
- id: {user.id}
- keterangan: sudah seller
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: `{user.id}`</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ꜱᴜᴅᴀʜ ʀᴇꜱᴇʟʟᴇʀ</ci></b></blockquote>
 """
         )
 
     try:
         await add_to_vars(bot.me.id, "SELER_USERS", user.id)
         return await msg.edit(f"""
-💬 INFORMATION
- name: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
- id: {user.id}
- keterangan: seller
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: `{user.id}`</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ʀᴇꜱᴇʟʟᴇʀ</ci></b>
+<b>ꜱɪʟᴀʜᴋᴀɴ ʙᴜᴋᴀ @{bot.me.username}</b></blockquote>
 """
         )
     except Exception as error:
@@ -180,11 +179,11 @@ async def _(client, message):
     user = message.from_user
     if user.id != OWNER_ID:
         return
-    msg = await message.reply("sedang memproses...")
+    msg = await message.reply("ꜱᴇᴅᴀɴɢ ᴍᴇᴍᴘʀᴏꜱᴇꜱ...")
     user_id = await extract_user(message)
     if not user_id:
         return await msg.edit(
-            f"{message.text} user_id/username"
+            f"<b>{message.text} ᴜsᴇʀ_ɪᴅ/ᴜsᴇʀɴᴀᴍᴇ</b>"
         )
 
     try:
@@ -196,20 +195,18 @@ async def _(client, message):
 
     if user.id not in seles_users:
         return await msg.edit(f"""
-💬 INFORMATION
- name: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
- id: {user.id}
- keterangan: tidak dalam daftar
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: `{user.id}`</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛɪᴅᴀᴋ ᴛᴇʀᴅᴀꜰᴛᴀʀ</ci></b></blockquote>
 """
         )
 
     try:
         await remove_from_vars(bot.me.id, "SELER_USERS", user.id)
         return await msg.edit(f"""
-💬 INFORMATION
- name: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
- id: {user.id}
- keterangan: unseller
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: `{user.id}`</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛᴇʟᴀʜ ᴅɪ ʜᴀᴘᴜꜱ ᴅᴀʀɪ ᴅᴀᴛᴀʙᴀꜱᴇ</ci></b></blockquote>
 """
         )
     except Exception as error:
@@ -221,31 +218,31 @@ async def _(client, message):
     user = message.from_user
     if user.id != OWNER_ID:
         return
-    Sh = await message.reply("sedang memproses...")
+    Sh = await message.reply("ꜱᴇᴅᴀɴɢ ᴍᴇᴍᴘʀᴏꜱᴇꜱ...")
     seles_users = await get_list_from_vars(bot.me.id, "SELER_USERS")
 
     if not seles_users:
-        return await Sh.edit("daftar seller kosong")
+        return await Sh.edit("ᴅᴀꜰᴛᴀʀ ꜱᴇʟʟᴇʀ ᴋᴏꜱᴏɴɢ")
 
     seles_list = []
     for user_id in seles_users:
         try:
             user = await client.get_users(int(user_id))
             seles_list.append(
-                f"👤 [{user.first_name} {user.last_name or ''}](tg://user?id={user.id}) | {user.id}"
+                f"👤 [{user.first_name} {user.last_name or ''}](tg://user?id={user.id}) | `{user.id}`"
             )
         except:
             continue
 
     if seles_list:
         response = (
-            "📋 daftar seller:\n\n"
+            "📋 ᴅᴀꜰᴛᴀʀ ʀᴇꜱᴇʟʟᴇʀ:\n\n"
             + "\n".join(seles_list)
-            + f"\n\n⚜️ total seller: {len(seles_list)}"
+            + f"\n\n• ᴛᴏᴛᴀʟ ʀᴇꜱᴇʟʟᴇʀ: {len(seles_list)}"
         )
         return await Sh.edit(response)
     else:
-        return await Sh.edit("tidak dapat mengambil daftar seller")
+        return await Sh.edit("ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴍᴇɴɢᴀᴍʙɪʟ ᴅᴀꜰᴛᴀʀ ꜱᴇʟʟᴇʀ")
 
 
 @PY.UBOT("set_time")
@@ -284,10 +281,10 @@ async def _(client, message):
     user = message.from_user
     if user.id != OWNER_ID:
         return
-    Sh = await message.reply("processing . . .")
+    Sh = await message.reply("ᴘʀᴏᴄᴇꜱꜱɪɴɢ . . .")
     user_id = await extract_user(message)
     if not user_id:
-        return await Sh.edit("pengguna tidak temukan")
+        return await Sh.edit("ᴘᴇɴɢɢᴜɴᴀ ᴛɪᴅᴀᴋ ᴛᴇᴍᴜᴋᴀɴ")
     try:
         get_exp = await get_expired_date(user_id)
         sh = await client.get_users(user_id)
@@ -295,12 +292,11 @@ async def _(client, message):
         return await Sh.ediit(error)
     if get_exp is None:
         await Sh.edit(f"""
-INFORMATION
-name : {sh.mention}
-plan : none
-id : {user_id}
-prefix : .
-expired : nonaktif
+<blockquote><b>ɴᴀᴍᴇ: {sh.mention}</b>
+<b>ɪᴅ: `{user_id}`</b>
+<b>ᴘʟᴀɴ : ɴᴏɴᴇ</b>
+<b>ᴘʀᴇꜰɪx : .</b>
+<b>ᴇxᴘɪʀᴇᴅ : ɴᴏɴᴀᴋᴛɪꜰ</b></blockquote>
 """)
     else:
         SH = await ubot.get_prefix(user_id)
@@ -310,12 +306,11 @@ expired : nonaktif
         else:
             status = "Premium"
         await Sh.edit(f"""
-INFORMATION
-name : {sh.mention}
-plan : {status}
-id : {user_id}
-prefix : {' '.join(SH)}
-expired : {exp}
+<blockquote><b>ɴᴀᴍᴇ: {sh.mention}</b>
+<b>ɪᴅ: `{user_id}`</b>
+<b>ᴘʟᴀɴ : {status}</b>
+<b>ᴘʀᴇꜰɪx : {' '.join(SH)}</b>
+<b>ᴇxᴘɪʀᴇᴅ : {exp}</b></blockquote>
 """
         )
 
