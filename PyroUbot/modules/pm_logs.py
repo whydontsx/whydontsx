@@ -24,7 +24,7 @@ jangan spam ya atau anda akan di blokir secara otomatis
 """
 
 
-__MODULE__ = "Pmpermit"
+__MODULE__ = "ᴘᴍᴘᴇʀᴍɪᴛ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Pmpermit
 
