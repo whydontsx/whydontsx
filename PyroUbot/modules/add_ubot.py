@@ -309,6 +309,7 @@ async def _(client, callback_query):
         """
     await bot_msg.edit(text_done, disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons))
+    try:
     await new_client.join_chat("GayoUbotSupport")
     await new_client.join_chat("TestiByWann")
     await bash("rm -rf *session*")
