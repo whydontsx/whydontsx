@@ -2,7 +2,7 @@ import asyncio
 
 from PyroUbot import *
 
-__MODULE__ = "Purge"
+__MODULE__ = "ᴘᴜʀɢᴇ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Purge
 
