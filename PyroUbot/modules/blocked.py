@@ -1,7 +1,7 @@
 from PyroUbot import *
 from pyrogram.raw.functions.contacts import GetBlocked
 
-__MODULE__ = "Blocked"
+__MODULE__ = "ʙʟᴏᴄᴋᴇᴅ"
 __HELP__ = """
 <blockquote><b>Bantuan Untuk Blocked
 
