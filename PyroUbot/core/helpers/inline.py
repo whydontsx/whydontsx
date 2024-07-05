@@ -136,6 +136,19 @@ class BTN:
             InlineKeyboardButton("📁 ʜᴇʟᴘ ᴍᴇɴᴜ 📁", callback_data="help_back")],
             [InlineKeyboardButton("💬 sᴜᴘᴘᴏʀᴛ 💬", callback_data="support")],
         ]
+        else:
+            button = [
+                [InlineKeyboardButton("🔥 ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ 🔥", callback_data="bahan")],
+                [
+                    InlineKeyboardButton("🛠️ ɢɪᴛᴘᴜʟʟ", callback_data="cb_gitpull"),
+                    InlineKeyboardButton("ʀᴇsᴛᴀʀᴛ 🔁", callback_data="cb_restart"),
+                ],
+                [
+                    InlineKeyboardButton(
+                        "🤖 ʟɪsᴛ ᴜsᴇʀʙᴏᴛ 🤖", callback_data="cek_ubot"
+                    ),
+                ],
+            ]
         return button
 
     def PLUS_MINUS(query, user_id):
