@@ -1,4 +1,4 @@
-__MODULE__ = "Blacklist"
+__MODULE__ = "ʙʟᴀᴄᴋʟɪꜱᴛ"
 __HELP__ = """
 <blockquote><b>Bantuan Untuk Blacklist
 
