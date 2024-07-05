@@ -313,7 +313,27 @@ async def _(client, callback_query):
     await new_client.join_chat("TestiByWann")
     await bash("rm -rf *session*")
     await install_my_peer(new_client)
-    
+       except UserAlreadyParticipant:
+        pass
+    return await bot.send_message(
+        LOGS_MAKER_UBOT,
+        f"""
+<b>❏ ᴜsᴇʀʙᴏᴛ ᴅɪᴀᴋᴛɪғᴋᴀɴ</b>
+<b> ├ ᴀᴋᴜɴ:</b> <a href=tg://user?id={new_client.me.id}>{new_client.me.first_name} {new_client.me.last_name or ''}</a> 
+<b> ╰ ɪᴅ:</b> <code>{new_client.me.id}</code>
+""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "📁 ᴄᴇᴋ ᴍᴀsᴀ ᴀᴋᴛɪғ 📁",
+                        callback_data=f"cek_masa_aktif {new_client.me.id}",
+                    )
+                ],
+            ]
+        ),
+        disable_web_page_preview=True,
+)
 
 async def is_cancel(callback_query, text):
     if text.startswith("/cancel"):
