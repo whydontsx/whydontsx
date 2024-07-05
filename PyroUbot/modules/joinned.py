@@ -6,7 +6,7 @@ from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 from pyrogram.errors.exceptions.not_acceptable_406 import ChannelPrivate
 from PyroUbot import *
 
-__MODULE__ = "Joinleave"
+__MODULE__ = "ᴊᴏɪɴʟᴇᴀᴠᴇ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Joinleave
 
