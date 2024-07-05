@@ -1,6 +1,6 @@
 from PyroUbot import *
 
-__MODULE__ = "Copy"
+__MODULE__ = "ᴄᴏᴘʏ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Copy
 
