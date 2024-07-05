@@ -1,4 +1,4 @@
-__MODULE__ = "Afk"
+__MODULE__ = "ᴀꜰᴋ"
 __HELP__ = """
 <blockquote><b>Bantuan untuk Afk
 
