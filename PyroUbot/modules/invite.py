@@ -4,7 +4,7 @@ from pyrogram.enums import UserStatus
 
 from PyroUbot import *
 
-__MODULE__ = "Invite"
+__MODULE__ = "ɪɴᴠɪᴛᴇ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Invite
 
