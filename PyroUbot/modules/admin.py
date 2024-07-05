@@ -196,9 +196,9 @@ async def _(client, message):
         except Exception as error:
             await message.reply(error)
         msg_kick = f"""
-{bcs}warning: {mention}
-{tion}admin: {message.from_user.mention}
-{ktrng}alasan: {reason}
+{bcs}ᴡᴀʀɴɪɴɢ: {mention}
+{tion}ᴀᴅᴍɪɴ: {message.from_user.mention}
+{ktrng}ᴀʟᴀꜱᴀɴ: {reason}
             """
         try:
             await message.chat.ban_member(user_id)
@@ -222,9 +222,9 @@ async def _(client, message):
         except Exception as error:
             await message.reply(error)
         msg_ban = f"""
-{bcs}warning: {mention}
-{tion}admin: {message.from_user.mention}
-{ktrng}alasan: {reason}
+{bcs}ᴡᴀʀɴɪɴɢ: {mention}
+{tion}ᴀᴅᴍɪɴ: {message.from_user.mention}
+{ktrng}ᴀʟᴀꜱᴀɴ: {reason}
             """
         try:
             await message.chat.ban_member(user_id)
@@ -246,9 +246,9 @@ async def _(client, message):
         except Exception as error:
             await message.reply(error)
         msg_mute = f"""
-{bcs}warning: {mention}
-{tion}admin: {message.from_user.mention}
-{ktrng}alasan: {reason}
+{bcs}ᴡᴀʀɴɪɴɢ: {mention}
+{tion}ᴀᴅᴍɪɴ: {message.from_user.mention}
+{ktrng}ᴀʟᴀꜱᴀɴ: {reason}
             """
         try:
             await message.chat.restrict_member(user_id, ChatPermissions())
