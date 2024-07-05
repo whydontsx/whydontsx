@@ -1,6 +1,6 @@
 from PyroUbot.core.helpers.tools import get_data_id
 from PyroUbot import *
-__MODULE__ = "Archive"
+__MODULE__ = "ᴀʀᴄʜɪᴠᴇ"
 __HELP__ = """
 <blockquote><b>Bantuan Untuk Archive
 
