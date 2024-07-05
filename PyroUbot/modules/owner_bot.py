@@ -88,20 +88,18 @@ async def _(client, message):
 
     if user.id not in prem_users:
         return await msg.edit(f"""
-💬 INFORMATION
- name: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
- id: {user.id}
- keterangan: tidak dalam daftar
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: `{user.id}`</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛɪᴅᴀᴋ ᴛᴇʀᴅᴀꜰᴛᴀʀ</ci></b></blockquote>
 """
         )
     try:
         await remove_from_vars(bot.me.id, "PREM_USERS", user.id)
         await rem_expired_date(user_id)
         return await msg.edit(f"""
-💬 INFORMATION
- name: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
- id: {user.id}
- keterangan: unpremium
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: `{user.id}`</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ᴛᴇʟᴀʜ ᴅɪ ʜᴀᴘᴜꜱ ᴅᴀʀɪ ᴅᴀᴛᴀʙᴀꜱᴇ</ci></b></blockquote>
 """
         )
     except Exception as error:
@@ -121,7 +119,7 @@ async def _(client, message):
         try:
             user = await client.get_users(user_id)
             prem_users.append(
-                f"👤 [{user.first_name} {user.last_name or ''}](tg://user?id={user.id}) | {user.id}"
+                f"👤 [{user.first_name} {user.last_name or ''}](tg://user?id={user.id}) | `{user.id}`"
             )
         except Exception as error:
             return await message.reply(str(error))
@@ -130,10 +128,10 @@ async def _(client, message):
     if prem_users:
         prem_list_text = "\n".join(prem_users)
         return await message.reply(
-            f"📋 daftar premium:\n\n{prem_list_text}\n\n⚜️ total premium: {total_prem_users}"
+            f"<blockquote>📋 ᴅᴀꜰᴛᴀʀ ᴘʀᴇᴍɪᴜᴍ:\n\n{prem_list_text}\n\n• ᴛᴏᴛᴀʟ ᴘʀᴇᴍɪᴜᴍ: {total_prem_users}</blockquote>"
         )
     else:
-        return await message.reply("tidak ada pengguna premium saat ini")
+        return await message.reply("ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴘᴇɴɢɢᴜɴᴀ ʏᴀɴɢ ᴅɪᴛᴇᴍᴜᴋᴀɴ")
 
 
 @PY.UBOT("addseles")
@@ -141,11 +139,11 @@ async def _(client, message):
     user = message.from_user
     if user.id != OWNER_ID:
         return
-    msg = await message.reply("sedang memproses...")
+    msg = await message.reply("ꜱᴇᴅᴀɴɢ ᴍᴇᴍᴘʀᴏꜱᴇꜱ...")
     user_id = await extract_user(message)
     if not user_id:
         return await msg.edit(
-            f"{message.text} user_id/username"
+            f"<b>{message.text} ᴜsᴇʀ_ɪᴅ/ᴜsᴇʀɴᴀᴍᴇ</b>"
         )
 
     try:
