@@ -1,6 +1,6 @@
 from PyroUbot import *
 
-__MODULE__ = "Game"
+__MODULE__ = "ɢᴀᴍᴇ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Game
 
