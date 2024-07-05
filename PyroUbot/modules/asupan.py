@@ -2,7 +2,7 @@ import random
 from pyrogram.enums import MessagesFilter
 from PyroUbot import *
 
-__MODULE__ = "Asupan"
+__MODULE__ = "ᴀꜱᴜᴘᴀɴ"
 __HELP__ = """
 <blockquote><b>Bantuan Untuk Asupan
 
