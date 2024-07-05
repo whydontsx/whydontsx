@@ -13,7 +13,7 @@ from pyrogram.enums import ChatType
 from PyroUbot import *
 
 
-__MODULE__ = "Profiles"
+__MODULE__ = "ᴘʀᴏꜰɪʟᴇꜱ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Profiles
 
