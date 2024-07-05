@@ -21,26 +21,28 @@ async def _(client, callback_query):
         pesan = await bot.ask(
             user_id,
             f"""
-silahkan melakukan pembayaran            
+<blockquote><b>ꜱɪʟᴀʜᴋᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴛᴇʀʟᴇʙɪʜ ᴛᴀʜᴜʟᴜ ᴋᴇ Qʀɪꜱ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ</b>           
 
-QRIS : https://telegra.ph//file/a673c21de9f6ff1c50d2d.jpg
+Qʀɪꜱ : https://telegra.ph//file/ed34c4a4ff423bace1543.jpg
+
+<b>💬 sɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍᴋᴀɴ ʙᴜᴋᴛɪ sᴄʀᴇᴇɴsʜᴏᴛ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ: {full_name}</b></blockquote>
 """,
             timeout=300,
         )
     except asyncio.TimeoutError as out:
-        return await bot.send_message(get.id, "pembatalan otomatis")
+        return await bot.send_message(get.id, "ᴘᴇᴍʙᴀᴛᴀʟᴀɴ ᴏᴛᴏᴍᴀᴛɪs")
     if get.id in CONFIRM_PAYMENT:
         if not pesan.photo:
             CONFIRM_PAYMENT.remove(get.id)
-            buttons = [[InlineKeyboardButton("✅ konfirmasi", callback_data="confirm")]]
+            buttons = [[InlineKeyboardButton("✅ ᴋᴏɴꜰɪʀᴍᴀsɪ", callback_data="confirm")]]
             return await bot.send_message(
                 user_id,
                 """
-tidak dapat diproses
+<blockquote><b>❌ ᴛɪᴅᴀᴋ ᴅᴀᴘᴀᴛ ᴅɪᴘʀᴏsᴇs</b>
 
-harap kirimkan screenshot bukti pembayaran anda yang valid
+<b>💬 ʜᴀʀᴀᴘ ᴋɪʀɪᴍᴋᴀɴ sᴄʀᴇᴇɴsʜᴏᴛ ʙᴜᴋᴛɪ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ ʏᴀɴɢ ᴠᴀʟɪᴅ</b>
 
-silahkan konfirmasi ulang pembayaran anda
+<b>✅ sɪʟᴀʜᴋᴀɴ ᴋᴏɴꜰɪʀᴍᴀsɪ ᴜʟᴀɴɢ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ</b></blockquote>
 """,
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
@@ -52,14 +54,14 @@ silahkan konfirmasi ulang pembayaran anda
             )
             CONFIRM_PAYMENT.remove(get.id)
             buttons = [
-                [InlineKeyboardButton("owner", url="https://t.me/anonymousx888")]
+                [InlineKeyboardButton("📞 ᴏᴡɴᴇʀ", url="https://t.me/WannOFFC08")]
             ]
             return await bot.send_message(
                 user_id,
                 f"""
-baik {full_name} silahkan ditunggu dan jangan spam ya
-pembayaran anda akan dikonfirmasi setelah 1-12 jam kerja
-jika pembayaran anda belum di konfirmasi silahkan hubungi admin
+<blockquote><b>💬 ʙᴀɪᴋ {full_name} sɪʟᴀʜᴋᴀɴ ᴅɪᴛᴜɴɢɢᴜ ᴅᴀɴ ᴊᴀɴɢᴀɴ sᴘᴀᴍ ʏᴀ</b>
+
+<b>🏦 ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ ᴀᴋᴀɴ ᴅɪᴋᴏɴꜰɪʀᴍᴀsɪ sᴇᴛᴇʟᴀʜ 1-12 ᴊᴀᴍ ᴋᴇʀᴊᴀ</b></blockquote>
 """,
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
@@ -68,7 +70,7 @@ jika pembayaran anda belum di konfirmasi silahkan hubungi admin
 @PY.CALLBACK("^(kurang|tambah)")
 async def _(client, callback_query):
     BULAN = int(callback_query.data.split()[1])
-    HARGA = 30
+    HARGA = 20
     QUERY = callback_query.data.split()[0]
     try:
         if QUERY == "kurang":
@@ -95,45 +97,60 @@ async def _(client, callback_query):
     get_user = await bot.get_users(query[1])
     if query[0] == "success":
         buttons = [
-            [InlineKeyboardButton("⚒️ buat userbot ⚒️", callback_data="buat_ubot")],
+            [InlineKeyboardButton("🔥 ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ 🔥", callback_data="buat_ubot")],
         ]
         await bot.send_message(
             get_user.id,
             f"""
-pembayaran anda berhasil dikonfirmasi
-sekarang anda bisa membuat userbot
+<blockquote><b>✅ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ ʙᴇʀʜᴀsɪʟ ᴅɪᴋᴏɴꜰɪʀᴍᴀsɪ</b>
+
+<b>💬 sᴇᴋᴀʀᴀɴɢ ᴀɴᴅᴀ ʙɪsᴀ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ</b></blockquote>
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
+        buttons_success = [
+            [
+                InlineKeyboardButton(
+                    "👤 ᴅᴀᴘᴀᴛᴋᴀɴ ᴘʀᴏꜰɪʟ 👤", callback_data=f"profil {get_user.id}"
+                )
+            ],
+        ]
         await add_to_vars(client.me.id, "PREM_USERS", get_user.id)
         now = datetime.now(timezone("Asia/Jakarta"))
         expired = now + relativedelta(months=int(query[2]))
         await set_expired_date(get_user.id, expired)
         return await callback_query.edit_message_text(
             f"""
-✅ {get_user.first_name} {get_user.last_name or ''} ditambahkan ke anggota premium
+<blockquote><b>✅ {get_user.first_name} {get_user.last_name or ''} ᴅɪᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ᴀɴɢɢᴏᴛᴀ ᴘʀᴇᴍɪᴜᴍ</b></blockquote>
 """,
         )
     if query[0] == "failed":
         buttons = [
             [
                 InlineKeyboardButton(
-                    "💳 lakukan pembayaran 💳", callback_data="bayar_dulu"
+                    "💳 ʟᴀᴋᴜᴋᴀɴ ᴘᴇᴍʙᴀʏᴀʀᴀɴ 💳", callback_data="bayar_dulu"
                 )
             ],
         ]
         await bot.send_message(
             get_user.id,
             """
-❌ pembayaran anda tidak bisa dikonfirmasi
+<b>❌ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ ᴛɪᴅᴀᴋ ʙɪsᴀ ᴅɪᴋᴏɴꜰɪʀᴍᴀsɪ</b>
 
-💬 silahkan lakukan pembayaran dengan benar
+<b>💬 sɪʟᴀʜᴋᴀɴ ʟᴀᴋᴜᴋᴀɴ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴅᴇɴɢᴀɴ ʙᴇɴᴀʀ</b>
 """,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
+        buttons_failed = [
+            [
+                InlineKeyboardButton(
+                    "👤 ᴅᴀᴘᴀᴛᴋᴀɴ ᴘʀᴏꜰɪʟ 👤", callback_data=f"profil {get_user.id}"
+                )
+            ],
+        ]
         return await callback_query.edit_message_text(
             f"""
-❌ {get_user.first_name} {get_user.last_name or ''} tidak ditambahkan ke anggota premium
+<b>❌ {get_user.first_name} {get_user.last_name or ''} ᴛɪᴅᴀᴋ ᴅɪᴛᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ᴀɴɢɢᴏᴛᴀ ᴘʀᴇᴍɪᴜᴍ</b>
 """,
         )
     if query[0] == "home":
