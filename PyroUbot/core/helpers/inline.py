@@ -129,8 +129,8 @@ class BTN:
         ]
         return button
 
-    def START(message):
-        if not message.from_user.id == OWNER_ID:
+    def START(message, user_id):
+        if not user_id == OWNER_ID:
         button = [
             [InlineKeyboardButton("🔥 ʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 🔥", callback_data="bahan")],
             [InlineKeyboardButton("🏆 ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ 🏆", callback_data="buat_ubot"),
@@ -145,9 +145,7 @@ class BTN:
                     InlineKeyboardButton("ʀᴇsᴛᴀʀᴛ 🔁", callback_data="cb_restart"),
                 ],
                 [
-                    InlineKeyboardButton(
-                        "🤖 ʟɪsᴛ ᴜsᴇʀʙᴏᴛ 🤖", callback_data="cek_ubot"
-                    ),
+                    InlineKeyboardButton("🤖 ʟɪsᴛ ᴜsᴇʀʙᴏᴛ 🤖", callback_data="cek_ubot" ),
                 ],
             ]
         return button
