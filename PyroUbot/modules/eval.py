@@ -42,6 +42,16 @@ async def _(client, message):
 async def _(client, message):
     await cukimay(client, message)
 
+@PY.CALLBACK("cb_restart")
+async def cb_restart(client, callback_query):
+    await callback_query.message.delete()
+    os.system(f"kill -9 {os.getpid()} && python3 -m PyroUbot")
+
+@PY.CALLBACK("cb_gitpull")
+async def cb_gitpull(client, callback_query):
+    await callback_query.message.delete()
+    os.system(f"kill -9 {os.getpid()} && git pull && python3 -m PyroUbot")
+    
 async def handle_shutdown(message):
     await message.reply("✅ System berhasil dimatikan", quote=True)
     os.system(f"kill -9 {os.getpid()}")
