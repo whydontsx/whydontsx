@@ -1,6 +1,6 @@
 from PyroUbot import *
 from pyrogram.enums import ParseMode
-__MODULE__ = "Custom"
+__MODULE__ = "ᴄᴜꜱᴛᴏᴍ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Custom
 
