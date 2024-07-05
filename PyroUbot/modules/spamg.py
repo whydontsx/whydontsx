@@ -6,7 +6,7 @@ from pyrogram.errors import FloodWait
 from .. import *
 from PyroUbot import *
 
-__MODULE__ = "spam"
+__MODULE__ = "ꜱᴘᴀᴍ"
 __HELP__ = """
 <blockquote><b>『 bantuan spam 』</b>
 
