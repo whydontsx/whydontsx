@@ -1,6 +1,6 @@
 from PyroUbot import *
 
-__MODULE__ = "Control"
+__MODULE__ = "ᴄᴏɴᴛʀᴏʟ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Control
 
