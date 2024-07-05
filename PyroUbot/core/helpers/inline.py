@@ -1,4 +1,5 @@
 from pyrogram.pykeyboard import InlineKeyboard
+from pyrogram.types import InlineKeyboardButton
 from pyrogram.errors import MessageNotModified
 from pyrogram.types import *
 from pyrogram.pyromod.helpers import ikb
