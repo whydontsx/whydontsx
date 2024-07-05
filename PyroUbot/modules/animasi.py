@@ -29,7 +29,7 @@ NOBLE = [
 ]
 
 
-__MODULE__ = "Animasi"
+__MODULE__ = "ᴀɴɪᴍᴀꜱɪ"
 __HELP__ = """
 <blockquote><b>Bantuan Untuk Animasi
 
