@@ -1,6 +1,6 @@
 from PyroUbot import *
 
-__MODULE__ = "Staff"
+__MODULE__ = "ꜱᴛᴀꜰꜰ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Staff
 
