@@ -7,7 +7,7 @@ from pyrogram.types import InputMediaPhoto
 
 from PyroUbot import *
 
-__MODULE__ = "Convert"
+__MODULE__ = "ᴄᴏɴᴠᴇʀᴛ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Clnvert
 
