@@ -13,23 +13,23 @@ async def support_callback(client, callback_query):
     SUPPORT.append(get.id)
     try:
         button = [
-            [InlineKeyboardButton("batalkan", callback_data=f"batal {user_id}")]
+            [InlineKeyboardButton("ʙᴀᴛᴀʟᴋᴀɴ", callback_data=f"batal {user_id}")]
         ]
         pesan = await client.ask(
             user_id,
-            f"<b>silahkan kirim pertanyaan anda: {full_name}</b>",
+            f"<b>ꜱɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍ ᴘᴇʀᴛᴀɴʏᴀᴀɴ ᴀɴᴅᴀ: {full_name}</b>",
             reply_markup=InlineKeyboardMarkup(button),
             timeout=90,
         )
     except asyncio.TimeoutError as out:
         if get.id in SUPPORT:
             SUPPORT.remove(get.id)
-            return await client.send_message(get.id, "Pembatalan otomatis")
-    text = f"<b>Pertanyaan anda sudah terkirim : {full_name}</b>"
+            return await client.send_message(get.id, "ᴘᴇᴍʙᴀᴛᴀʟᴀɴ ᴏᴛᴏᴍᴀᴛɪꜱ")
+    text = f"<b>ᴘᴇʀᴛᴀɴʏᴀᴀɴ ᴀɴᴅᴀ ꜱᴜᴅᴀʜ ᴛᴇʀᴋɪʀɪᴍ : {full_name}</b>"
     buttons = [
         [
-            InlineKeyboardButton("👤 profil", callback_data=f"profil {user_id}"),
-            InlineKeyboardButton("jawab 💬", callback_data=f"jawab_pesan {user_id}"),
+            InlineKeyboardButton("👤 ᴘʀᴏꜰɪʟ", callback_data=f"profil {user_id}"),
+            InlineKeyboardButton("ᴊᴀᴡᴀʙ 💬", callback_data=f"jawab_pesan {user_id}"),
         ],
     ]
     if get.id in SUPPORT:
@@ -40,7 +40,7 @@ async def support_callback(client, callback_query):
             )
             SUPPORT.remove(get.id)
             await pesan.request.edit(
-                f"<b>Silahkan kirim pertanyaan Anda : {full_name}</b>"
+                f"<b>ꜱɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍ ᴘᴇʀᴛᴀɴʏᴀᴀɴ ᴀɴᴅᴀ : {full_name}</b>"
             )
             return await client.send_message(user_id, text)
         except Exception as error:
@@ -56,26 +56,26 @@ async def jawab_pesan_callback(client, callback_query):
     SUPPORT.append(get.id)
     try:
         button = [
-            [InlineKeyboardButton("batalkan", callback_data=f"batal {user_id}")]
+            [InlineKeyboardButton("ʙᴀᴛᴀʟᴋᴀɴ", callback_data=f"batal {user_id}")]
         ]
         pesan = await client.ask(
             user_id,
-            f"<b>Silahkan kirim balasan Anda: {full_name}</b>",
+            f"<b>ꜱɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍ ʙᴀʟᴀꜱᴀɴ ᴀɴᴅᴀ: {full_name}</b>",
             reply_markup=InlineKeyboardMarkup(button),
             timeout=300,
         )
     except asyncio.TimeoutError:
         if get.id in SUPPORT:
             SUPPORT.remove(get.id)
-            return await client.send_message(get.id, "Pembatalan otomatis")
-    text = f"<b>Pesan balasan anda telah terkirim : {full_name}</b>"
+            return await client.send_message(get.id, "ᴘᴇᴍʙᴀᴛᴀʟᴀɴ ᴏᴛᴏᴍᴀᴛɪꜱ")
+    text = f"<b>ꜱɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍ ʙᴀʟᴀꜱᴀɴ ᴀɴᴅᴀ : {full_name}</b>"
     if not user_ids == OWNER_ID:
-        buttons = [[InlineKeyboardButton("💬 jawab pesan 💬", f"jawab_pesan {user_id}")]]
+        buttons = [[InlineKeyboardButton("💬 ᴊᴀᴡᴀʙ 💬", f"jawab_pesan {user_id}")]]
     else:
         buttons = [
             [
-                InlineKeyboardButton("👤 profil", callback_data=f"profil {user_id}"),
-                InlineKeyboardButton("jawab 💬", callback_data=f"jawab_pesan {user_id}"),
+                InlineKeyboardButton("👤 ᴘʀᴏꜰɪʟ", callback_data=f"profil {user_id}"),
+                InlineKeyboardButton("ᴊᴀᴡᴀʙ 💬", callback_data=f"jawab_pesan {user_id}"),
             ],
         ]
     if get.id in SUPPORT:
@@ -86,7 +86,7 @@ async def jawab_pesan_callback(client, callback_query):
             )
             SUPPORT.remove(get.id)
             await pesan.request.edit(
-                f"<b>Silahkan kirim balasan anda: {full_name}</b>",
+                f"<b>ꜱɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍ ʙᴀʟᴀꜱᴀɴ ᴀɴᴅᴀ: {full_name}</b>",
             )
             await client.send_message(user_id, text)
         except Exception as error:
@@ -104,17 +104,17 @@ async def profil_callback(client, callback_query):
         username = f"{get.username}"
         msg = (
             f"<b>👤 <a href=tg://user?id={get.id}>{full_name}</a></b>\n"
-            f"<b> ┣ id pengguna:</b> <code>{get.id}</code>\n"
-            f"<b> ┣ nama depan:</b> {first_name}\n"
+            f"<b> ┣ ɪᴅ ᴘᴇɴɢɢᴜɴᴀ:</b> <code>{get.id}</code>\n"
+            f"<b> ┣ ɴᴀᴍᴀ ᴅᴇᴘᴀɴ:</b> {first_name}\n"
         )
         if last_name == "None":
             msg += ""
         else:
-            msg += f"<b> ┣ nama belakangnya:</b> {last_name}\n"
+            msg += f"<b> ┣ ɴᴀᴍᴀ ʙᴇʟᴀᴋᴀɴɢɴʏᴀ:</b> {last_name}\n"
         if username == "None":
             msg += ""
         else:
-            msg += f"<b> ┣ username:</b> @{username}\n"
+            msg += f"<b> ┣ ᴜꜱᴇʀɴᴀᴍᴇ:</b> @{username}\n"
         msg += f"<b> ┗ bot: {client.me.mention}\n"
         buttons = [
             [
@@ -146,4 +146,4 @@ async def batal_callback(client, callback_query):
             )
         except Exception as why:
             await callback_query.message.delete()
-            await client.send_message(user_id, f"<b>gagal di batalkan! {why}</b>")
+            await client.send_message(user_id, f"<b>ɢᴀɢᴀʟ ᴅɪ ʙᴀᴛᴀʟᴋᴀɴ! {why}</b>")
