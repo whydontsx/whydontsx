@@ -30,7 +30,6 @@ class PY:
             user = message.from_user
             seller_id = await get_list_from_vars(client.me.id, "SELER_USERS")
             if user.id not in seller_id:
-                return await message.reply_text("<blockquote>ᴜɴᴛᴜᴋ ᴍᴇɴɢɢᴜɴᴀᴋᴀɴ ᴘᴇʀɪɴᴛᴀʜ ɪɴɪ ᴀɴᴅᴀ ʜᴀʀᴜꜱ ᴍᴇɴᴊᴀᴅɪ ʀᴇꜱᴇʟʟᴇʀ ᴛᴇʀʟᴇʙɪʜ ᴅᴀʜᴜʟᴜ\nᴜɴᴛᴜᴋ ᴍᴇᴍʙᴇʟɪ ʀᴇꜱᴇʟʟᴇʀ ꜱɪʟᴀʜᴋᴀɴ ᴄʜᴀᴛ @wannoffc08</blockquote>")
             return await func(client, message)
 
         return function
