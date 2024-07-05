@@ -30,11 +30,10 @@ async def _(client, message):
 
     if user.id in prem_users:
         return await msg.edit(f"""
-💬 INFORMATION
- name: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
- id: {user.id}
- keterangan: sudah premium</ci>
- expired: {get_bulan} bulan
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: {user.id}</b>
+<b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ꜱᴜᴅᴀʜ ᴘʀᴇᴍɪᴜᴍ</ci></b>
+<b>ᴇxᴘɪʀᴇᴅ: {get_bulan} ʙᴜʟᴀɴ</b></blockquote>
 """
         )
 
@@ -44,25 +43,24 @@ async def _(client, message):
         await set_expired_date(user_id, expired)
         await add_to_vars(bot.me.id, "PREM_USERS", user.id)
         await msg.edit(f"""
-💬 INFORMATION
- name: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})
- id: {user.id}
- expired: {get_bulan} bulan
- ꜱilahkan buka @{bot.me.username} untuk membuat uꜱerbot
+<blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
+<b>ɪᴅ: {user.id}</b>
+<b>ᴇxᴘɪʀᴇᴅ: {get_bulan} ʙᴜʟᴀɴ</b>
+<b>ꜱɪʟᴀʜᴋᴀɴ ʙᴜᴋᴀ @{bot.me.username} ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ</b></blockquote>
 """
         )
         return await bot.send_message(
             OWNER_ID,
-            f"🆔 id-seller: {message.from_user.id}\n\n🆔 id-customer: {user_id}",
+            f"• ɪᴅ-ꜱᴇʟʟᴇʀ: `{message.from_user.id}`\n\n• ɪᴅ-ᴄᴜꜱᴛᴏᴍᴇʀ: `{user_id}`",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            "🔱 seller",
+                            "⁉️ ꜱᴇʟʟᴇʀ",
                             callback_data=f"profil {message.from_user.id}",
                         ),
                         InlineKeyboardButton(
-                            "customer ⚜️", callback_data=f"profil {user_id}"
+                            "ᴄᴜꜱᴛᴏᴍᴇʀ ⁉️", callback_data=f"profil {user_id}"
                         ),
                     ],
                 ]
