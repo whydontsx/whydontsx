@@ -14,7 +14,7 @@ from PyroUbot import *
 
 
 
-__MODULE__ = "Misc"
+__MODULE__ = "ᴍɪꜱᴄ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Misc
 
