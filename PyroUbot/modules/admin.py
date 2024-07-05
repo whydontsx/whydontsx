@@ -12,7 +12,7 @@ from pyrogram.errors.exceptions.bad_request_400 import (
 from PyroUbot import *
 
 
-__MODULE__ = "Admin"
+__MODULE__ = "ᴀᴅᴍɪɴ"
 __HELP__ = """
 <blockquote><b>Bantuan Untuk Admin
 
