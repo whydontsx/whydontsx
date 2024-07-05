@@ -17,7 +17,7 @@ async def _(client, message):
     user_id, get_bulan = await extract_user_and_reason(message)
     msg = await message.reply("memproses...")
     if not user_id:
-        return await msg.edit(f"{message.text} user_id/username")
+        return await msg.edit(f"<b>{message.text} ᴜsᴇʀ_ɪᴅ/ᴜsᴇʀɴᴀᴍᴇ - ʙᴜʟᴀɴ</b>")
 
     try:
         user = await client.get_users(user_id)
@@ -31,7 +31,7 @@ async def _(client, message):
     if user.id in prem_users:
         return await msg.edit(f"""
 <blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
-<b>ɪᴅ: {user.id}</b>
+<b>ɪᴅ: `{user.id}`</b>
 <b>ᴋᴇᴛᴇʀᴀɴɢᴀɴ: ꜱᴜᴅᴀʜ ᴘʀᴇᴍɪᴜᴍ</ci></b>
 <b>ᴇxᴘɪʀᴇᴅ: {get_bulan} ʙᴜʟᴀɴ</b></blockquote>
 """
@@ -44,7 +44,7 @@ async def _(client, message):
         await add_to_vars(bot.me.id, "PREM_USERS", user.id)
         await msg.edit(f"""
 <blockquote><b>ɴᴀᴍᴇ: [{user.first_name} {user.last_name or ''}](tg://user?id={user.id})</b>
-<b>ɪᴅ: {user.id}</b>
+<b>ɪᴅ: `{user.id}`</b>
 <b>ᴇxᴘɪʀᴇᴅ: {get_bulan} ʙᴜʟᴀɴ</b>
 <b>ꜱɪʟᴀʜᴋᴀɴ ʙᴜᴋᴀ @{bot.me.username} ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ</b></blockquote>
 """
@@ -76,7 +76,7 @@ async def _(client, message):
     user_id = await extract_user(message)
     if not user_id:
         return await msg.edit(
-            f"{message.text} user_id/username"
+            f"<b>{message.text} ᴜsᴇʀ_ɪᴅ/ᴜsᴇʀɴᴀᴍᴇ</b>"
         )
 
     try:
