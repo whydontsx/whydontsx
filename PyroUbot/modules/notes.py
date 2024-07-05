@@ -2,7 +2,7 @@ from pyrogram.types import *
 
 from PyroUbot import *
 
-__MODULE__ = "Notes"
+__MODULE__ = "ɴᴏᴛᴇ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Notes
 
