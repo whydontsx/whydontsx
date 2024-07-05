@@ -1,4 +1,4 @@
-__MODULE__ = "Vctools"
+__MODULE__ = "ᴠᴄᴛᴏᴏʟꜱ"
 __HELP__ = """
 <blockquote>Bantuan Untuk VcTools
 
