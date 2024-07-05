@@ -30,6 +30,7 @@ class PY:
             user = message.from_user
             seller_id = await get_list_from_vars(client.me.id, "SELER_USERS")
             if user.id not in seller_id:
+                return
             return await func(client, message)
 
         return function
