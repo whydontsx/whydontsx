@@ -1,4 +1,4 @@
-__MODULE__ = "Reaction"
+__MODULE__ = "ʀᴇᴀᴄᴛɪᴏɴ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Reaction
 
