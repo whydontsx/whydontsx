@@ -9,7 +9,7 @@ from pyrogram.errors.exceptions.not_acceptable_406 import ChannelPrivate
 
 from PyroUbot import *
 
-__MODULE__ = "Broadcast"
+__MODULE__ = "ʙʀᴏᴀᴅᴄᴀꜱᴛ"
 __HELP__ = """
 <blockquote><b>Bantuan Broadcast
 
