@@ -1,4 +1,4 @@
-__MODULE__ = "Downloader"
+__MODULE__ = "ʏᴏᴜᴛᴜʙᴇ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Downloader
 
