@@ -9,7 +9,7 @@ hadir_list = []
 def get_hadir_list():
     return "\n".join([f"👤 {user['mention']} - {user['jam']}" for user in hadir_list])
 
-__MODULE__ = "Absen"
+__MODULE__ = "ᴀʙꜱᴇɴ"
 __HELP__ = """
 <blockquote><b>Bantuan Untuk Absen
 
