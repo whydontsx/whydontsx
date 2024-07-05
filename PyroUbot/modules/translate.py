@@ -8,7 +8,7 @@ from pyrogram.pykeyboard import InlineKeyboard
 from PyroUbot import *
 
 
-__MODULE__ = "Translate"
+__MODULE__ = "ᴛʀᴀɴꜱʟᴀᴛᴇ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Translate
 
