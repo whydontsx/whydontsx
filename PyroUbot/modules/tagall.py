@@ -7,7 +7,7 @@ from PyroUbot import *
 
 
 
-__MODULE__ = "Tagall"
+__MODULE__ = "ᴛᴀɢᴀʟʟ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Tagall
 
