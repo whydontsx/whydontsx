@@ -9,7 +9,7 @@ from pyrogram.errors.exceptions import FloodWait
 
 from PyroUbot import *
 
-__MODULE__ = "Broaddb"
+__MODULE__ = "ʙʀᴏᴀᴅᴅʙ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Broaddb
 
