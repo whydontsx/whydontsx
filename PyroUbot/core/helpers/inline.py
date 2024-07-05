@@ -132,28 +132,80 @@ class BTN:
 
     
     def START(message):
-    if not message.from_user.id == OWNER_ID:
-        button = [
-            [InlineKeyboardButton("🔥 ʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 🔥", callback_data="bahan")],
-            [
-                InlineKeyboardButton("🏆 ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ 🏆", callback_data="buat_ubot"),
-                InlineKeyboardButton("📁 ʜᴇʟᴘ ᴍᴇɴᴜ 📁", callback_data="help_back")
-            ],
-            [InlineKeyboardButton("💬 sᴜᴘᴘᴏʀᴛ 💬", callback_data="support")]
-        ]
-    else:
-        button = [
-            [InlineKeyboardButton("🔥 ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ 🔥", callback_data="bahan")],
-            [
-                InlineKeyboardButton("🛠️ ɢɪᴛᴘᴜʟʟ", callback_data="cb_gitpull"),
-                InlineKeyboardButton("ʀᴇsᴛᴀʀᴛ 🔁", callback_data="cb_restart")
-            ],
-            [
-                InlineKeyboardButton("🤖 ʟɪsᴛ ᴜsᴇʀʙᴏᴛ 🤖", callback_data="cek_ubot")
+        if not message.from_user.id == OWNER_ID:
+            button = [
+                [InlineKeyboardButton("🔥 ʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 🔥", callback_data="bahan")],
+                [
+                    InlineKeyboardButton("🏆 ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ 🏆", callback_data="buat_ubot"),
+                    InlineKeyboardButton("📁 ʜᴇʟᴘ ᴍᴇɴᴜ 📁", callback_data="help_back")
+                ],
+                [InlineKeyboardButton("💬 sᴜᴘᴘᴏʀᴛ 💬", callback_data="support")]
             ]
-        ]
-    return button
+        else:
+            button = [
+                [InlineKeyboardButton("🔥 ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ 🔥", callback_data="bahan")],
+                [
+                    InlineKeyboardButton("🛠️ ɢɪᴛᴘᴜʟʟ", callback_data="cb_gitpull"),
+                    InlineKeyboardButton("ʀᴇsᴛᴀʀᴛ 🔁", callback_data="cb_restart")
+                ],
+                [
+                    InlineKeyboardButton("🤖 ʟɪsᴛ ᴜsᴇʀʙᴏᴛ 🤖", callback_data="cek_ubot")
+                ]
+            ]
+        return button
 
+    def PLUS_MINUS(query, user_id):
+        button = [
+            [
+                InlineKeyboardButton(
+                    "-1",
+                    callback_data=f"kurang {query}",
+                ),
+                InlineKeyboardButton(
+                    "+1",
+                    callback_data=f"tambah {query}",
+                ),
+            ],
+            [InlineKeyboardButton("✅ ᴋᴏɴꜰɪʀᴍᴀsɪ", callback_data="confirm")],
+            [InlineKeyboardButton("🔙 ʙᴀᴛᴀʟᴋᴀɴ", callback_data=f"home {user_id}")],
+        ]
+        return button
+
+    
+    def UBOT(user_id, count):
+        button = [
+            [
+                InlineKeyboardButton(
+                    "📁 ʜᴀᴘᴜs ᴅᴀʀɪ ᴅᴀᴛᴀʙᴀsᴇ 📁",
+                    callback_data=f"del_ubot {int(user_id)}",
+                )
+            ],
+            [
+                InlineKeyboardButton(
+                    "⏳ ᴄᴇᴋ ᴍᴀsᴀ ᴀᴋᴛɪғ ⏳",
+                    callback_data=f"cek_masa_aktif {int(user_id)}",
+                )
+            ],
+            [
+                InlineKeyboardButton("⬅️", callback_data=f"p_ub {int(count)}"),
+                InlineKeyboardButton("➡️", callback_data=f"n_ub {int(count)}"),
+            ],
+        ]
+        return button
+
+    def DEAK(user_id, count):
+        button = [
+            [
+                InlineKeyboardButton(
+                    "🔙 ᴋᴇᴍʙᴀʟɪ",
+                    callback_data=f"p_ub {int(count)}"
+                ),
+                InlineKeyboardButton(
+                    "sᴇᴛᴜᴊᴜɪ ✅", callback_data=f"deak_akun {int(count)}",
+                ),
+            ],
+        ]
+        return button
     def PLUS_MINUS(query, user_id):
         button = [
             [
