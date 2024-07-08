@@ -306,7 +306,7 @@ async def _(client, callback_query):
 ɪᴅ : {new_client.me.id}
 ᴘʀᴇꜰɪxᴇꜱ : {' '.join(SH)}
 ʜᴀʀᴀᴘ ᴊᴏɪɴ : @GayoUbotSupport ᴜɴᴛᴜᴋ ɪɴꜰᴏ" ᴛᴇʀʙᴀʀᴜ
-ᴊɪᴋᴀ ʙᴏᴛ ᴛɪᴅᴀᴋ ʀᴇꜱᴘᴏɴ, ᴋᴇᴛɪᴋ /start - ʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ - ᴛᴇᴋᴇɴ ʙᴜᴛᴛᴏɴ ʀᴇꜱᴛᴀʀᴛ</b></blockquote>
+ᴊɪᴋᴀ ʙᴏᴛ ᴛɪᴅᴀᴋ ʀᴇꜱᴘᴏɴ, ᴋᴇᴛɪᴋ /restart</b></blockquote>
         """
     await bot_msg.edit(text_done, disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons))
@@ -408,7 +408,7 @@ async def _(client, message):
                                 importlib.import_module(f"PyroUbot.modules.{mod}")
                             )
                         return await msg.edit(
-                            f"ʀᴇꜱᴛᴀʀᴛ ʙᴇʀʜᴀꜱɪʟ ᴅɪʟᴀᴋᴜᴋᴀɴ !\n\n ɴᴀᴍᴇ: {UB.me.first_name} {UB.me.last_name or ''} | {UB.me.id}"
+                            f"ʀᴇꜱᴛᴀʀᴛ ʙᴇʀʜᴀꜱɪʟ ᴅɪʟᴀᴋᴜᴋᴀɴ !\n\n ɴᴀᴍᴇ: {UB.me.first_name} {UB.me.last_name or ''} | `{UB.me.id}`"
                         )
                     except Exception as error:
                         return await msg.edit(f"{error}")
