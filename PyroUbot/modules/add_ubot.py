@@ -388,6 +388,7 @@ async def _(client, callback_query):
 
 @PY.BOT("restart")
 async def _(client, message):
+    msg = await message.reply("<b>ᴛᴜɴɢɢᴜ sᴇʙᴇɴᴛᴀʀ</b>")
     if message.from_user.id not in ubot._get_my_id:
         return await msg.edit(
             f"you don't have acces",
