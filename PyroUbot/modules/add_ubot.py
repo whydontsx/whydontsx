@@ -305,7 +305,8 @@ async def _(client, callback_query):
 ɴᴀᴍᴇ : <a href=tg://user?id={new_client.me.id}>{new_client.me.first_name} {new_client.me.last_name or ''}</a>
 ɪᴅ : {new_client.me.id}
 ᴘʀᴇꜰɪxᴇꜱ : {' '.join(SH)}
-ʜᴀʀᴀᴘ ᴊᴏɪɴ : @GayoUbotSupport ᴜɴᴛᴜᴋ ɪɴꜰᴏ" ᴛᴇʀʙᴀʀᴜ</b></blockquote>
+ʜᴀʀᴀᴘ ᴊᴏɪɴ : @GayoUbotSupport ᴜɴᴛᴜᴋ ɪɴꜰᴏ" ᴛᴇʀʙᴀʀᴜ
+ᴊɪᴋᴀ ʙᴏᴛ ᴛɪᴅᴀᴋ ʀᴇꜱᴘᴏɴ, ᴋᴇᴛɪᴋ /start - ʙᴜᴀᴛ ᴜꜱᴇʀʙᴏᴛ - ᴛᴇᴋᴇɴ ʙᴜᴛᴛᴏɴ ʀᴇꜱᴛᴀʀᴛ</b></blockquote>
         """
     await bot_msg.edit(text_done, disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons))
