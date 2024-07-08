@@ -359,7 +359,7 @@ async def _(client, message):
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
-
+@PY.BOT("restart")
 @PY.CALLBACK("ress_ubot")
 async def _(client, callback_query):
     if callback_query.from_user.id not in ubot._get_my_id:
