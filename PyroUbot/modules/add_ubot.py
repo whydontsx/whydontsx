@@ -360,7 +360,6 @@ async def _(client, message):
             reply_markup=InlineKeyboardMarkup(buttons),
         )
 
-@PY.BOT("restart")
 @PY.CALLBACK("ress_ubot")
 async def _(client, callback_query):
     if callback_query.from_user.id not in ubot._get_my_id:
@@ -387,6 +386,31 @@ async def _(client, callback_query):
                     except Exception as error:
                         return await callback_query.edit_message_text(f"{error}")
 
+@PY.BOT("restart")
+async def _(client, message):
+    if message.from_user.id not in ubot._get_my_id:
+        return await msg.edit(
+            f"you don't have acces",
+            True,
+        )
+    for X in ubot._ubot:
+        if message.from_user.id == X.me.id:
+            for _ubot_ in await get_userbots():
+                if X.me.id == int(_ubot_["name"]):
+                    try:
+                        ubot._ubot.remove(X)
+                        ubot._get_my_id.remove(X.me.id)
+                        UB = Ubot(**_ubot_)
+                        await UB.start()
+                        for mod in loadModule():
+                            importlib.reload(
+                                importlib.import_module(f"PyroUbot.modules.{mod}")
+                            )
+                        return await msg.edit(
+                            f"ʀᴇꜱᴛᴀʀᴛ ʙᴇʀʜᴀꜱɪʟ ᴅɪʟᴀᴋᴜᴋᴀɴ !\n\n ɴᴀᴍᴇ: {UB.me.first_name} {UB.me.last_name or ''} | {UB.me.id}"
+                        )
+                    except Exception as error:
+                        return await msg.edit(f"{error}")
 
 @PY.CALLBACK("cek_ubot")
 @PY.BOT("getubot")
