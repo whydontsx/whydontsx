@@ -12,7 +12,7 @@ from pyrogram.handlers import CallbackQueryHandler, MessageHandler
 from pyrogram.types import Message
 from pytgcalls import PyTgCalls
 from pytgcalls import filters as fl
-from pyrogram.pyromod import listen
+from pyromod import listen
 from PyroUbot.config import *
 from aiohttp import ClientSession
 

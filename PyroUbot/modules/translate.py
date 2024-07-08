@@ -3,7 +3,7 @@ from gc import get_objects
 
 import gtts
 from gpytranslate import Translator
-from pyrogram.pykeyboard import InlineKeyboard
+from pykeyboard import InlineKeyboard
 
 from PyroUbot import *
 

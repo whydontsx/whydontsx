@@ -2,7 +2,7 @@ import wget
 
 from gc import get_objects
 from pyrogram.errors.exceptions.not_acceptable_406 import UserRestricted
-from pyrogram.pykeyboard import InlineKeyboard
+from pykeyboard import InlineKeyboard
 from pyrogram.types import (InlineKeyboardButton, InlineQueryResultArticle,
                             InlineQueryResultPhoto, InputTextMessageContent)
 

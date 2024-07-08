@@ -1,8 +1,8 @@
-from pyrogram.pykeyboard import InlineKeyboard
+from pykeyboard import InlineKeyboard
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.errors import MessageNotModified
 from pyrogram.types import *
-from pyrogram.pyromod.helpers import ikb
+from pyromod.helpers import ikb
 from PyroUbot import *
 
 
