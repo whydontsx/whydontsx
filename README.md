@@ -12,10 +12,7 @@ cd gayoubotwan
 screen -S gayoubotwan
 ```
 ```
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo bash -
-```
-```
-sudo apt-get install -y nodejs
+bash installnode.sh
 ```
 ```
 apt install python3.10-venv
