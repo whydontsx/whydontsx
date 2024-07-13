@@ -81,15 +81,15 @@ async def _(client, callback_query):
             if BULAN < 12:
                 BULAN += 1
                 TOTAL_HARGA = HARGA * BULAN
-        buttons = BTN.PLUS_MINUS(BULAN, callback_query.from_user.id)
-        await callback_query.message.edit_text(
+        buttons = Button.plus_minus(BULAN, callback_query.from_user.id)
+        await callback_query.message.reply_text(
             MSG.TEXT_PAYMENT(HARGA, TOTAL_HARGA, BULAN),
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(buttons),
         )
+        await callback_query.message.delete()
     except:
         pass
-
 
 @PY.CALLBACK("^(success|failed|home)")
 async def _(client, callback_query):
