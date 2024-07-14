@@ -126,28 +126,6 @@ async def _(client, message):
         await message.reply_text("ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴘᴇɴɢɢᴜɴᴀ ʏᴀɴɢ ᴅɪᴛᴇᴍᴜᴋᴀɴ")
     else:
         await message.reply_text(text)
-        
-async def _(client, message):
-    prem = await get_list_from_vars(client.me.id, "PREM_USERS")
-    prem_users = []
-
-    for user_id in prem:
-        try:
-            user = await client.get_users(user_id)
-            prem_users.append(
-                f"👤 [{user.first_name} {user.last_name or ''}](tg://user?id={user.id}) | {user.id}"
-            )
-        except Exception as error:
-            return await message.reply(str(error))
-
-    total_prem_users = len(prem_users)
-    if prem_users:
-        prem_list_text = "\n".join(prem_users)
-        return await message.reply(
-            f"📋 daftar premium:\n\n{prem_list_text}\n\n⚜️ total premium: {total_prem_users}"
-        )
-    else:
-        return await message.reply("tidak ada pengguna premium saat ini")
 
 
 @PY.BOT("addseles")
