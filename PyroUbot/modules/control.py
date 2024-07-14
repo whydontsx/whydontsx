@@ -89,9 +89,9 @@ async def _(client, message):
     reason = get_arg(message)
     db_afk = {"time": time(), "reason": reason}
     msg_afk = (
-        f"{tion}sedang afk\n{ktrng}alasan: {reason}"
+        f"<blockquote>{tion}sᴇᴅᴀɴɢ ᴀғᴋ\n{ktrng}ᴀʟᴀsᴀɴ: {reason}</blockquote>"
         if reason
-        else f"{tion}sedang afk"
+        else f"{tion}sᴇᴅᴀɴɢ ᴀғᴋ"
       )
     await set_vars(client.me.id, "AFK", db_afk)
     return await message.reply(msg_afk)
@@ -131,7 +131,7 @@ async def _(client, message):
     if vars:
         afk_time = vars.get("time")
         afk_runtime = await get_time(time() - afk_time)
-        afk_text = f"{tion}kembali online\n{mng}afk selama: {afk_runtime}"
+        afk_text = f"<blockquote>{tion}ᴋᴇᴍʙᴀʟɪ ᴏɴʟɪɴᴇ\n{mng}ᴀғᴋ sᴇʟᴀᴍᴀ: {afk_runtime}</blockquote>"
         await message.reply(afk_text)
         return await remove_vars(client.me.id, "AFK")
 
