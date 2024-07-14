@@ -48,7 +48,7 @@ async def _(client, inline_query):
             get_exp = await get_expired_date(my.me.id)
             exp = get_exp.strftime("%d-%m-%Y") if get_exp else "None"
             if my.me.id == OWNER_ID:
-                status = "ɢᴀʏᴏᴡᴀɴɴ-ᴜʙᴏᴛ ᴠ1  <code>[ᴀᴅᴍɪɴ]</code>"
+                status = "ɢᴀʏᴏᴡᴀɴɴ-ᴜʙᴏᴛ ᴠ1  <code>[ᴏᴡɴᴇʀ]</code>"
             elif my.me.id in await get_list_from_vars(client.me.id, "SELER_USERS"):
                 status = "ɢᴀʏᴏᴡᴀɴɴ-ᴜʙᴏᴛ ᴠ1  </b> <code>[ʀᴇsᴇʟʟᴇʀ]</code>"
             else:
