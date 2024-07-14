@@ -48,9 +48,9 @@ async def _(client, inline_query):
             get_exp = await get_expired_date(my.me.id)
             exp = get_exp.strftime("%d-%m-%Y") if get_exp else "None"
             if my.me.id == OWNER_ID:
-                status = "ɢᴀʏᴏᴡᴀɴɴ-ᴜʙᴏᴛ ᴠ1  <code>[ꜰᴏᴜɴᴅᴇʀ]</code>"
+                status = "ɢᴀʏᴏᴡᴀɴɴ-ᴜʙᴏᴛ ᴠ1  <code>[ᴀᴅᴍɪɴ]</code>"
             elif my.me.id in await get_list_from_vars(client.me.id, "SELER_USERS"):
-                status = "ɢᴀʏᴏᴡᴀɴɴ-ᴜʙᴏᴛ ᴠ1  </b> <code>[ᴀᴅᴍɪɴ]</code>"
+                status = "ɢᴀʏᴏᴡᴀɴɴ-ᴜʙᴏᴛ ᴠ1  </b> <code>[ʀᴇsᴇʟʟᴇʀ]</code>"
             else:
                 status = "ɢᴀʏᴏᴡᴀɴɴ-ᴜʙᴏᴛ ᴠ1  </b> <code>[ᴘʀᴇᴍɪᴜᴍ]</code>"
             button = BTN.ALIVE(get_id)
@@ -60,13 +60,13 @@ async def _(client, inline_query):
             uptime = await get_time((time() - start_time))
             msg = f"""
 <blockquote>{bot.me.mention}
-    status: {status} 
-        expired_on: {exp} 
-        dc_id: {my.me.dc_id}
-        ping_dc: {ping} ms
-        peer_users: {users} users
-        peer_group: {group} group
-        start_uptime: {uptime}</blockquote>
+    `status: {status}`
+        `expired_on: {exp}` 
+        `dc_id: {my.me.dc_id}`
+        `ping_dc: {ping} ms`
+        `peer_users: {users} users`
+        `peer_group: {group} group`
+        `start_uptime: {uptime}`</blockquote>
 """
             await client.answer_inline_query(
                 inline_query.id,
