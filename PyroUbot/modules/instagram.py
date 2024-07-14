@@ -8,7 +8,7 @@ from pyrogram import Client
 
 from PyroUbot import *
 
-__MODULE__ = "instagram"
+__MODULE__ = "ɪɴsᴛᴀɢʀᴀᴍ"
 __HELP__ = """
  <blockquote><b>Bantuan Untuk Instagram</b>
 
@@ -148,7 +148,7 @@ class PinterestMediaDownloader:
 async def instacrot(client: Client, message):
     print("processing")
     if len(message.text.split()) < 2:
-        await message.reply_text("/ig [berikan url yang benar]")
+        await message.reply_text("<blockquote>Pengunaan : .ig url</blockquote>")
         return
 
     link = message.text.split()[1]
@@ -185,7 +185,7 @@ async def instacrot(client: Client, message):
             tracemsg = traceback.format_exc()
             await message.reply_text(tracemsg)
             await message.reply_text(
-                "400: Sorry, Unable To Find It  try another or report it  to @vckys or support chat @geezram 🤖"
+                "<blockquote>400: Sorry, Unable To Find It  try another or report it  to @vckys or support chat @wannoffc08 🤖</blockquote>"
             )
         finally:
             await m.delete()
