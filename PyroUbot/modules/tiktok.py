@@ -3,7 +3,7 @@ import requests
 
 from PyroUbot import *
 
-__MODULE__ = "tiktok"
+__MODULE__ = "ᴛɪᴋᴛᴏᴋ"
 __HELP__ = """
 <blockquote> <b>Bantuan Untuk Tiktok</b>
 
@@ -91,9 +91,7 @@ class TikTokDownloaderAPI:
 async def tiktok(client, message):
     if len(message.command) < 2:
         text = (
-            "Anda harus mengirimkan url yang benar untuk mendapatkan video dari TikTok.\n"
-            "Contoh:\n"
-            "- https://vt.tiktok.com/ZSN5V7BFX/\n"
+            "<blockquote>Pengunaan : .tt https://vt.tiktok.com/ZSN5V7BFX/</blockquote>"
         )
         return await message.reply_text(text, disable_web_page_preview=True)
 
@@ -101,26 +99,24 @@ async def tiktok(client, message):
     value = message.text.split(None, 1)[1]
 
     if "tiktok.com" in value and "https://" in value:
-        message_wait = await message.reply_text("🔍 <b>Memprosess...</b>")
+        message_wait = await message.reply_text("<blockquote>🔍 <b>Memprosess...</b></blockquote>")
 
         video = val.downloader(url=value, output_name="video.mp4")
         video_id = open("video.mp4", "rb")
 
         if video:
             await client.send_video(
-                message.chat.id, video_id, caption="• Powered by WannFyy"
+                message.chat.id, video_id, caption="<blockquote>Berikut Vidio Yang Anda Minta</blockquote>"
             )
         else:
             await message_wait.edit(
-                "Maaf, saya tidak dapat mendapatkan informasi tentang file ini.\nCoba lagi nanti atau kirim tautan lain."
+                "<blockquote>Maaf, saya tidak dapat mendapatkan informasi tentang file ini.\nCoba lagi nanti atau kirim tautan lain.</blockquote>"
             )
 
         await message_wait.delete()
     else:
         text = (
-            "Anda mengirimkan tautan yang salah ke postingan, silakan kirim tautan yang benar.\n"
-            "Contoh:\n"
-            "- https://vt.tiktok.com/ZSN5V7BFX/\n"
+            "<blockquote>Pengunaan : .tt https://vt.tiktok.com/ZSN5V7BFX/</blockquote>"
         )
         return await client.send_message(
             message.chat.id, text, disable_web_page_preview=True
