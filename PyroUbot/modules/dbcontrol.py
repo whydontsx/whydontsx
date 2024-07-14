@@ -121,7 +121,7 @@ async def _(client, message):
             userlist = f"• {count}: <a href=tg://user?id={user.id}>{user.first_name} {user.last_name or ''}</a> > <code>{user.id}</code>"
         except Exception:
             continue
-        text += f"{userlist}\n"
+        text += f"<blockquote>{userlist}</blockquote>\n"
     if not text:
         await message.reply_text("ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴘᴇɴɢɢᴜɴᴀ ʏᴀɴɢ ᴅɪᴛᴇᴍᴜᴋᴀɴ")
     else:
