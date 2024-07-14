@@ -1,7 +1,15 @@
 import os
 
 from PIL import Image, ImageDraw, ImageFont
+from PyroUbot import *
 
+__MODULE__ = "ɴᴜʟɪs"
+__HELP__ = """
+<blockquote><b>『 ʙᴀɴᴛᴜᴀɴ ᴜɴᴛᴜᴋ ɴᴜʟɪs 』</b>
+
+  <b>• ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}nulis</code> [ʀᴇᴘʟʏ/ᴛᴇxᴛ]
+  <b>• ᴘᴇɴᴊᴇʟᴀsᴀɴ:</b> ᴜɴᴛᴜᴋ ɴᴜʟɪs sᴇsᴜᴀᴛᴜ ᴋᴀʟɪᴍᴀᴛ/ᴋᴀᴛᴀ ᴅɪ ʙᴜᴋᴜ</blockquote>
+"""
 
 def text_set(text):
     lines = []
@@ -18,8 +26,8 @@ def text_set(text):
                     lines.append(line[((z - 1) * 55) : (z * 55)])
     return lines[:25]
 
-
-async def nulis_cmd(client, message):
+@PY.UBOT("nulis")
+async def _(client, message):
     if message.reply_to_message:
         reply = message.reply_to_message
         if reply.text or reply.caption:
