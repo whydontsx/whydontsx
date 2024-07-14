@@ -130,33 +130,6 @@ async def _(client, message):
     else:
         await message.reply_text(text)
         
-async def _(client, message):
-    user = message.from_user
-    seller_id = await get_list_from_vars(bot.me.id, "SELER_USERS")
-    if user.id not in seller_id:
-        return
-    prem = await get_list_from_vars(bot.me.id, "PREM_USERS")
-    prem_users = []
-
-    for user_id in prem:
-        try:
-            user = await client.get_users(user_id)
-            prem_users.append(
-                f"👤 [{user.first_name} {user.last_name or ''}](tg://user?id={user.id}) | `{user.id}`"
-            )
-        except Exception as error:
-            return await message.reply(str(error))
-
-    total_prem_users = len(prem_users)
-    if prem_users:
-        prem_list_text = "\n".join(prem_users)
-        return await message.reply(
-            f"<blockquote>📋 ᴅᴀꜰᴛᴀʀ ᴘʀᴇᴍɪᴜᴍ:\n\n{prem_list_text}\n\n• ᴛᴏᴛᴀʟ ᴘʀᴇᴍɪᴜᴍ: {total_prem_users}</blockquote>"
-        )
-    else:
-        return await message.reply("ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴘᴇɴɢɢᴜɴᴀ ʏᴀɴɢ ᴅɪᴛᴇᴍᴜᴋᴀɴ")
-
-
 @PY.UBOT("addseles")
 async def _(client, message):
     user = message.from_user
