@@ -108,6 +108,29 @@ async def _(client, message):
 
 @PY.UBOT("getprem")
 async def _(client, message):
+    text = ""
+    count = 0
+    user = message.from_user
+    seller_id = await get_list_from_vars(bot.me.id, "SELER_USERS")
+    if user.id not in seller_id:
+        return
+    prem = await get_list_from_vars(bot.me.id, "PREM_USERS")
+    prem_users = []
+
+    for user_id in prem:
+        try:
+            user = await bot.get_users(user_id)
+            count += 1
+            userlist = f"• {count}: <a href=tg://user?id={user.id}>{user.first_name} {user.last_name or ''}</a> > <code>{user.id}</code>"
+        except Exception:
+            continue
+        text += f"{userlist}\n"
+    if not text:
+        await message.reply_text("ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴘᴇɴɢɢᴜɴᴀ ʏᴀɴɢ ᴅɪᴛᴇᴍᴜᴋᴀɴ")
+    else:
+        await message.reply_text(text)
+        
+async def _(client, message):
     user = message.from_user
     seller_id = await get_list_from_vars(bot.me.id, "SELER_USERS")
     if user.id not in seller_id:
