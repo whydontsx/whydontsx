@@ -18,9 +18,11 @@ Bantuan Untuk Adzan
 
 @PY.UBOT("adzan")
 async def _(client, message):
-    LOKASI = message.text.split(None, 1)[1]
-    if len(message.command) < 2:
-        return await message.reply_text("<b>Silahkan Masukkan Nama Kota Anda</b>")
+    if len(message.text.split()) < 2:
+        await message.reply_text("<blockquote><b>Silahkan Masukkan Nama Kota Anda</b></blockquote>")
+        return
+    LOKASI = message.text.split()[1]
+    try:
     url = f"http://muslimsalat.com/{LOKASI}.json?key=bd099c5825cbedb9aa934e255a81a5fc"
     request = requests.get(url)
     if request.status_code != 200:
