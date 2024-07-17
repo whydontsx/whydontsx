@@ -8,7 +8,7 @@ __HELP__ = f"""
 Bantuan Untuk Adzan
 
 
-• Perintah: <code>{0}adzan</code> [nama kota]
+• Perintah: <code>.adzan</code> [nama kota]
 • Penjelasan: Untuk mengetahui jadwal adzan di lokasi anda.
 
 
