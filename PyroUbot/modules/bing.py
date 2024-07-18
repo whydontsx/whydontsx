@@ -9,7 +9,7 @@ __MODULE__ = "ʙɪɴɢ"
 __HELP__ = """
 <blockquote><b>Bantuan Untuk ʙɪɴɢ
 
-perintah : <code>{0}ask</code>
+perintah : <code>{0}bing</code>
     buat pertanyaan contoh <code>{0}bing</code> dimana letak Antartika</b></blockquote>
 """
 
