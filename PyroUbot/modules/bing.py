@@ -10,11 +10,11 @@ __HELP__ = """
 <blockquote><b>Bantuan Untuk AI
 
 perintah : <code>{0}ask</code>
-    buat pertanyaan contoh <code>{0}ask</code> dimana letak Antartika</b></blockquote>
+    buat pertanyaan contoh <code>{0}bing</code> dimana letak Antartika</b></blockquote>
 """
 
 
-@PY.UBOT("blackbox")
+@PY.UBOT("bing")
 @PY.TOP_CMD
 async def chat_gpt(client, message):
     try:
@@ -27,7 +27,7 @@ async def chat_gpt(client, message):
         else:
             prs = await message.reply_text(f"<emoji id=6226405134004389590>🔍</emoji>proccesing....")
             a = message.text.split(' ', 1)[1]
-            response = requests.get(f'https://api.botcahx.eu.org/api/search/blackbox-chat?text={a}&apikey=ApiKhususWannAza')
+            response = requests.get(f'https://api.botcahx.eu.org/api/search/bing-chat?text={a}&apikey=ApiKhususWannAza')
 
             try:
                 if "message" in response.json():
