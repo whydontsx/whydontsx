@@ -5,9 +5,9 @@ from pyrogram.enums import ChatAction, ParseMode
 from pyrogram import filters
 from pyrogram.types import Message
 
-__MODULE__ = "test"
+__MODULE__ = "ʙɪɴɢ"
 __HELP__ = """
-<blockquote><b>Bantuan Untuk AI
+<blockquote><b>Bantuan Untuk ʙɪɴɢ
 
 perintah : <code>{0}ask</code>
     buat pertanyaan contoh <code>{0}bing</code> dimana letak Antartika</b></blockquote>
@@ -22,7 +22,7 @@ async def chat_gpt(client, message):
 
         if len(message.command) < 2:
             await message.reply_text(
-                "<emoji id=5019523782004441717>❌</emoji>mohon gunakan format\ncontoh : ask bagaimana membuat donat?"
+                "<emoji id=5019523782004441717>❌</emoji>mohon gunakan format\ncontoh : .bing bagaimana membuat donat?"
             )
         else:
             prs = await message.reply_text(f"<emoji id=6226405134004389590>🔍</emoji>proccesing....")
