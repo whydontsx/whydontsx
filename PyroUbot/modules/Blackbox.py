@@ -5,7 +5,7 @@ from pyrogram.enums import ChatAction, ParseMode
 from pyrogram import filters
 from pyrogram.types import Message
 
-__MODULE__ = "ᴏᴘᴇɴᴀɪ"
+__MODULE__ = "test"
 __HELP__ = """
 <blockquote><b>Bantuan Untuk AI
 
@@ -14,7 +14,7 @@ perintah : <code>{0}ask</code>
 """
 
 
-@PY.UBOT("ask")
+@PY.UBOT("blackbox")
 @PY.TOP_CMD
 async def chat_gpt(client, message):
     try:
@@ -27,7 +27,7 @@ async def chat_gpt(client, message):
         else:
             prs = await message.reply_text(f"<emoji id=6226405134004389590>🔍</emoji>proccesing....")
             a = message.text.split(' ', 1)[1]
-            response = requests.get(f'https://api.botcahx.eu.org/api/search/openai-chat?text={a}&apikey=ApiKhususWannAza')
+            response = requests.get(f'https://api.botcahx.eu.org/api/search/blackbox-chat?text={a}&apikey=ApiKhususWannAza')
 
             try:
                 if "message" in response.json():
