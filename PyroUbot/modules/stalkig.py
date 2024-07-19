@@ -22,7 +22,7 @@ async def stalk_ig(client, message):
             response = requests.get(f'https://api.botcahx.eu.org/api/stalk/ig?username={a}&apikey=ApiKhususWannAza')
 
             try:
-            responseData = await response.json();
+            
                 if { username, fullName, bio, posts, followers, following, postsCount, photoUrl } in responseData.result():      
                     await prs.edit(
                       f"{username}"
