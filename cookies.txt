@@ -1,6 +1,6 @@
 # Netscape HTTP Cookie File
 # http://curl.haxx.se/rfc/cookie_spec.html
-# This is a generated file!  Do not edit.
+# This is a generated file! Do not edit.
 
 .youtube.com	TRUE	/	TRUE	1755954816	PREF	tz=Asia.Jakarta
 .youtube.com	TRUE	/	FALSE	1755935768	SID	g.a000mAhvzLVhukog8sBqhm06_4Wg2z4fXZU6HJgEIVyc_BjcVy-rnuvKe3aOc3Z3c_QRaVa7owACgYKAS4SARMSFQHGX2MiVMMW1oicdcyMh0JcOR_tkRoVAUF8yKq1Iu47VfPfNDcarS2VJM_c0076
