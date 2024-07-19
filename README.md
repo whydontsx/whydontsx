@@ -3,6 +3,9 @@
 apt update && apt upgrade -y
 ```
 ```
+apt install ffmpeg -y
+```
+```
 git clone https://github.com/wndrzzka/gayoubotwann
 ```
 ```
