@@ -6,7 +6,7 @@ import wget
 import os
 import glob
 
-__MODULE__ = "Couple"
+__MODULE__ = "ᴄᴏᴜᴘʟᴇ"
 __HELP__ = """
 <b>『 ᴄᴏᴜᴘʟᴇ 』</b>
 
