@@ -28,11 +28,11 @@ perintah : <code>{0}bcfd</code> or <code>{0}cfd</code>
 perintah : <code>{0}send</code>
     mengirim pesan ke user/group/channel
 
-perintah : <code>{0}auto_gcast</code>
+perintah : <code>{0}autobc</code>
     mengirim pesan siaran secara otomatis
 
 query:
-    |on/off |text |delay |remove |limit</b></blockquote>
+    |on/off |text |delay |list |remove |limit</b></blockquote>
 """
 
 
@@ -415,7 +415,7 @@ AG = []
 LT = []
 
 
-@PY.UBOT("auto_gcast")
+@PY.UBOT("autobc")
 @PY.TOP_CMD
 async def _(client, message):
     prs = await EMO.PROSES(client)
@@ -466,10 +466,10 @@ async def _(client, message):
 
                 done += 1
                 await msg.reply(f"""
-{bcs}auto_gcaꜱt done
+<blockquote>{bcs}autobc done
 putaran {done}
 {brhsl}ꜱucceꜱ {group} group
-{mng}wait {delay} minuteꜱ
+{mng}wait {delay} minuteꜱ</blockquote>
 """,
                     quote=True,
                 )
