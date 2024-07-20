@@ -5,16 +5,8 @@ from pyrogram.enums import ChatAction, ParseMode
 from pyrogram import filters
 from pyrogram.types import Message
 
-__MODULE__ = "ᴏᴘᴇɴᴀɪ"
-__HELP__ = """
-<blockquote><b>Bantuan Untuk AI
 
-perintah : <code>{0}ask</code>
-    buat pertanyaan contoh <code>{0}ask</code> dimana letak Antartika</b></blockquote>
-"""
-
-
-@PY.UBOT("ask")
+@PY.UBOT("stalkig")
 @PY.TOP_CMD
 async def chat_gpt(client, message):
     try:
@@ -27,13 +19,15 @@ async def chat_gpt(client, message):
         else:
             prs = await message.reply_text(f"<emoji id=6226405134004389590>🔍</emoji>proccesing....")
             a = message.text.split(' ', 1)[1]
-            response = requests.get(f'https://api.botcahx.eu.org/api/search/openai-chat?text={a}&apikey=ApiKhususWannAza')
+            response = requests.get(f'https://api.botcahx.eu.org/api/stalk/ig?username={a}&apikey=ApiKhususWannAza')
 
             try:
-                if "message" in response.json():
-                    x = response.json()["message"]                  
+            if response.status_code == 200:
+               data = response.json()
+               male_url = data['result']['male']
+               female_url = data['result']['female']             
                     await prs.edit(
-                      f"{x}\n\n<emoji id=5208727996315220567>✅</emoji>**pertanyaan ini dijawab oleh** {bot.me.mention}"
+                      f"{maleurl}\n\n<emoji id=5208727996315220567>✅</emoji>**pertanyaan ini dijawab oleh** {bot.me.mention}"
                     )
                 else:
                     await message.reply_text("No 'results' key found in the response.")
