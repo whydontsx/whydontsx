@@ -24,9 +24,19 @@ async def chat_gpt(client, message):
             if response.status_code == 200:
                 data = response.json()
                 if 'result' in data:
-                    username = data['result']['username']
+                    username = data['result']['username']['fullName']['bio']['posts']['followers']['following']['postsCount']['photoUrl']
                     await prs.edit(
-                        f"{username}\n\n<emoji id=5208727996315220567>✅</emoji>**pertanyaan ini dijawab oleh** {bot.me.mention}"
+                        f"
+╭─ •  「 Instagram Stalk 」
+│  ◦  Username : ${username}
+│  ◦  Nickname : ${fullName}
+│  ◦  Followers : ${followers}
+│  ◦  Following : ${following}
+│  ◦  Posting : ${postsCount}
+│  ◦  Link : https://instagram.com/${username}
+│  ◦  Bio : ${bio}
+╰──── •
+"
                     )
                 else:
                     await message.reply_text("No 'result' key found in the response.")
