@@ -24,7 +24,8 @@ async def chat_gpt(client, message):
             if response.status_code == 200:
                data = response.json()
                male_url = data['result']['male']
-               female_url = data['result']['female']             
+               female_url = data['result']['female']  
+         try:           
                     await prs.edit(
                       f"{maleurl}\n\n<emoji id=5208727996315220567>✅</emoji>**pertanyaan ini dijawab oleh** {bot.me.mention}"
                     )
