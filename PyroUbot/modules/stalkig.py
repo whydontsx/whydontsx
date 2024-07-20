@@ -4,7 +4,7 @@ import os
 from pyrogram import Client
 from PyroUbot import *
 
-__MODULE__ = "Stalkig"
+__MODULE__ = "sᴛᴀʟᴋɪɢ"
 __HELP__ = """
 <b>『 sᴛᴀʟᴋɪɢ 』</b>
 
