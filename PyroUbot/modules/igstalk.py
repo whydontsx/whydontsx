@@ -24,7 +24,7 @@ async def chat_gpt(client, message):
             if response.status_code == 200:
                 data = response.json()
                 if 'result' in data:
-                    username = data['result']['username']['fullName']['bio']['posts']['followers']['following']['postsCount']['photoUrl']
+                    username = data['result']['username']['fullName']['bio']['followers']['following']['postsCount']['photoUrl']
                     await prs.edit(
                         f"""
 ╭─ •  「 Instagram Stalk 」
