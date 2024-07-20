@@ -6,7 +6,7 @@ from pyrogram import *
 from pyrogram.types import *
 from io import BytesIO
 
-__MODULE__ = "cecan"
+__MODULE__ = "ᴄᴇᴄᴀɴ"
 __HELP__ = """
 <blockquote><b>『 ʙᴀɴᴛᴜᴀɴ ᴄᴇᴄᴀɴ 』</b>
 
