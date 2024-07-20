@@ -20,16 +20,19 @@ async def chat_gpt(client, message):
             prs = await message.reply_text(f"<emoji id=6226405134004389590>🔍</emoji>proccesing....")
             a = message.text.split(' ', 1)[1]
             response = requests.get(f'https://api.botcahx.eu.org/api/stalk/ig?username={a}&apikey=ApiKhususWannAza')
-         
+
             if response.status_code == 200:
-               data = response.json()
-               username = data['result']['username']       
+                data = response.json()
+                if 'result' in data:
+                    username = data['result']['username']
                     await prs.edit(
-                      f"{username}\n\n<emoji id=5208727996315220567>✅</emoji>**pertanyaan ini dijawab oleh** {bot.me.mention}"
+                        f"{username}\n\n<emoji id=5208727996315220567>✅</emoji>**pertanyaan ini dijawab oleh** {bot.me.mention}"
                     )
                 else:
-                    await message.reply_text("No 'results' key found in the response.")
-            except KeyError:
-                await message.reply_text("Error accessing the response.")
+                    await message.reply_text("No 'result' key found in the response.")
+            else:
+                await message.reply_text("Failed to get a valid response from the API.")
+    except KeyError:
+        await message.reply_text("Error accessing the response.")
     except Exception as e:
         await message.reply_text(f"{e}")
