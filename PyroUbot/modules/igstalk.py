@@ -21,7 +21,6 @@ async def chat_gpt(client, message):
             a = message.text.split(' ', 1)[1]
             response = requests.get(f'https://api.botcahx.eu.org/api/stalk/ig?username={a}&apikey=ApiKhususWannAza')
 
-            try:
             if response.status_code == 200:
                data = response.json()
                male_url = data['result']['male']
