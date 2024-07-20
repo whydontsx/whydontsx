@@ -20,12 +20,10 @@ async def chat_gpt(client, message):
             prs = await message.reply_text(f"<emoji id=6226405134004389590>🔍</emoji>proccesing....")
             a = message.text.split(' ', 1)[1]
             response = requests.get(f'https://api.botcahx.eu.org/api/stalk/ig?username={a}&apikey=ApiKhususWannAza')
-
+         try:
             if response.status_code == 200:
                data = response.json()
-               male_url = data['result']['male']
-               female_url = data['result']['female']  
-         try:           
+               male_url = data['result']['username']       
                     await prs.edit(
                       f"{maleurl}\n\n<emoji id=5208727996315220567>✅</emoji>**pertanyaan ini dijawab oleh** {bot.me.mention}"
                     )
