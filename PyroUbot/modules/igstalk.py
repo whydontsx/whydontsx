@@ -23,9 +23,9 @@ async def chat_gpt(client, message):
          try:
             if response.status_code == 200:
                data = response.json()
-               male_url = data['result']['username']       
+               username = data['result']['username']       
                     await prs.edit(
-                      f"{maleurl}\n\n<emoji id=5208727996315220567>✅</emoji>**pertanyaan ini dijawab oleh** {bot.me.mention}"
+                      f"{username}\n\n<emoji id=5208727996315220567>✅</emoji>**pertanyaan ini dijawab oleh** {bot.me.mention}"
                     )
                 else:
                     await message.reply_text("No 'results' key found in the response.")
