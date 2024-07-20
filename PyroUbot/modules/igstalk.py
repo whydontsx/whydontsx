@@ -24,17 +24,27 @@ async def chat_gpt(client, message):
             if response.status_code == 200:
                 data = response.json()
                 if 'result' in data:
-                    username = data['result']['username']['fullName']['bio']['followers']['following']['postsCount']['photoUrl']
+                    result = data['result']
+                    username = result.get('username', 'N/A')
+                    fullName = result.get('fullName', 'N/A')
+                    bio = result.get('bio', 'N/A')
+                    posts = result.get('posts', 'N/A')
+                    followers = result.get('followers', 'N/A')
+                    following = result.get('following', 'N/A')
+                    postsCount = result.get('postsCount', 'N/A')
+                    photoUrl = result.get('photoUrl', 'N/A')
+
                     await prs.edit(
                         f"""
 ╭─ •  「 Instagram Stalk 」
-│  ◦  Username : ${username}
-│  ◦  Nickname : ${fullName}
-│  ◦  Followers : ${followers}
-│  ◦  Following : ${following}
-│  ◦  Posting : ${postsCount}
-│  ◦  Link : https://instagram.com/${username}
-│  ◦  Bio : ${bio}
+│  ◦  Username : {username}
+│  ◦  Nickname : {fullName}
+│  ◦  Followers : {followers}
+│  ◦  Following : {following}
+│  ◦  Posting : {postsCount}
+│  ◦  Link : https://instagram.com/{username}
+│  ◦  Bio : {bio}
+│  ◦  Photo : {photoUrl}
 ╰──── •
 """
                     )
