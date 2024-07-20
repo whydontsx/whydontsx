@@ -26,7 +26,7 @@ async def chat_gpt(client, message):
                 if 'result' in data:
                     username = data['result']['username']['fullName']['bio']['posts']['followers']['following']['postsCount']['photoUrl']
                     await prs.edit(
-                        f"
+                        f"""
 ╭─ •  「 Instagram Stalk 」
 │  ◦  Username : ${username}
 │  ◦  Nickname : ${fullName}
@@ -36,7 +36,7 @@ async def chat_gpt(client, message):
 │  ◦  Link : https://instagram.com/${username}
 │  ◦  Bio : ${bio}
 ╰──── •
-"
+"""
                     )
                 else:
                     await message.reply_text("No 'result' key found in the response.")
