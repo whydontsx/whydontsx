@@ -9,7 +9,7 @@ __MODULE__ = "ᴀᴅᴢᴀɴ"
 __HELP__ = f"""
 <blockquote><b>『 bantuan untuk ᴀᴅᴢᴀɴ 』</b>
 
-  <b>• perintah:</b> <code>{PREFIX[0]}adzan</code> [nama kota]
+  <b>• perintah:</b> <code>.adzan</code> [nama kota]
   <b>• penjelasan:</b> Untuk mengetahui waktu adzan.</blockquote>
  
 """
