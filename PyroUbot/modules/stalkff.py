@@ -31,7 +31,6 @@ async def stalkff(client, message):
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
-            hasil = data['result']
             lyrics = data['region']
             photoUrl = data['img_url']
             caption = f"""
