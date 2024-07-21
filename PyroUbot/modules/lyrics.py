@@ -33,7 +33,7 @@ async def lyrics(client, message):
             data = response.json()
             hasil = data['result']
             lyrics = hasil['lyrics']
-            photoUrl = f"https://telegra.ph//file/e46111a04c3b614fd1632.jpg"
+            photoUrl = f"https://cdn.vectorstock.com/i/1000v/71/92/music-lyrics-logo-mark-for-concert-vector-35117192.jpg"
             caption = f"""
 <b><emoji id=5841235769728962577>⭐</emoji>{lyrics}</b>
 """
