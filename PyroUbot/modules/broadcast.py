@@ -452,11 +452,11 @@ async def _(client, message):
                     ):
                         try:
                             await asyncio.sleep(1)
-                            await client.send_message(dialog.chat.id, f"{txt} {random.choice(range(999))}")
+                            await client.send_message(dialog.chat.id, f"{txt}")
                             group += 1
                         except FloodWait as e:
                             await asyncio.sleep(e.value)
-                            await client.send_message(dialog.chat.id, f"{txt} {random.choice(range(999))}")
+                            await client.send_message(dialog.chat.id, f"{txt}")
                             group += 1
                         except Exception:
                             pass
