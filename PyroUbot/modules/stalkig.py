@@ -4,9 +4,9 @@ import os
 from pyrogram import Client
 from PyroUbot import *
 
-__MODULE__ = "sᴛᴀʟᴋɪɢ"
+__MODULE__ = "ꜱᴛᴀʟᴋɪɢ"
 __HELP__ = """
-<blockquote><b>『 sᴛᴀʟᴋɪɢ 』</b>
+<blockquote><b>『 ꜱᴛᴀʟᴋɪɢ 』</b>
 
   <b>➢ ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}stalkig</code> 
    <i>penjelasan:</b> untuk stalking instagram menggunakan username</i></blockquote>
