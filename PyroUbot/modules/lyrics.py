@@ -4,9 +4,9 @@ import os
 from pyrogram import Client
 from PyroUbot import *
 
-__MODULE__ = "lyrics"
+__MODULE__ = "ʟʏʀɪᴄꜱ"
 __HELP__ = """
-<b>『 lyrics 』</b>
+<b>『 ʟʏʀɪᴄꜱ 』</b>
 
   <b>➢ ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}lyrics</code> 
    <i>penjelasan:</b> search lyrics music</i>
