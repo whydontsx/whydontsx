@@ -27,11 +27,11 @@ async def chat_gpt(client, message):
         else:
             prs = await message.reply_text(f"<emoji id=6226405134004389590>🔍</emoji>proccesing....")
             a = message.text.split(' ', 1)[1]
-            response = requests.get(f'https://api.botcahx.eu.org/api/search/openai-chat?text={a}&apikey=ApiKhususWannAza')
+            response = requests.get(f'https://widipe.com/openai?text={a}')
 
             try:
-                if "message" in response.json():
-                    x = response.json()["message"]                  
+                if "result" in response.json():
+                    x = response.json()["result"]                  
                     await prs.edit(
                       f"{x}\n\n<emoji id=5208727996315220567>✅</emoji>**pertanyaan ini dijawab oleh** {bot.me.mention}"
                     )
