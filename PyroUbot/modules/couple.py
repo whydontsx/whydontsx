@@ -8,10 +8,10 @@ import glob
 
 __MODULE__ = "ᴄᴏᴜᴘʟᴇ"
 __HELP__ = """
-<b>『 ᴄᴏᴜᴘʟᴇ 』</b>
+<blockquote><b>『 ᴄᴏᴜᴘʟᴇ 』</b>
 
   <b>➢ ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}couple</code> <b>ᴊᴜᴍʟᴀʜ/ᴋᴀᴛᴀ_ᴋᴜɴᴄɪ</b> 
-   <i>penjelasan:</b> untuk mencari photo couple secara random</i>
+   <i>penjelasan:</b> untuk mencari photo couple secara random</i></blockquote>
 """
 
 @PY.UBOT("couple")
