@@ -6,10 +6,10 @@ from PyroUbot import *
 
 __MODULE__ = "sᴛᴀʟᴋtt"
 __HELP__ = """
-<b>『 sᴛᴀʟᴋtt 』</b>
+<blockquote><b>『 sᴛᴀʟᴋtt 』</b>
 
   <b>➢ ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}stalktt</code> 
-   <i>penjelasan:</b> untuk stalk tiktok menggunakan username</i>
+   <i>penjelasan:</b> untuk stalk tiktok menggunakan username</i></blockquote>
 """
 
 @PY.UBOT("stalktt")
