@@ -4,9 +4,9 @@ import os
 from pyrogram import Client
 from PyroUbot import *
 
-__MODULE__ = "stalkff"
+__MODULE__ = "ꜱᴛᴀʟᴋꜰꜰ"
 __HELP__ = """
-<blockquote><b>『 stalkff 』</b>
+<blockquote><b>『 ꜱᴛᴀʟᴋꜰꜰ 』</b>
 
   <b>➢ ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}stalkff</code> 
    <i>penjelasan:</b> search akun ff menggunakan id</i></blockquote>
