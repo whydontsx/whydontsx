@@ -23,18 +23,22 @@ async def stalkff(client, message):
     if len(message.command) != 2:
         return await jalan.edit(f"{ggl} Please use the command `stalkff` id akun.")
     
-    lyrics = message.command[1]
+    id = message.command[1]
     chat_id = message.chat.id
-    url = f"https://ff.lxonfire.workers.dev/?id={lyrics}"
+    url = f"https://ff.lxonfire.workers.dev/?id={id}"
     
     try:
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
-            lyrics = data['region']
+            Nicname = data['nickname']
+            region = data['region']
+            openid = data['open_id']
             photoUrl = data['img_url']
             caption = f"""
-<b><emoji id=5841235769728962577>⭐</emoji>{lyrics}</b>
+<b><emoji id=5841235769728962577>⭐</emoji>Nicname: <code>{Nicname}</code></b>
+<b><emoji id=5843952899184398024>⭐</emoji>Region: <code>{region}</code></b>
+<b><emoji id=5841243255856960314>⭐</emoji>OpenID: <code>{openid}</code></b>
 """
             photo_path = wget.download(photoUrl)
             await client.send_photo(chat_id, caption=caption, photo=photo_path)
