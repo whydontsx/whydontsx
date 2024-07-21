@@ -25,8 +25,7 @@ async def stalkig(client, message):
     
     username = message.command[1]
     chat_id = message.chat.id
-    api_key = "ApiKhususWannAza"
-    url = f"https://api.botcahx.eu.org/api/stalk/ig?username={username}&apikey={api_key}"
+    url = f"https://widipe.com/download/igstalk?username{username]"
     
     try:
         response = requests.get(url)
