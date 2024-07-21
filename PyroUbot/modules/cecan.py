@@ -24,7 +24,7 @@ __HELP__ = """
     <b>justinaxie</b>,
     <b>malaysia</b>,
     <b>japan</b>,
-    <b>korea</b>
+    <b>korea</b></blockquote>
 """
 
 URLS = {
