@@ -10,7 +10,6 @@ __HELP__ = f"""
 
   <b>• perintah:</b> <code>.adzan</code> [nama kota]
   <b>• penjelasan:</b> Untuk mengetahui waktu adzan.</blockquote>
- 
 """
 
 @PY.UBOT("adzan")
