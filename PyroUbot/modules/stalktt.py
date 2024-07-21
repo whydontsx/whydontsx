@@ -4,9 +4,9 @@ import os
 from pyrogram import Client
 from PyroUbot import *
 
-__MODULE__ = "sᴛᴀʟᴋtt"
+__MODULE__ = "ꜱᴛᴀʟᴋᴛᴛ"
 __HELP__ = """
-<blockquote><b>『 sᴛᴀʟᴋtt 』</b>
+<blockquote><b>『 ꜱᴛᴀʟᴋᴛᴛ 』</b>
 
   <b>➢ ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}stalktt</code> 
    <i>penjelasan:</b> untuk stalk tiktok menggunakan username</i></blockquote>
