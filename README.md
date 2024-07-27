@@ -9,10 +9,10 @@ apt install ffmpeg -y
 git clone https://github.com/wndrzzka/gayoubotwann
 ```
 ```
-cd gayoubotwan
+cd gayoubotwann
 ```
 ```
-screen -S gayoubotwan
+screen -S gayoubotwann
 ```
 ```
 bash installnode.sh
