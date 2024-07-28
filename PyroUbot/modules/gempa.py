@@ -27,12 +27,12 @@ async def stalkig(client, message):
         if response.status_code == 200:
             data = response.json()
             hasil = data['result']
-            lintang = data['lintang']
-            bujur = data['bujur']
-            magnitude = ['magnitude']
-            kedalaman = ['kedalaman']
-            potensi = ['potensi']
-            wilayah = ['wilayah']
+            lintang = hasil['lintang']
+            bujur = hasil['bujur']
+            magnitude = hasil['magnitude']
+            kedalaman = hasil['kedalaman']
+            potensi = hasil['potensi']
+            wilayah = hasil['wilayah']
             tanggal = hasil['tanggal']
             jam = hasil['jam']
             photoUrl = f"https://warning.bmkg.go.id/img/logo-bmkg.png"
