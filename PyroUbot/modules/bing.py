@@ -5,9 +5,9 @@ from pyrogram.enums import ChatAction, ParseMode
 from pyrogram import filters
 from pyrogram.types import Message
 
-__MODULE__ = "ʙɪɴɢ"
+__MODULE__ = "ʙɪɴɢᴀɪ"
 __HELP__ = """
-<blockquote><b>Bantuan Untuk ʙɪɴɢ
+<blockquote><b>Bantuan Untuk ʙɪɴɢᴀɪ
 
 perintah : <code>{0}bing</code>
     buat pertanyaan contoh <code>{0}bing</code> dimana letak Antartika</b></blockquote>
@@ -27,7 +27,7 @@ async def chat_gpt(client, message):
         else:
             prs = await message.reply_text(f"<emoji id=6226405134004389590>🔍</emoji>proccesing....")
             a = message.text.split(' ', 1)[1]
-            response = requests.get(f'https://api.botcahx.eu.org/api/search/bing-chat?text={a}&apikey=ApiKhususWannAza')
+            response = requests.get(f'https://widipe.com/bingai?text={a}')
 
             try:
                 if "message" in response.json():
