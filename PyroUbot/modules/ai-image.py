@@ -24,9 +24,9 @@ async def stalkig(client, message):
         return await jalan.edit(f"{ggl} Please use the command `stalkig` followed by the Instagram username.")
     
     prs = await message.reply_text(f"<emoji id=6226405134004389590>🔍</emoji>proccesing....")
-    text = message.text.split(' ', 1)[1]
+    a = message.text.split(' ', 1)[1]
     chat_id = message.chat.id
-     url = f"https://widipe.com/bingimg?text={text}"
+     url = f"https://widipe.com/bingimg?text={a}"
     
     try:
         response = requests.get(url)
