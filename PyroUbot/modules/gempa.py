@@ -27,12 +27,24 @@ async def stalkig(client, message):
         if response.status_code == 200:
             data = response.json()
             hasil = data['result']
+            lintang = data['lintang']
+            bujur = data['bujur']
+            magnitude = ['magnitude']
+            kedalaman = ['kedalaman']
+            potensi = ['potensi']
+            wilayah = ['wilayah']
             tanggal = hasil['tanggal']
             jam = hasil['jam']
             photoUrl = f"https://warning.bmkg.go.id/img/logo-bmkg.png"
             caption = f"""
-<b><emoji id=5841235769728962577>⭐</emoji>TANGGAL: <code>{tanggal}</code></b>
-<b><emoji id=5843952899184398024>⭐</emoji>JAM: <code>{jam}</code></b>
+╭─ •  「 Info Gempa Terkini 」
+│  ◦ Magnitude: <code>{magnitude}</code>
+│  ◦ Kedalaman: <code>{kedalaman}</code>
+│  ◦ Koordinat: <code>{bujur}, {lintang}</code>
+│  ◦ Waktu: <code>{tanggal}, {jam}</code>
+│  ◦ Lokasi: {wilayah}</code>
+│  ◦ Potensi: <code>{potensi}</code>
+╰──── •
 """
             photo_path = wget.download(photoUrl)
             await client.send_photo(chat_id, caption=caption, photo=photo_path)
