@@ -42,7 +42,7 @@ async def stalkig(client, message):
 │  ◦ <b>Kedalaman: <code>{kedalaman}</code></b>
 │  ◦ <b>Koordinat: <code>{bujur}, {lintang}</code></b>
 │  ◦ <b>Waktu: <code>{tanggal}, {jam}</code></b>
-│  ◦ <b>Lokasi: {wilayah}</code></b>
+│  ◦ <b>Lokasi: <code>{wilayah}</code></b>
 │  ◦ <b>Potensi: <code>{potensi}</code></b></blockquote>
 ╰──── •
 """
