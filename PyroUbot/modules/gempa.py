@@ -40,7 +40,7 @@ async def stalkig(client, message):
 ╭─ •  「 Info Gempa Terkini 」
 │  ◦ Magnitude: <code>{magnitude}</code>
 │  ◦ Kedalaman: <code>{kedalaman}</code>
-│  ◦ Koordinat: <code>{bujur}, {lintang}</code>
+│  ◦ Koordinat: <code>{bujur}</code>, {lintang}
 │  ◦ Waktu: <code>{tanggal}, {jam}</code>
 │  ◦ Lokasi: {wilayah}</code>
 │  ◦ Potensi: <code>{potensi}</code>
