@@ -31,8 +31,7 @@ async def stalkig(client, message):
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
-            hasil = data['result']
-            photoUrl = hasil['result']
+            photoUrl = data['result']
             caption = f"""
 <b><emoji id=5841235769728962577>⭐</emoji></b>
 """
