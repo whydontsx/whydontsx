@@ -29,7 +29,7 @@ async def stalkig(client, message):
             hasil = data['result']
             tanggal = hasil['tanggal']
             jam = hasil['jam']
-            photoUrl = hasil['image']
+            photoUrl = f"https://cdn.vectorstock.com/i/1000v/71/92/music-lyrics-logo-mark-for-concert-vector-35117192.jpg"
             caption = f"""
 <b><emoji id=5841235769728962577>⭐</emoji>TANGGAL: <code>{tanggal}</code></b>
 <b><emoji id=5843952899184398024>⭐</emoji>JAM: <code>{jam}</code></b>
