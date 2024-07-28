@@ -23,7 +23,7 @@ async def stalkig(client, message):
     if len(message.command) != 2:
         return await jalan.edit(f"{ggl} Please use the command `stalkig` followed by the Instagram username.")
     
-    a = message.text.split(' ', 1)[1]
+    a = message.command[1]
     chat_id = message.chat.id
      url = f"https://widipe.com/bingimg?text={a}"
     
