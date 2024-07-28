@@ -4,12 +4,12 @@ import os
 from pyrogram import Client
 from PyroUbot import *
 
-__MODULE__ = "gempa"
+__MODULE__ = "ɢᴇᴍᴘᴀ"
 __HELP__ = """
-<blockquote><b>『 gempa 』</b>
+<blockquote><b>『 ɢᴇᴍᴘᴀ 』</b>
 
   <b>➢ ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}gempa</code> 
-   <i>penjelasan:</b> untuk stalking instagram menggunakan username</i></blockquote>
+   <i>penjelasan:</b> cek info sekitar gempa bmkg</i></blockquote>
 """
 
 @PY.UBOT("gempa")
@@ -37,13 +37,13 @@ async def stalkig(client, message):
             jam = hasil['jam']
             photoUrl = f"https://warning.bmkg.go.id/img/logo-bmkg.png"
             caption = f"""
-╭─ •  「 Info Gempa Terkini 」
-│  ◦ Magnitude: <code>{magnitude}</code>
-│  ◦ Kedalaman: <code>{kedalaman}</code>
-│  ◦ Koordinat: <code>{bujur}</code>, {lintang}
-│  ◦ Waktu: <code>{tanggal}, {jam}</code>
-│  ◦ Lokasi: {wilayah}</code>
-│  ◦ Potensi: <code>{potensi}</code>
+<blockquote>╭─ •  「 <b>Info Gempa Terkini</b> 」
+│  ◦ <b>Magnitude: <code>{magnitude}</code></b>
+│  ◦ <b>Kedalaman: <code>{kedalaman}</code></b>
+│  ◦ <b>Koordinat: <code>{bujur}, {lintang}</code></b>
+│  ◦ <b>Waktu: <code>{tanggal}, {jam}</code></b>
+│  ◦ <b>Lokasi: {wilayah}</code></b>
+│  ◦ <b>Potensi: <code>{potensi}</code></b></blockquote>
 ╰──── •
 """
             photo_path = wget.download(photoUrl)
