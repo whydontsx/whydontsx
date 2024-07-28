@@ -32,10 +32,11 @@ async def stalkig(client, message):
         if response.status_code == 200:
             data = response.json()
             photoUrl = data['result']
+            randomIndex = Math.floor(Math.random() * photoUrl.length);
             caption = f"""
 <b><emoji id=5841235769728962577>⭐</emoji></b>
 """
-            photo_path = wget.download(photoUrl)
+            photo_path = wget.download(randomIndex)
             await client.send_photo(chat_id, caption=caption, photo=photo_path)
             if os.path.exists(photo_path):
                 os.remove(photo_path)
