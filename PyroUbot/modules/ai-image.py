@@ -1,4 +1,5 @@
 import requests
+import random
 import wget
 import os
 from pyrogram import Client
@@ -31,12 +32,11 @@ async def stalkig(client, message):
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
-            photoUrl = data['result']
-            randomIndex = Math.floor(Math.random() * photoUrl.length);
+            photoUrl = data['result'].random
             caption = f"""
 <b><emoji id=5841235769728962577>⭐</emoji></b>
 """
-            photo_path = wget.download(randomIndex)
+            photo_path = wget.download(photoUrl)
             await client.send_photo(chat_id, caption=caption, photo=photo_path)
             if os.path.exists(photo_path):
                 os.remove(photo_path)
