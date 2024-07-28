@@ -18,12 +18,11 @@ async def stalkig(client, message):
     sks = await EMO.BERHASIL(client)
     prs = await EMO.PROSES(client)
     
-    jalan = await message.reply(f"{prs} Processing...")
+    jalan = await message.reply(f"<emoji id=6226405134004389590>🔍</emoji>proccesing...")
     
     if len(message.command) != 2:
         return await jalan.edit(f"{ggl} Please use the command `stalkig` followed by the Instagram username.")
     
-    psrs = await message.reply_text(f"<emoji id=6226405134004389590>🔍</emoji>proccesing....")
     a = message.text.split(' ', 1)[1]
     chat_id = message.chat.id
      url = f"https://widipe.com/bingimg?text={a}"
