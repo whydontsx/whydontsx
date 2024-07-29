@@ -36,10 +36,10 @@ async def pin(client, message):
             caption = f"""
 <emoji id=5841235769728962577>⭐</emoji>Berikut Foto Yang Kamu Minta.
 """
-            photo_path = wget.download(data)
-            await client.send_photo(chat_id, caption=caption, photo=photo_path)
-            if os.path.exists(photo_path):
-                os.remove(photo_path)
+            
+            await client.send_photo(chat_id, caption=caption, photo=data)
+            if os.path.exists(data):
+                os.remove(data)
             
             await jalan.delete()
         else:
