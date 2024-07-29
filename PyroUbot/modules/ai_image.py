@@ -26,7 +26,7 @@ async def pin(client, message):
     
     a = message.text.split(' ', 1)[1]
     chat_id = message.chat.id
-    url = f"https://api.botcahx.eu.org/api/search/bing-img?text={a}&apikey=ApiKhususWannAza"
+    url = f"https://widipe.com/bingimg?text={a}"
     
     try:
         response = requests.get(url)
