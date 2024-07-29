@@ -24,7 +24,6 @@ async def pin(client, message):
     if len(message.command) != 2:
         return await jalan.edit(f"{ggl} Example .pinsearch asuna")
     
-    link = message.command[1]
     a = message.text.split(' ', 1)[1]
     chat_id = message.chat.id
     url = f"https://widipe.com/pinterest?query={a}"
@@ -36,8 +35,7 @@ async def pin(client, message):
             hasil = data['result']
             random_result = random.choice(hasil)
             caption = f"""
-<emoji id=5841235769728962577>⭐</emoji>PinUrl: 
-<emoji id=5843952899184398024>⭐</emoji>Title: 
+<emoji id=5841235769728962577>⭐</emoji>Berikut Foto Yang Kamu Minta.
 """
             photo_path = wget.download(random_result)
             await client.send_photo(chat_id, caption=caption, photo=photo_path)
