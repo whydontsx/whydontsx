@@ -31,7 +31,7 @@ async def pin(client, message):
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
-            hasil = data['data']
+            hasil = data['result']['data']
             pin_url = hasil['pin_url']
             photoUrl = hasil['image']
             title = hasil['title']
