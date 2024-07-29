@@ -10,7 +10,7 @@ __HELP__ = """
 <blockquote><b>『 pinterest 』</b>
 
   <b>➢ ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}pinsearch</code> 
-   <i>penjelasan:</b> mendowload media dari pencarian</i></blockquote>
+   <i>penjelasan:</b> mendowload media dari pencarian.</i></blockquote>
 """
 
 @PY.UBOT("pinsearch")
