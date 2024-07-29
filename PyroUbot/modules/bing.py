@@ -30,8 +30,8 @@ async def chat_gpt(client, message):
             response = requests.get(f'https://widipe.com/bingai?text={a}')
 
             try:
-                if "message" in response.json():
-                    x = response.json()["message"]                  
+                if "result" in response.json():
+                    x = response.json()["result"]                  
                     await prs.edit(
                       f"{x}\n\n<emoji id=5208727996315220567>✅</emoji>**pertanyaan ini dijawab oleh** {bot.me.mention}"
                     )
