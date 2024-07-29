@@ -36,7 +36,7 @@ async def cuaca(client, message):
             minTemp = hasil['minTemp']
             humidity = hasil['humidity']
             windSpeed = hasil['windSpeed']
-            photoUrl = f"https://data.bmkg.go.id/include/assets/img/cuaca.svg"
+            photoUrl = f"https://telegra.ph//file/9354c197366cde09650fd.jpg"
             caption = f"""
 <blockquote>╭─ •  「 <b>Info Cuaca Terkini</b> 」
 │  ◦ <b>location: <code>{location}</code></b>
