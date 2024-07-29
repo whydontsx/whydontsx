@@ -5,7 +5,7 @@ import random
 from pyrogram import Client
 from PyroUbot import *
 
-__MODULE__ = "pinterest"
+__MODULE__ = "ᴘɪɴsᴇᴀʀᴄʜ"
 __HELP__ = """
 <blockquote><b>『 pinterest 』</b>
 
