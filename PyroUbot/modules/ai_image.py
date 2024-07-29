@@ -21,7 +21,7 @@ async def pin(client, message):
     
     jalan = await message.reply(f"{prs} Processing...")
     
-    if len(message.command) != 2:
+    if len(message.command) < 2:
         return await jalan.edit(f"{ggl} Example .ai_image kucing lucu")
     
     a = message.text.split(' ', 1)[1]
