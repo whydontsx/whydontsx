@@ -26,18 +26,17 @@ async def pin(client, message):
     
     a = message.text.split(' ', 1)[1]
     chat_id = message.chat.id
-    url = f"https://widipe.com/bingimg?text={a}"
+    url = f"https://widipe.com/gimage?query={a}"
     
     try:
         response = requests.get(url)
         if response.status_code == 200:
             data = response.json()
-            hasil = data['result']
-            random_result = random.choice(hasil)
+            
             caption = f"""
 <emoji id=5841235769728962577>⭐</emoji>Berikut Foto Yang Kamu Minta.
 """
-            photo_path = wget.download(random_result)
+            photo_path = wget.download(data)
             await client.send_photo(chat_id, caption=caption, photo=photo_path)
             if os.path.exists(photo_path):
                 os.remove(photo_path)
