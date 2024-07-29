@@ -17,9 +17,8 @@ async def _(client, message):
     buttons = BTN.START(message)
     msg = MSG.START(message)
     await message.reply(
-        msg,
-        reply_markup=InlineKeyboardMarkup(buttons)),
-        message_effect_id=5104841245755180586
+        msg, message_effect_id=5104841245755180586,
+        reply_markup=InlineKeyboardMarkup(buttons))
 
 
 @PY.CALLBACK("bahan")
