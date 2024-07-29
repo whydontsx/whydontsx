@@ -19,7 +19,6 @@ async def _(client, message):
     await message.reply(
         msg,
         reply_markup=InlineKeyboardMarkup(buttons)),
-        disable_web_page_preview=True,
         message_effect_id=5104841245755180586
 
 
