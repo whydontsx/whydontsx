@@ -4,12 +4,12 @@ import os
 from pyrogram import Client
 from PyroUbot import *
 
-__MODULE__ = "ɢᴇᴍᴘᴀ"
+__MODULE__ = "ᴄᴜᴀᴄᴀ"
 __HELP__ = """
-<blockquote><b>『 ɢᴇᴍᴘᴀ 』</b>
+<blockquote><b>『 cuaca 』</b>
 
-  <b>➢ ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}gempa</code> 
-   <i>penjelasan:</b> cek info sekitar gempa bmkg</i></blockquote>
+  <b>➢ ᴘᴇʀɪɴᴛᴀʜ:</b> <code>{0}cuaca</code> 
+   <i>penjelasan:</b> cek info cuaca di kota kota besar.</i></blockquote>
 """
 
 @PY.UBOT("cuaca")
@@ -19,6 +19,7 @@ async def cuaca(client, message):
     prs = await EMO.PROSES(client)
     
     jalan = await message.reply(f"{prs} Processing...")
+    a = message.text.split(' ', 1)[1]
     chat_id = message.chat.id
     url = f"https://widipe.com/weather?text={a}"
     
@@ -27,23 +28,23 @@ async def cuaca(client, message):
         if response.status_code == 200:
             data = response.json()
             hasil = data['result']
-            lintang = hasil['lintang']
-            bujur = hasil['bujur']
-            magnitude = hasil['magnitude']
-            kedalaman = hasil['kedalaman']
-            potensi = hasil['potensi']
-            wilayah = hasil['wilayah']
-            tanggal = hasil['tanggal']
-            jam = hasil['jam']
-            photoUrl = f"https://warning.bmkg.go.id/img/logo-bmkg.png"
+            location = hasil['location']
+            country = hasil['country']
+            weather = hasil['weather']
+            currentTemp = hasil['currentTemp']
+            maxTemp = hasil['maxTemp']
+            minTemp = hasil['minTemp']
+            humidity = hasil['humidity']
+            windSpeed = hasil['windSpeed']
+            photoUrl = f"https://data.bmkg.go.id/include/assets/img/cuaca.svg"
             caption = f"""
-<blockquote>╭─ •  「 <b>Info Gempa Terkini</b> 」
-│  ◦ <b>Magnitude: <code>{magnitude}</code></b>
-│  ◦ <b>Kedalaman: <code>{kedalaman}</code></b>
-│  ◦ <b>Koordinat: <code>{bujur}, {lintang}</code></b>
-│  ◦ <b>Waktu: <code>{tanggal}, {jam}</code></b>
-│  ◦ <b>Lokasi: <code>{wilayah}</code></b>
-│  ◦ <b>Potensi: <code>{potensi}</code></b></blockquote>
+<blockquote>╭─ •  「 <b>Info Cuaca Terkini</b> 」
+│  ◦ <b>location: <code>{location}</code></b>
+│  ◦ <b>country: <code>{country}</code></b>
+│  ◦ <b>weather: <code>{weather}</code></b>
+│  ◦ <b>currentTemp: <code>{currentTemp}</code></b>
+│  ◦ <b>Temp: <code>{maxTemp}, {minTemp}</code></b>
+│  ◦ <b>windSpeed: <code>{windSpeed}</code></b></blockquote>
 ╰──── •
 """
             photo_path = wget.download(photoUrl)
