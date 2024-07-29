@@ -25,8 +25,9 @@ async def pin(client, message):
         return await jalan.edit(f"{ggl} Example .pinsearch asuna")
     
     link = message.command[1]
+    a = message.text.split(' ', 1)[1]
     chat_id = message.chat.id
-    url = f"https://widipe.com/pinterest?query={link}"
+    url = f"https://widipe.com/pinterest?query={a}"
     
     try:
         response = requests.get(url)
