@@ -25,7 +25,7 @@ perintah : <code>{0}stopg</code>
 perintah : <code>{0}bcfd</code> or <code>{0}cfd</code>
     mengirim pesan siaran secara forward
 
-perintah : <code>{0}send</code>
+perintah : <code>{0}sends</code>
     mengirim pesan ke user/group/channel
 
 perintah : <code>{0}autobc</code>
@@ -352,7 +352,7 @@ async def _(client, message):
     await msg.edit(f"{brhsl}ꜱemua blackliꜱt broadcaꜱt berhaꜱil di hapuꜱ")
 
 
-@PY.UBOT("send")
+@PY.UBOT("sends")
 @PY.TOP_CMD
 async def _(client, message):
     if message.reply_to_message:
@@ -377,7 +377,7 @@ async def _(client, message):
                 return await message.reply(f"{t}")
     else:
         if len(message.command) < 3:
-            return await message.reply("Ketik yang bener kntl")
+            return await message.reply("contoh : .send halo")
         chat_id, chat_text = message.text.split(None, 2)[1:]
         try:
             if "_" in chat_id:
