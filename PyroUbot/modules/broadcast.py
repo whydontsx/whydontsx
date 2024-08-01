@@ -130,7 +130,7 @@ async def gcast_handler(client, message):
                 await text.copy(chat_id)
             else:
                 await client.send_message(chat_id, 
-                 text
+                 text, f"test asyyyyy"
                 )
             done += 1
         except FloodWait as e:
@@ -140,7 +140,7 @@ async def gcast_handler(client, message):
                     await text.copy(chat_id)
                 else:
                     await client.send_message(chat_id, 
-                   text
+                   text, f"test asyyyyy"
                     )
                 done += 1
             except (Exception, ChannelPrivate):
