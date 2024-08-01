@@ -112,7 +112,7 @@ async def gcast_handler(client, message):
 
     if command not in ["group", "users", "all"] or not text:
         gcast_progress.remove(client.me.id)
-        return await gcs.edit(f"<blockquote><code>{message.text.split()[0]}</code> <b>[ᴛʏᴘᴇ] [ᴛᴇxᴛ/ʀᴇᴘʟʏ]</b> {ggl}</blockquote>")
+        return await gcs.edit(f"{ggl}{message.text.split()[0]} ᴛʏᴘᴇ [ʀᴇᴘʟʏ]")
     chats = await get_data_id(client, command)
     blacklist = await get_list_from_vars(client.me.id, "BL_ID")
 
@@ -130,7 +130,7 @@ async def gcast_handler(client, message):
                 await text.copy(chat_id)
             else:
                 await client.send_message(chat_id, 
-                 text, f"test asyyyyy"
+                 text
                 )
             done += 1
         except FloodWait as e:
@@ -140,7 +140,7 @@ async def gcast_handler(client, message):
                     await text.copy(chat_id)
                 else:
                     await client.send_message(chat_id, 
-                   text, f"test asyyyyy"
+                   text
                     )
                 done += 1
             except (Exception, ChannelPrivate):
@@ -178,16 +178,16 @@ async def _(client, message):
     ggl = await EMO.GAGAL(client)
     bcs = await EMO.BROADCAST(client)
     
-    _msg = f"{prs}proceꜱꜱing..."
+    _msg = f"<b>{prs}ᴍᴇᴍᴘʀᴏsᴇs...</b>"
     gcs = await message.reply(_msg)
 
     command, text = extract_type_and_msg(message)
     
     if command not in ["group", "users", "all"] or not text:
-        return await gcs.edit(f"{ggl}{message.text.split()[0]} type [reply]")
+        return await gcs.edit(f"{ggl}{message.text.split()[0]} ᴛʏᴘᴇ [ʀᴇᴘʟʏ]")
 
     if not message.reply_to_message:
-        return await gcs.edit(f"{ggl}{message.text.split()[0]} type [reply]")
+        return await gcs.edit(f"{ggl}{message.text.split()[0]} ᴛʏᴘᴇ [ʀᴇᴘʟʏ]")
 
     chats = await get_data_id(client, command)
     blacklist = await get_list_from_vars(client.me.id, "BL_ID")
@@ -217,9 +217,9 @@ async def _(client, message):
 
     await gcs.delete()
     _gcs = f"""
-{bcs}broadcaꜱt fordward done
-{brhsl}ꜱucceꜱ {done} group
-{ggl}failed {failed} group
+<blockquote><b>{bcs}ʙʀᴏᴀᴅᴄᴀꜱᴛ ғᴏʀᴅᴡᴀʀᴅ ᴅᴏɴᴇ</blockquote>
+<blockquote>{brhsl}ʙᴇʀʜᴀsɪʟ : {done} ᴄʜᴀᴛ
+{ggl}ɢᴀɢᴀʟ : {failed} ᴄʜᴀᴛ</blockquote></b>
 """
     return await message.reply(_gcs)
 
