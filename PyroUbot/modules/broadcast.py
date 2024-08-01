@@ -127,9 +127,9 @@ async def gcast_handler(client, message):
 
         try:
             if message.reply_to_message:
-                await text.copy(f"{chat_id}\n\n<b>-- USERBOT 15K/BULAN BY {bot.me.mention} --</b>")
+                await text.copy(chat_id)
             else:
-                await client.send_message(f"{chat_id}\n\n<b>-- USERBOT 15K/BULAN BY {bot.me.mention} --</b>", 
+                await client.send_message(chat_id, 
                  text
                 )
             done += 1
@@ -137,9 +137,9 @@ async def gcast_handler(client, message):
             await asyncio.sleep(e.value)
             try:
                 if message.reply_to_message:
-                    await text.copy(f"{chat_id}\n\n<b>-- USERBOT 15K/BULAN BY {bot.me.mention} --</b>")
+                    await text.copy(chat_id)
                 else:
-                    await client.send_message(f"{chat_id}\n\n<b>-- USERBOT 15K/BULAN BY {bot.me.mention} --</b>", 
+                    await client.send_message(chat_id, 
                    text
                     )
                 done += 1
