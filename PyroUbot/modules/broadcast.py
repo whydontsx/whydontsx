@@ -129,7 +129,7 @@ async def gcast_handler(client, message):
             if message.reply_to_message:
                 await text.copy(chat_id)
             else:
-                await client.send_message(chat_id", 
+                await client.send_message(chat_id, 
                  text
                 )
             done += 1
