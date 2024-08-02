@@ -167,7 +167,7 @@ async def stopg_handler(client, message):
     global gcast_progress
     if client.me.id in gcast_progress:
         gcast_progress.remove(client.me.id)
-        return await message.reply(f"<blockquote><b>ɢᴄᴀsᴛ ʙᴇʀʜᴀsɪʟ ᴅɪ ᴄᴀɴᴄᴇʟ</b> sks}</blockquote>")
+        return await message.reply(f"<blockquote><b>ɢᴄᴀsᴛ ʙᴇʀʜᴀsɪʟ ᴅɪ ᴄᴀɴᴄᴇʟ</b></blockquote>")
     else:
         return await message.reply(f"<blockquote><b>{ggl}ᴛɪᴅᴀᴋ ᴀᴅᴀ ɢᴄᴀsᴛ !!!</b></blockquote>")
 
