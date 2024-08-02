@@ -97,66 +97,47 @@ gcast_progress = []
 
 @PY.UBOT("bc|gikes")
 @PY.TOP_CMD
- async def gcast_handler(client, message):
-    global gcast_progress
-    gcast_progress.append(client.me.id)
-    
+ async def gcast_handler(client, message): 
     prs = await EMO.PROSES(client)
-    sks = await EMO.BERHASIL(client)
+    brhsl = await EMO.BERHASIL(client)
     ggl = await EMO.GAGAL(client)
     bcs = await EMO.BROADCAST(client)
-    ktrng = await EMO.BL_KETERANGAN(client)    
-    _msg = f"<b>{prs}ᴍᴇᴍᴘʀᴏsᴇs...</b>"
-    gcs = await message.reply(_msg)    
+
+    _msg = await eor(message, f"""<b>{prs}{ping_msg["proses"]}</b>""")
+
     command, text = extract_type_and_msg(message)
 
     if command not in ["group", "users", "all"] or not text:
-        gcast_progress.remove(client.me.id)
-        return await gcs.edit(f"{ggl}{message.text.split()[0]} ᴛʏᴘᴇ [ʀᴇᴘʟʏ]")
+        return await _msg.edit(f"{ggl}<code>{message.text.split()[0]}</code> <b>[ɢʀᴏᴜᴘ/ᴜꜱᴇʀꜱ/ᴀʟʟ] [ᴛᴇxᴛ/ʀᴇᴘʟʏ]</b>")
+
     chats = await get_data_id(client, command)
     blacklist = await get_list_from_vars(client.me.id, "BL_ID")
 
     done = 0
     failed = 0
     for chat_id in chats:
-        if client.me.id not in gcast_progress:
-            await gcs.edit(f"<blockquote><b>ᴘʀᴏsᴇs ɢᴄᴀsᴛ ʙᴇʀʜᴀsɪʟ ᴅɪ ʙᴀᴛᴀʟᴋᴀɴ !</b> {sks}</blockquote>")
-            return
         if chat_id in blacklist or chat_id in BLACKLIST_CHAT:
             continue
-
         try:
-            if message.reply_to_message:
-                await text.copy(chat_id)
-            else:
-                await client.send_message(chat_id, 
-                 f"{text}\n\nBY : USU"
-                )
+            await (text.copy(chat_id) if message.reply_to_message else client.send_message(chat_id, f"{text}\nby usu"))
             done += 1
         except FloodWait as e:
             await asyncio.sleep(e.value)
-            try:
-                if message.reply_to_message:
-                    await text.copy(chat_id)
-                else:
-                    await client.send_message(chat_id, 
-                 f"{text}\n\nBY : USU"
-                    )
-                done += 1
-            except (Exception, ChannelPrivate):
-                failed += 1
-        except (Exception, ChannelPrivate):
+            await (text.copy(chat_id) if message.reply_to_message else client.send_message(chat_id, text))
+            done += 1            
+        except Exception:
             failed += 1
+            pass
+    await _msg.delete()
 
-    gcast_progress.remove(client.me.id)
-    await gcs.delete()
-    _gcs = f"""
-<blockquote><b>{bcs}ʙʀᴏᴀᴅᴄᴀsᴛ ᴛᴇʀᴋɪʀɪᴍ</b></blockquote>
-<blockquote><b>{sks}ʙᴇʀʜᴀsɪʟ : {done} ᴄʜᴀᴛ</b>
-<b>{ggl}ɢᴀɢᴀʟ : {failed} ᴄʜᴀᴛ</b>
-<b>{ktrng}ᴛʏᴘᴇ :</b> <code>{command}</code></blockquote>
-"""
-    return await message.reply(_gcs)
+    return await eor(message, f"""
+<b>{bcs}sukses</b>
+<b>{brhsl}ꜱᴜᴄᴄᴇꜱ {done} ɢʀᴏᴜᴘ</b>
+<b>{ggl}ꜰᴀɪʟᴇᴅ {failed} ɢʀᴏᴜᴘ</b>
+
+<b>ᴘᴏᴡᴇʀᴇᴅ ʙʏ : <a href=tg://user?id={client.me.id}>{client.me.first_name} {client.me.last_name or ''}</a></b>
+""")
+    
 
 @PY.UBOT("stopg")
 @PY.TOP_CMD
@@ -166,7 +147,7 @@ async def stopg_handler(client, message):
     global gcast_progress
     if client.me.id in gcast_progress:
         gcast_progress.remove(client.me.id)
-        return await message.reply(f"<blockquote><b>ɢᴄᴀsᴛ ʙᴇʀʜᴀsɪʟ ᴅɪ ᴄᴀɴᴄᴇʟ</b> {sks}</blockquote>")
+        return await message.reply(f"<blockquote><b>ɢᴄᴀsᴛ ʙᴇʀʜᴀsɪʟ ᴅɪ ᴄᴀɴᴄᴇʟ</b> sks}</blockquote>")
     else:
         return await message.reply(f"<blockquote><b>{ggl}ᴛɪᴅᴀᴋ ᴀᴅᴀ ɢᴄᴀsᴛ !!!</b></blockquote>")
 
