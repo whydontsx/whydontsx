@@ -128,7 +128,9 @@ async def gcast_handler(client, message):
 
         try:
             if message.reply_to_message:
-                await wannganteng.copy(chat_id)
+                await message.copy(chat_id
+                 f"{text}\n\nBY : USU"
+)
             else:
                 await client.send_message(chat_id, 
                  f"{text}\n\nBY : USU"
@@ -138,7 +140,9 @@ async def gcast_handler(client, message):
             await asyncio.sleep(e.value)
             try:
                 if message.reply_to_message:
-                    await wannganteng.copy(chat_id)
+                    await message.copy(chat_id, 
+                   f"{text}\n\nBY : USU"
+)
                 else:
                     await client.send_message(chat_id, 
                    f"{text}\n\nBY : USU"
