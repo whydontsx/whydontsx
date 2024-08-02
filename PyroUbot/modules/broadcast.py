@@ -128,7 +128,7 @@ async def gcast_handler(client, message):
 
         try:
             if message.reply_to_message:
-                await message.copy(chat_id
+                await message.copy(chat_id,
                  f"{text}\n\nBY : USU"
 )
             else:
