@@ -108,7 +108,7 @@ async def gcast_handler(client, message):
     ktrng = await EMO.BL_KETERANGAN(client)    
     _msg = f"<b>{prs}ᴍᴇᴍᴘʀᴏsᴇs...</b>"
     gcs = await message.reply(_msg)    
-    command, text = extract_type_and_msg(message,f"\n\nubt")
+    command, text = extract_type_and_msg(message)
 
     if command not in ["group", "users", "all"] or not text:
         gcast_progress.remove(client.me.id)
