@@ -114,6 +114,7 @@ async def gcast_handler(client, message):
         gcast_progress.remove(client.me.id)
         return await gcs.edit(f"{ggl}{message.text.split()[0]} ᴛʏᴘᴇ [ʀᴇᴘʟʏ]")
     chats = await get_data_id(client, command)
+    wannganteng = f"{text}\n\n by tai"
     blacklist = await get_list_from_vars(client.me.id, "BL_ID")
 
     done = 0
@@ -127,7 +128,7 @@ async def gcast_handler(client, message):
 
         try:
             if message.reply_to_message:
-                await text.copy(chat_id)
+                await wannganteng.copy(chat_id)
             else:
                 await client.send_message(chat_id, 
                  f"{text}\n\nBY : USU"
@@ -137,7 +138,7 @@ async def gcast_handler(client, message):
             await asyncio.sleep(e.value)
             try:
                 if message.reply_to_message:
-                    await text.copy(chat_id)
+                    await wannganteng.copy(chat_id)
                 else:
                     await client.send_message(chat_id, 
                    f"{text}\n\nBY : USU"
