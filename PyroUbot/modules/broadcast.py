@@ -114,7 +114,7 @@ async def gcast_handler(client, message):
         gcast_progress.remove(client.me.id)
         return await gcs.edit(f"{ggl}{message.text.split()[0]} ᴛʏᴘᴇ [ʀᴇᴘʟʏ]")
     chats = await get_data_id(client, command)
-    wannganteng = text(f"\n\n by tai")
+    wannganteng = message.text(f"\n\n by tai")
     blacklist = await get_list_from_vars(client.me.id, "BL_ID")
 
     done = 0
