@@ -97,7 +97,7 @@ gcast_progress = []
 
 @PY.UBOT("bc|gikes")
 @PY.TOP_CMD
-async def gcast_handler(client, message):
+async def gcast_handler(client, message): 
     global gcast_progress
     gcast_progress.append(client.me.id)
     
