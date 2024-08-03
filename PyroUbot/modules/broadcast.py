@@ -96,6 +96,7 @@ ubot : {bot.me.mention}</blockquote>
 gcast_progress = []
 @PY.UBOT("bc|gikes")
 @PY.TOP_CMD
+@PY.TOP_CMD
 async def gcast_handler(client, message):
     global gcast_progress
     gcast_progress.append(client.me.id)
@@ -126,24 +127,20 @@ async def gcast_handler(client, message):
 
         try:
             if message.reply_to_message:
-                await text.copy(chat_id, + f"\n\nBY : USU"
-                 
-)
+                await text.copy(chat_id)
             else:
                 await client.send_message(chat_id, 
-                 f"{text}\n\nBY : USU"
+                 text
                 )
             done += 1
         except FloodWait as e:
             await asyncio.sleep(e.value)
             try:
                 if message.reply_to_message:
-                    await text.copy(chat_id, + f"\n\nBY : USU"
-                   
-)
+                    await text.copy(chat_id)
                 else:
                     await client.send_message(chat_id, 
-                   f"{text}\n\nBY : USU"
+                   text
                     )
                 done += 1
             except (Exception, ChannelPrivate):
