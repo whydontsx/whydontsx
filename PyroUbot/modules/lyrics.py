@@ -36,6 +36,8 @@ async def lyrics(client, message):
             photoUrl = f"https://cdn.vectorstock.com/i/1000v/71/92/music-lyrics-logo-mark-for-concert-vector-35117192.jpg"
             caption = f"""
 <b><emoji id=5841235769728962577>⭐</emoji>{lyrics}</b>
+
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
 """
             photo_path = wget.download(photoUrl)
             await client.send_photo(chat_id, caption=caption, photo=photo_path)
