@@ -94,6 +94,7 @@ ubot : {bot.me.mention}</blockquote>
         print("Status tidak valid atau status.text tidak ada")
 
 gcast_progress = []
+
 @PY.UBOT("bc|gikes")
 @PY.TOP_CMD
 async def gcast_handler(client, message):
@@ -135,7 +136,7 @@ async def gcast_handler(client, message):
             await asyncio.sleep(e.value)
             try:
                 if message.reply_to_message:
-                await text.copy(chat_id)
+                    await text.copy(chat_id)
                 else:
                     await client.send_message(chat_id, f"{text}\n\n<b>-- USERBOT 15K/BULAN BY @SEWAUBOT --</b>"
                     )
