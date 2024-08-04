@@ -198,16 +198,6 @@ class BTN:
         return button
     def PLUS_MINUS(query, user_id):
         button = [
-            [
-                InlineKeyboardButton(
-                    "-1",
-                    callback_data=f"kurang {query}",
-                ),
-                InlineKeyboardButton(
-                    "+1",
-                    callback_data=f"tambah {query}",
-                ),
-            ],
             [InlineKeyboardButton("✅ ᴋᴏɴꜰɪʀᴍᴀsɪ", callback_data="confirm")],
             [InlineKeyboardButton("🔙 ʙᴀᴛᴀʟᴋᴀɴ", callback_data=f"home {user_id}")],
         ]
