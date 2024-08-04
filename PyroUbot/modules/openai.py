@@ -9,12 +9,12 @@ __MODULE__ = "ᴏᴘᴇɴᴀɪ"
 __HELP__ = """
 <blockquote><b>Bantuan Untuk AI
 
-perintah : <code>{0}ask</code>
+perintah : <code>{0}ai</code>
     buat pertanyaan contoh <code>{0}ask</code> dimana letak Antartika</b></blockquote>
 """
 
 
-@PY.UBOT("ask")
+@PY.UBOT("ai")
 @PY.TOP_CMD
 async def chat_gpt(client, message):
     try:
@@ -22,7 +22,7 @@ async def chat_gpt(client, message):
 
         if len(message.command) < 2:
             await message.reply_text(
-                "<emoji id=5019523782004441717>❌</emoji>mohon gunakan format\ncontoh : ask bagaimana membuat donat?"
+                "<emoji id=5019523782004441717>❌</emoji>mohon gunakan format\ncontoh : .ai bagaimana membuat donat?"
             )
         else:
             prs = await message.reply_text(f"<emoji id=6226405134004389590>🔍</emoji>proccesing....")
@@ -33,7 +33,7 @@ async def chat_gpt(client, message):
                 if "result" in response.json():
                     x = response.json()["result"]                  
                     await prs.edit(
-                      f"{x}\n\n<emoji id=5208727996315220567>✅</emoji>**pertanyaan ini dijawab oleh** {bot.me.mention}"
+                      f"<blockquote>{x}</blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>"
                     )
                 else:
                     await message.reply_text("No 'results' key found in the response.")
