@@ -126,20 +126,18 @@ async def gcast_handler(client, message):
 
         try:
             if message.reply_to_message:
-              usu = f"{text}\n\nByUsu"
-                await usu.copy(chat_id)
+                await text.copy(chat_id)
             else:
-                await client.send_message(chat_id, f"{text}\n\nByUsu"
+                await client.send_message(chat_id, f"{text}\n\n<b>-- USERBOT 15K/BULAN BY @SEWAUBOT --</b>"
                 )
             done += 1
         except FloodWait as e:
             await asyncio.sleep(e.value)
             try:
                 if message.reply_to_message:
-                usu = f"{text}\n\nByUsu"
-                await usu.copy(chat_id)
+                await text.copy(chat_id)
                 else:
-                    await client.send_message(chat_id, f"{text}\n\nByUsu"
+                    await client.send_message(chat_id, f"{text}\n\n<b>-- USERBOT 15K/BULAN BY @SEWAUBOT --</b>"
                     )
                 done += 1
             except (Exception, ChannelPrivate):
