@@ -17,14 +17,14 @@ async def archive_user(client, message):
     brhsl = await EMO.BERHASIL(client)
     ggl = await EMO.GAGAL(client)
     if len(message.command) <2:
-        return await message.reply(f"{ggl}mohon gunakan arch all, users, group")
+        return await message.reply(f"<blockquote><b>{ggl}mohon gunakan arch all, users, group</b></blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
     anjai = await message.reply(f"{prs}proccesing...")
     anjir = message.command[1]
     xx = await get_data_id(client, anjir)
     for anu in xx:
         await client.archive_chats(anu)
     
-    await anjai.edit(f"{brhsl}berhasil mengarchivekan semua {anjir}")
+    await anjai.edit(f"<b>{brhsl}berhasil mengarchivekan semua {anjir}</b>")
 
 @PY.UBOT("unarch")
 @PY.TOP_CMD
@@ -39,4 +39,4 @@ async def unarchive_user(client, message):
     xx = await get_data_id(client, anjir)
     for anu in xx:
         await client.unarchive_chats(anu)
-    await anjai.edit(f"{brhsl}berhasil mengunarchivekan semua {anjir}")
+    await anjai.edit(f"<blockquote><b>{brhsl}berhasil mengunarchivekan semua {anjir}</b></blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
