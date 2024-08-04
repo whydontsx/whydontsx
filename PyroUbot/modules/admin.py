@@ -196,9 +196,11 @@ async def _(client, message):
         except Exception as error:
             await message.reply(error)
         msg_kick = f"""
-{bcs}ᴡᴀʀɴɪɴɢ: {mention}
+<blockquote>{bcs}ᴡᴀʀɴɪɴɢ: {mention}
 {tion}ᴀᴅᴍɪɴ: {message.from_user.mention}
-{ktrng}ᴀʟᴀꜱᴀɴ: {reason}
+{ktrng}ᴀʟᴀꜱᴀɴ: {reason}</blockquote>
+
+<b>-- USERBOT 15K/BULAN BY @SEWAUBOT --</b>
             """
         try:
             await message.chat.ban_member(user_id)
