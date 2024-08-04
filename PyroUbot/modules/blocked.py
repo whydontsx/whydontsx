@@ -24,18 +24,18 @@ async def _(user, message):
             await user.unblock_user(x)
         except:
             pass
-    await _prs.edit(f"{sks}berhasil melakukan unblockall users")
+    await _prs.edit(f"<blockquote><b>{sks}berhasil melakukan unblockall users</b></blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
 
 @PY.UBOT("getblock")
 async def _(user, message):
     prs = await EMO.PROSES(user)
-    _prs = await message.reply(f"{prs}sedang mengecek...")
+    _prs = await message.reply(f"<b>{prs}sedang mengecek...</b>")
     mecha = await user.invoke(GetBlocked(offset=0, limit=100))
     user_ids = [entry.peer_id.user_id for entry in mecha.blocked]
     teko = len(user_ids)
     if user_ids:
         try:
-            await _prs.edit(f"kamu memblockir : {teko} users")
+            await _prs.edit(f"<blockquote>kamu memblockir : {teko} users</blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
         except Exception as i:
             await _prs.edit(f"{i}")
     else:
