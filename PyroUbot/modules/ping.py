@@ -34,6 +34,8 @@ async def _(client, message):
 <blockquote>{pong} {pantek} : {str(delta_ping_formatted).replace('.', ',')} ms
 {tion} {ngentod} : <code>{client.me.mention}</code>
 {yubot} {kontol} : <code>{bot.me.mention}</code></blockquote>
+
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
 """
         await message.reply(_ping)
     else:
@@ -41,6 +43,8 @@ async def _(client, message):
 <blockquote>{pantek} : {str(delta_ping_formatted).replace('.', ',')} ms
 {ngentod} : <code>{client.me.mention}</code>
 {kontol} : <code>{bot.me.mention}</code></blockquote>
+
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
 """
         await message.reply(_ping)
 
