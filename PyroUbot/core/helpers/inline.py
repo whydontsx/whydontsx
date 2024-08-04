@@ -134,17 +134,23 @@ class BTN:
     def START(message):
         if not message.from_user.id == OWNER_ID:
             button = [
-                [InlineKeyboardButton("🔥 ʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 🔥", callback_data="bahan")],
+                [InlineKeyboardButton("🌟 ʙᴇʟɪ ᴘʀᴇᴍɪᴜᴍ 🌟", callback_data="bahan")],
                 [
-                    InlineKeyboardButton("🏆 ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ 🏆", callback_data="buat_ubot"),
-                    InlineKeyboardButton("📁 ʜᴇʟᴘ ᴍᴇɴᴜ 📁", callback_data="help_back")
+                    InlineKeyboardButton("🤖 ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ 🤖", callback_data="buat_ubot"),
+                    InlineKeyboardButton("🎉 ʜᴇʟᴘ ᴍᴇɴᴜ 🎉", callback_data="help_back")
                 ],
-                [InlineKeyboardButton("💬 sᴜᴘᴘᴏʀᴛ 💬", callback_data="support")],
-                [InlineKeyboardButton("🔔 sʏᴀʀᴀᴛ ᴜsᴇʀʙᴏᴛ 🔔", url = 'https://t.me/sewaubot/6')]
+                [
+                    InlineKeyboardButton("🆘 ʙᴀɴᴛᴜᴀɴ 🆘", url = 'https://t.me/GayoUbotSupport'),
+                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ 📣", url = 'https://t.me/sewaubot)
+                ],
+                [
+                    InlineKeyboardButton("💬 ʟɪᴠᴇ ᴄʜᴀᴛ 💬", callback_data="support"),
+                    InlineKeyboardButton("🔔 sʏᴀʀᴀᴛ ᴜsᴇʀʙᴏᴛ 🔔", url = 'https://t.me/sewaubot/6')
+                ]
             ]
         else:
             button = [
-                [InlineKeyboardButton("🔥 ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ 🔥", callback_data="bahan")],
+                [InlineKeyboardButton("🤖 ʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ 🤖", callback_data="bahan")],
                 [
                     InlineKeyboardButton("🛠️ ɢɪᴛᴘᴜʟʟ", callback_data="cb_gitpull"),
                     InlineKeyboardButton("ʀᴇsᴛᴀʀᴛ 🔁", callback_data="cb_restart")
