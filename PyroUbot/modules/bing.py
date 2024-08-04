@@ -33,7 +33,7 @@ async def chat_gpt(client, message):
                 if "result" in response.json():
                     x = response.json()["result"]                  
                     await prs.edit(
-                      f"{x}\n\n<emoji id=5208727996315220567>✅</emoji>**pertanyaan ini dijawab oleh** {bot.me.mention}"
+                      f"<blockquote>{x}</blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>"
                     )
                 else:
                     await message.reply_text("No 'results' key found in the response.")
