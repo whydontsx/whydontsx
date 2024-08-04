@@ -21,11 +21,8 @@ async def _(client, callback_query):
         pesan = await bot.ask(
             user_id,
             f"""
-<blockquote><b>ꜱɪʟᴀʜᴋᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴛᴇʀʟᴇʙɪʜ ᴛᴀʜᴜʟᴜ ᴋᴇ Qʀɪꜱ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ</b>           
-
-Qʀɪꜱ : https://telegra.ph//file/ed34c4a4ff423bace1543.jpg
-
-<b>💬 sɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍᴋᴀɴ ʙᴜᴋᴛɪ sᴄʀᴇᴇɴsʜᴏᴛ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ: {full_name}</b></blockquote>
+<b>💬 sɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍᴋᴀɴ ʙᴜᴋᴛɪ sᴄʀᴇᴇɴsʜᴏᴛ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ: {full_name}
+ᴊɪᴋᴀ ʙᴇʟᴜᴍ ᴅɪ ᴋᴏɴғɪʀᴍᴀsɪ sɪʟᴀʜᴋᴀɴ ʜᴜʙᴜɴɢɪ @wannoffc08</b></blockquote>
 """,
             timeout=300,
         )
