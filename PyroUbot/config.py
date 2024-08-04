@@ -23,4 +23,4 @@ MONGO_URL = os.getenv("MONGO_URL", "")
 
 LOGS_MAKER_UBOT = int(os.getenv("LOGS_MAKER_UBOT"))
 
-USER_GROUP =
+USER_GROUP = os.getenv("USER_GROUP", "@SEWAUBOT")
