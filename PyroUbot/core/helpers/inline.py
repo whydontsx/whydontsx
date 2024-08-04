@@ -140,12 +140,7 @@ class BTN:
                     InlineKeyboardButton("🎉 ʜᴇʟᴘ ᴍᴇɴᴜ 🎉", callback_data="help_back")
                 ],
                 [
-                    InlineKeyboardButton("🆘 ʙᴀɴᴛᴜᴀɴ 🆘", url = 'https://t.me/GayoUbotSupport'),
-                    InlineKeyboardButton("📣 ᴄʜᴀɴɴᴇʟ 📣", url = 'https://t.me/sewaubot)
-                ],
-                [
-                    InlineKeyboardButton("💬 ʟɪᴠᴇ ᴄʜᴀᴛ 💬", callback_data="support"),
-                    InlineKeyboardButton("🔔 sʏᴀʀᴀᴛ ᴜsᴇʀʙᴏᴛ 🔔", url = 'https://t.me/sewaubot/6')
+                    InlineKeyboardButton("💬 ʟɪᴠᴇ ᴄʜᴀᴛ 💬", callback_data="support")
                 ]
             ]
         else:
