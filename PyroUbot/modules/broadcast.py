@@ -63,30 +63,30 @@ async def limit_cmd(client, message):
         if pjg <= 100:
             if client.me.is_premium:
                 text = f"""
-<blockquote>{pong} status akun premium : true {sks}
-{tion} limit check : akun anda tidak dibatasi {sks}
-{yubot} ubot : {bot.me.mention}</blockquote>
+<blockquote>{pong} sᴛᴀᴛᴜs ᴀᴋᴜɴ ᴘʀᴇᴍɪᴜᴍ : ᴛʀᴜᴇ {sks}
+{tion} limit check : ᴀᴋᴜɴ ᴀɴᴅᴀ ᴛɪᴅᴀᴋ ᴅɪ ʙᴀᴛᴀsɪ {sks}
+{yubot} ᴜʙᴏᴛ : {USER_GROUP}</blockquote>
 """
             else:
                 text = f"""
-<blockquote>status akun : beli prem dulu ya
-limit check : akun anda tidak di batasi
-ubot : {bot.me.mention}</blockquote>
+<blockquote>sᴛᴀᴛᴜs ᴀᴋᴜɴ : ʙᴇʟɪ ᴘʀᴇᴍ ᴅᴜʟᴜ ʏᴀ
+ʟɪᴍɪᴛ ᴄʜᴇᴄᴋ : ᴀᴋᴜɴ ᴀɴᴅᴀ ᴛɪᴅᴀᴋ ᴅɪ ʙᴀᴛᴀsɪ
+ᴜʙᴏᴛ : {USER_GROUP}</blockquote>
 """
             await client.send_message(message.chat.id, text)
             return await client.invoke(DeleteHistory(peer=bot_info, max_id=0, revoke=True))
         else:
             if client.me.is_premium:
                 text = f"""
-<blockquote>{pong} status akun premium : true
-{tion} limit check : akun anda bermasalah{ggl} 
-{yubot} ubot : {bot.me.mention}</blockquote>
+<blockquote>{pong} sᴛᴀᴛᴜs ᴀᴋᴜɴ : ʙᴇʟɪ ᴘʀᴇᴍ ᴅᴜʟᴜ ʏᴀ
+{tion} ʟɪᴍɪᴛ ᴄʜᴇᴄᴋ : ᴀᴋᴜɴ ᴀɴᴅᴀ ʙᴇʀᴍᴀsᴀʟᴀʜ{ggl} 
+{yubot} ᴜʙᴏᴛ : {USER_GROUP}</blockquote>
 """
             else:
                 text = f"""
-<blockquote>status akun : beli prem dulu ya
-limit check : akun anda bermasalah
-ubot : {bot.me.mention}</blockquote>
+<blockquote>sᴛᴀᴛᴜs ᴀᴋᴜɴ : ʙᴇʟɪ ᴘʀᴇᴍ ᴅᴜʟᴜ ʏᴀ
+ʟɪᴍɪᴛ ᴄʜᴇᴄᴋ : ᴀᴋᴜɴ ᴀɴᴅᴀ ʙᴇʀᴍᴀsᴀʟᴀʜ
+ᴜʙᴏᴛ : {USER_GROUP}</blockquote>
 """
             await client.send_message(message.chat.id, text)
             return await client.invoke(DeleteHistory(peer=bot_info, max_id=0, revoke=True))
@@ -129,7 +129,7 @@ async def gcast_handler(client, message):
             if message.reply_to_message:
                 await text.copy(chat_id)
             else:
-                await client.send_message(chat_id, f"{text}\n\n<b>-- USERBOT 15K/BULAN BY @SEWAUBOT --</b>"
+                await client.send_message(chat_id, f"{text}\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>"
                 )
             done += 1
         except FloodWait as e:
@@ -138,7 +138,7 @@ async def gcast_handler(client, message):
                 if message.reply_to_message:
                     await text.copy(chat_id)
                 else:
-                    await client.send_message(chat_id, f"{text}\n\n<b>-- USERBOT 15K/BULAN BY @SEWAUBOT --</b>"
+                    await client.send_message(chat_id, f"{text}\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>"
                     )
                 done += 1
             except (Exception, ChannelPrivate):
@@ -153,6 +153,8 @@ async def gcast_handler(client, message):
 <blockquote><b>{sks}ʙᴇʀʜᴀsɪʟ : {done} ᴄʜᴀᴛ</b>
 <b>{ggl}ɢᴀɢᴀʟ : {failed} ᴄʜᴀᴛ</b>
 <b>{ktrng}ᴛʏᴘᴇ :</b> <code>{command}</code></blockquote>
+
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
 """
     return await message.reply(_gcs)
 
@@ -164,9 +166,9 @@ async def stopg_handler(client, message):
     global gcast_progress
     if client.me.id in gcast_progress:
         gcast_progress.remove(client.me.id)
-        return await message.reply(f"<blockquote><b>ɢᴄᴀsᴛ ʙᴇʀʜᴀsɪʟ ᴅɪ ᴄᴀɴᴄᴇʟ</b></blockquote>")
+        return await message.reply(f"<blockquote><b>ɢᴄᴀsᴛ ʙᴇʀʜᴀsɪʟ ᴅɪ ᴄᴀɴᴄᴇʟ</b></blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
     else:
-        return await message.reply(f"<blockquote><b>{ggl}ᴛɪᴅᴀᴋ ᴀᴅᴀ ɢᴄᴀsᴛ !!!</b></blockquote>")
+        return await message.reply(f"<blockquote><b>{ggl}ᴛɪᴅᴀᴋ ᴀᴅᴀ ɢᴄᴀsᴛ !!!</b></blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
 
 @PY.UBOT("bcfd|cfd")
 @PY.TOP_CMD
@@ -218,6 +220,8 @@ async def _(client, message):
 <blockquote><b>{bcs}ʙʀᴏᴀᴅᴄᴀꜱᴛ ғᴏʀᴅᴡᴀʀᴅ ᴅᴏɴᴇ</blockquote>
 <blockquote>{brhsl}ʙᴇʀʜᴀsɪʟ : {done} ᴄʜᴀᴛ
 {ggl}ɢᴀɢᴀʟ : {failed} ᴄʜᴀᴛ</blockquote></b>
+
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
 """
     return await message.reply(_gcs)
 
@@ -268,12 +272,16 @@ async def _(client, message):
 
         if chat_id in blacklist:
             txt = f"""
-{grp} group: {message.chat.title}  ꜱudah ada dalam blackliꜱt broadcaꜱt
+<blockquote><b>{grp} group: {message.chat.title}  ꜱudah ada dalam blackliꜱt broadcaꜱt</b></blockquote>
+
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
 """
         else:
             await add_to_vars(client.me.id, "BL_ID", chat_id)
             txt = f"""
-{grp} group: {message.chat.title}  berhaꜱil di tambahkan ke blackliꜱt broadcaꜱt
+<blockquote><b>{grp} group: {message.chat.title}  berhaꜱil di tambahkan ke blackliꜱt broadcaꜱt</b></blockquote>
+
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
 """
 
         return await msg.edit(txt)
@@ -296,12 +304,16 @@ async def _(client, message):
 
         if chat_id not in blacklist:
             response = f"""
-{grp} group: {message.chat.title}  tidak ada dalam blackliꜱt broadcaꜱt
+<blockquote><b>{grp} group: {message.chat.title}  tidak ada dalam blackliꜱt broadcaꜱt</b></blockquote>
+
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
 """
         else:
             await remove_from_vars(client.me.id, "BL_ID", chat_id)
             response = f"""
-{grp} group: {message.chat.title}  berhaꜱil di hapuꜱ dalam blackliꜱt broadcaꜱt
+<blockquote><b>{grp} group: {message.chat.title}  berhaꜱil di hapuꜱ dalam blackliꜱt broadcaꜱt</b></blockquote>
+
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
 """
 
         return await msg.edit(response)
@@ -454,11 +466,11 @@ async def _(client, message):
                     ):
                         try:
                             await asyncio.sleep(1)
-                            await client.send_message(dialog.chat.id, f"{txt}")
+                            await client.send_message(dialog.chat.id, f"{txt}\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
                             group += 1
                         except FloodWait as e:
                             await asyncio.sleep(e.value)
-                            await client.send_message(dialog.chat.id, f"{txt}")
+                            await client.send_message(dialog.chat.id, f"{txt}\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
                             group += 1
                         except Exception:
                             pass
@@ -472,6 +484,8 @@ async def _(client, message):
 putaran {done}
 {brhsl}ꜱucceꜱ {group} group
 {mng}wait {delay} minuteꜱ</blockquote>
+
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
 """,
                     quote=True,
                 )
