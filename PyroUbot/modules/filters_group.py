@@ -1,6 +1,6 @@
 from PyroUbot import *
 
-__MODULE__ = "filters"
+__MODULE__ = "ғɪʟᴛᴇʀ"
 __HELP__ = """
 <blockquote><b>『 ʙᴀɴᴛᴜᴀɴ ғɪʟᴛᴇʀs 』</b>
 
