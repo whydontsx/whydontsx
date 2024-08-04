@@ -200,7 +200,7 @@ async def _(client, message):
 {tion}ᴀᴅᴍɪɴ: {message.from_user.mention}
 {ktrng}ᴀʟᴀꜱᴀɴ: {reason}</blockquote>
 
-<b>-- USERBOT 15K/BULAN BY @SEWAUBOT --</b>
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
             """
         try:
             await message.chat.ban_member(user_id)
