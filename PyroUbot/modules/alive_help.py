@@ -188,7 +188,7 @@ async def help_callback(client, callback_query):
         button = [[InlineKeyboardButton("⊲ ʙᴀᴄᴋ", callback_data="help_back")]]
         await callback_query.edit_message_text(
             text=text 
-            + '\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>',
+            + '\n<blockquote><b>-- USERBOT 15K/BULAN BY @SEWAUBOT --</b></blockquote>',
             reply_markup=InlineKeyboardMarkup(button),
             disable_web_page_preview=True,
         )
