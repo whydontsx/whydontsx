@@ -140,7 +140,7 @@ class BTN:
                     InlineKeyboardButton("📁 ʜᴇʟᴘ ᴍᴇɴᴜ 📁", callback_data="help_back")
                 ],
                 [InlineKeyboardButton("💬 sᴜᴘᴘᴏʀᴛ 💬", callback_data="support")],
-                [InlineKeyboardButton("🔔 sʏᴀʀᴀᴛ ᴜsᴇʀʙᴏᴛ 🔔", url = 'https://t.me/sewaubot/6']
+                [InlineKeyboardButton("🔔 sʏᴀʀᴀᴛ ᴜsᴇʀʙᴏᴛ 🔔", url = 'https://t.me/sewaubot/6')]
             ]
         else:
             button = [
