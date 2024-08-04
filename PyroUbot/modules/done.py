@@ -39,7 +39,7 @@ async def done_command(client, message):
             f"💸 <b>Nominal : {price}</b>\n"
             f"🕰️ <b>Waktu : {time}</b>\n"
             f"💬 <b>Payment : {payment}</b>\n\n"
-            f"𝗧𝗲𝗿𝗶𝗺𝗮𝗸𝗮𝘀𝗶𝗵 𝗧𝗲𝗹𝗮𝗵 𝗢𝗿𝗱𝗲𝗿"
+            f"𝗧𝗲𝗿𝗶𝗺𝗮𝗸𝗮𝘀𝗶𝗵 𝗧𝗲𝗹𝗮𝗵 𝗢𝗿𝗱𝗲𝗿\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>"
         )
         await izzy_ganteng.edit(response)
 
