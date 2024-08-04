@@ -227,6 +227,8 @@ async def _(client, message):
 {bcs}ᴡᴀʀɴɪɴɢ: {mention}
 {tion}ᴀᴅᴍɪɴ: {message.from_user.mention}
 {ktrng}ᴀʟᴀꜱᴀɴ: {reason}
+
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
             """
         try:
             await message.chat.ban_member(user_id)
@@ -251,6 +253,8 @@ async def _(client, message):
 {bcs}ᴡᴀʀɴɪɴɢ: {mention}
 {tion}ᴀᴅᴍɪɴ: {message.from_user.mention}
 {ktrng}ᴀʟᴀꜱᴀɴ: {reason}
+
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
             """
         try:
             await message.chat.restrict_member(user_id, ChatPermissions())
