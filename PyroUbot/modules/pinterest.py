@@ -36,6 +36,8 @@ async def pin(client, message):
             random_result = random.choice(hasil)
             caption = f"""
 <emoji id=5841235769728962577>⭐</emoji>Berikut Foto Yang Kamu Minta.
+
+<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
 """
             photo_path = wget.download(random_result)
             await client.send_photo(chat_id, caption=caption, photo=photo_path)
