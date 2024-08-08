@@ -24,7 +24,7 @@ async def _(user, message):
             await user.unblock_user(x)
         except:
             pass
-    await _prs.edit(f"<blockquote><b>{sks}berhasil melakukan unblockall users</b></blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
+    await _prs.edit(f"<blockquote><b>{sks}berhasil melakukan unblockall users</b></blockquote>")
 
 @PY.UBOT("getblock")
 async def _(user, message):
@@ -35,7 +35,7 @@ async def _(user, message):
     teko = len(user_ids)
     if user_ids:
         try:
-            await _prs.edit(f"<blockquote>kamu memblockir : {teko} users</blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
+            await _prs.edit(f"<blockquote>kamu memblockir : {teko} users</blockquote>")
         except Exception as i:
             await _prs.edit(f"{i}")
     else:
