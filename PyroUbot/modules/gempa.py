@@ -45,8 +45,6 @@ async def stalkig(client, message):
 │  ◦ <b>Lokasi: <code>{wilayah}</code></b>
 │  ◦ <b>Potensi: <code>{potensi}</code></b></blockquote>
 ╰──── •
-
-<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
 """
             photo_path = wget.download(photoUrl)
             await client.send_photo(chat_id, caption=caption, photo=photo_path)
