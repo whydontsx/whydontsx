@@ -38,7 +38,5 @@ Zuhur :`{result['items'][0]['dhuhr']}`
 Ashar : `{result['items'][0]['asr']}`
 Maghrib : `{result['items'][0]['maghrib']}`
 Isya : `{result['items'][0]['isha']}`**
-
-<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
 """
     await message.reply_text(txt)
