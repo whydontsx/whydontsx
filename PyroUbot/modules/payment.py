@@ -51,7 +51,7 @@ async def _(client, callback_query):
             )
             CONFIRM_PAYMENT.remove(get.id)
             buttons = [
-                [InlineKeyboardButton("📞 ᴏᴡɴᴇʀ", url=f"https://t.me/{OWNER_ID}")]
+                [InlineKeyboardButton("📞 ᴏᴡɴᴇʀ", url=f"tg://openmessage?user_id={OWNER_ID}")]
             ]
             return await bot.send_message(
                 user_id,
