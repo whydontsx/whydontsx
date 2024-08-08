@@ -64,8 +64,7 @@ async def limit_cmd(client, message):
             if client.me.is_premium:
                 text = f"""
 <blockquote>{pong} sᴛᴀᴛᴜs ᴀᴋᴜɴ ᴘʀᴇᴍɪᴜᴍ : ᴛʀᴜᴇ {sks}
-{tion} limit check : ᴀᴋᴜɴ ᴀɴᴅᴀ ᴛɪᴅᴀᴋ ᴅɪ ʙᴀᴛᴀsɪ {sks}
-{yubot} ᴜʙᴏᴛ : {USER_GROUP}</blockquote>
+{tion} limit check : ᴀᴋᴜɴ ᴀɴᴅᴀ ᴛɪᴅᴀᴋ ᴅɪ ʙᴀᴛᴀsɪ {sks}</blockquote>
 """
             else:
                 text = f"""
