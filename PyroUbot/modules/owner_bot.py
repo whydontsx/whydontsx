@@ -17,7 +17,7 @@ async def _(client, message):
     user_id, get_bulan = await extract_user_and_reason(message)
     msg = await message.reply("memproses...")
     if not user_id:
-        return await msg.edit(f"<b>{message.text} ᴜsᴇʀ_ɪᴅ/ᴜsᴇʀɴᴀᴍᴇ - ʙᴜʟᴀɴ</b>")
+        return await msg.edit(f"<b>{message.text} ᴜsᴇʀ_ɪᴅ/ᴜsᴇʀɴᴀᴍ</b>")
 
     try:
         user = await client.get_users(user_id)
