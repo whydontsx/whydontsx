@@ -10,7 +10,7 @@ __HELP__ = """
 <blockquote><b>Bantuan Untuk ʙɪɴɢᴀɪ
 
 perintah : <code>{0}bing</code>
-    buat pertanyaan contoh <code>{0}bing</code> dimana letak Antartika</b></blockquote>
+    bbuat pertanyaan contoh <code>{0}bing</code> dimana letak Antartika</b></blockquote>
 """
 
 
