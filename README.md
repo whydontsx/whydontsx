@@ -57,5 +57,5 @@ cp sample.env .env
 nano .env
 ```
 ```
-python3 -m PyroUbot
+bash start.sh
 ```
