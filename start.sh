@@ -1,1 +1,1 @@
-python3 -m PyroUbot
+git pull && python3 -m PyroUbot
