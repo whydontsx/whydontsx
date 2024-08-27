@@ -8,7 +8,7 @@ perintah : <code>{0}arch</code>
     mengarchivekan group chat pribadi maupun channel
 
 perintah : <code>{0}unarch</code>
-    mengunarchivekan group chat pribadi maupun channel</b></blockquote>
+    mmengunarchivekan group chat pribadi maupun channel</b></blockquote>
 """
 @PY.UBOT("arch")
 @PY.TOP_CMD
