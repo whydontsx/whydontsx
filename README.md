@@ -33,7 +33,7 @@ apt update && apt upgrade -y
 apt install ffmpeg -y
 ```
 ```
-git clone https://token_github@github.com/wndrzzka/gayoubotwann
+git clone https://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@github.com/devs/gayoubotwann
 ```
 ```
 cd gayoubotwann
