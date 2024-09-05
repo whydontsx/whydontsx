@@ -19,10 +19,10 @@ class MSG:
 <b>💬 @{bot.me.username} ᴀᴅᴀʟᴀʜ ʙᴏᴛ ʏᴀɴɢ ᴅᴀᴘᴀᴛ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ ᴅᴇɴɢᴀɴ ᴍᴜᴅᴀʜ</b>
 
 🚀 ꜱɪʟᴀʜᴋᴀɴ ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 
-• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>ᴡᴀɴɴꜰʏʏ</a> 
+• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>vilain</a> 
 
 ʟɪsᴛ ʜᴀʀɢᴀ & ᴋᴇʙᴜᴛᴜʜᴀɴ ᴜsᴇʀʙᴏᴛ :
-<a href='https://t.me/TestiByWann/3526'>ᴋᴇʙᴜᴛᴜʜᴀɴ ᴜsᴇʀʙᴏᴛ</a>
+<a href='https://t.me/spacetimeworld'>ᴋᴇʙᴜᴛᴜʜᴀɴ ᴜsᴇʀʙᴏᴛ</a>
 
 👉🏻 ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅɪʙᴀᴡᴀʜ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴜᴀᴛ ᴜsᴇʀʙᴏᴛ</b></blockquote>
 """
@@ -31,17 +31,17 @@ class MSG:
         return f"""
 <blockquote><b>💬 sɪʟᴀʜᴋᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴛᴇʀʟᴇʙɪʜ ᴅᴀʜᴜʟᴜ</b>
 
-<b>🎟️ ʜᴀʀɢᴀ ᴘᴇʀʙᴜʟᴀɴ: 15.000</b>
+<b>🎟️ ʜᴀʀɢᴀ ᴘᴇʀʙᴜʟᴀɴ: 25.000</b>
 
 <b>💳 ᴍᴏᴛᴏᴅᴇ ᴘᴇᴍʙᴀʏᴀʀᴀɴ:</b>
- <b>├ ʙᴀɴᴋ ᴊᴀɢᴏ : `103177506039` <b>RAHMAH</b> </b>
- <b>├ ᴅᴀɴᴀ : `085366293093` <b>RAHMAH</b> </b>
- <b>├ ɢᴏᴘᴀʏ : `085366293093` <b>RAHMAH</b> </b>
+ <b>├ ʙᴀɴᴋ ᴊᴀɢᴏ : `103214690871` <b>ANDREAN PRATAMA</b> </b>
+ <b>├ ᴅᴀɴᴀ : `085314925500` <b>ANDREAN PRATAMA</b> </b>
+ <b>├ ɢᴏᴘᴀʏ : `087732949147` <b>ANDREAN PRATAMA</b> </b>
  <b>├ ǫʀɪs : TANYAKAN SAJA</b>
-<b>🔖 ᴛᴏᴛᴀʟ ʜᴀʀɢᴀ: ʀᴘ 15.000 ᴘᴇʀʙᴜʟᴀɴ</b> 
+<b>🔖 ᴛᴏᴛᴀʟ ʜᴀʀɢᴀ: ʀᴘ 25.000 ᴘᴇʀʙᴜʟᴀɴ</b> 
 
  🚀 ꜱɪʟᴀʜᴋᴀɴ ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴅɪ ʙᴀᴡᴀʜ ɪɴɪ ᴜɴᴛᴜᴋ ᴍᴇᴍʙᴇʟɪ ᴜꜱᴇʀʙᴏᴛ 
-• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>ᴡᴀɴɴꜰʏʏ</a> 
+• ᴏᴡɴᴇʀ : <a href=tg://openmessage?user_id={OWNER_ID}>vilain</a> 
 
 <b>✅ ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴋᴏɴꜰɪʀᴍᴀsɪ ᴜɴᴛᴜᴋ ᴋɪʀɪᴍ ʙᴜᴋᴛɪ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ</b></blockquote>
 """
