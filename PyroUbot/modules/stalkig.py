@@ -47,7 +47,7 @@ async def stalkig(client, message):
 <b><emoji id=5841243255856960314>⭐</emoji>Posts: <code>{postsCount}</code></b>
 <b><emoji id=5353036831581544549>⭐</emoji>Bio: <code>{bio}</code></b>
 
-<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
+<b>-- USERBOT PREMIUM BY {USER_GROUP} --</b>
 """
             photo_path = wget.download(photoUrl)
             await client.send_photo(chat_id, caption=caption, photo=photo_path)
