@@ -28,7 +28,7 @@ async def SpamMsg(client, message, send):
     if message.reply_to_message:
         await send.copy(message.chat.id)
     else:
-        await client.send_message(message.chat.id, f"{send}\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
+        await client.send_message(message.chat.id, f"{send}\n\n<b>--  --</b>")
 
 @PY.UBOT("spam")
 @PY.TOP_CMD
