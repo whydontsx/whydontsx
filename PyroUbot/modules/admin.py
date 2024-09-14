@@ -254,7 +254,7 @@ async def _(client, message):
 {tion}ᴀᴅᴍɪɴ: {message.from_user.mention}
 {ktrng}ᴀʟᴀꜱᴀɴ: {reason}</blockquote>
 
-<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>
+<b>--  --</b>
             """
         try:
             await message.chat.restrict_member(user_id, ChatPermissions())
