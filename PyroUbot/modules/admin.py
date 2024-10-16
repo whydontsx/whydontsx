@@ -243,7 +243,7 @@ async def _(client, message):
             return await message.reply_text(f"{ggl}anda tidak bisa membisukan anggota ini")
         if user_id in (await list_admins(message)):
             return await message.reply_text(
-                f"<blockquote>{ggl}saya tidak bisa membisukan admin</blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>"
+                f"<blockquote>{ggl}saya tidak bisa membisukan admin</blockquote>\n\n<b>-- --</b>"
             )
         try:
             mention = (await client.get_users(user_id)).mention
@@ -284,7 +284,7 @@ async def _(client, message):
             await message.reply(error)
         try:
             await message.chat.unban_member(user_id)
-            await message.reply(f"<blockquote><b>{brhsl}{mention} sudah bisa join lagi</b><blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
+            await message.reply(f"<blockquote><b>{brhsl}{mention} sudah bisa join lagi</b><blockquote>\n\n<b>-- --</b>")
         except Exception as error:
             await message.reply(error)
 
@@ -309,6 +309,6 @@ async def _(client, message):
                 await message.chat.ban_member(deleted_user)
             except Exception:
                 pass
-        await Tm.edit(f"<blockquote><b>{brhsl}berhasil mengeluarkan {banned_users} akun terhapus</b></blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
+        await Tm.edit(f"<blockquote><b>{brhsl}berhasil mengeluarkan {banned_users} akun terhapus</b></blockquote>\n\n<b>-- --</b>")
     else:
-        await Tm.edit(f"<blockquote><b>{ggl}tidak ada akun terhapus di group ini</b></blockquote>\n\n<b>-- USERBOT 15K/BULAN BY {USER_GROUP} --</b>")
+        await Tm.edit(f"<blockquote><b>{ggl}tidak ada akun terhapus di group ini</b></blockquote>\n\n<b>-- --</b>")
