@@ -34,6 +34,6 @@ python-dotenv
 ntgcalls==1.2.1
 numpy==1.26.4
 opencv-python-headless==4.10.0.82
-git+https://github.com/wanngntenk/ytta
+git+https://github.com/wndrzzka/bywannoffc
 pyromod==1.5
 pykeyboard
