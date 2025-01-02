@@ -26,157 +26,227 @@ perintah : <code>{0}ungmute</code>
 """
 
       
-
-@PY.UBOT("gban")
-@PY.TOP_CMD
-async def _(client, message):
-    sks = await EMO.BERHASIL(client)
-    prs = await EMO.PROSES(client)
-    ggl = await EMO.GAGAL(client)
-    user_id = await extract_user(message)
-    _msg = f"{prs}proceꜱꜱing..."
-
-    Tm = await message.reply(_msg)
-    if not user_id:
-        return await Tm.edit(f"{ggl}user tidak ditemukan")
+@py.ubot("gban")
+@py.devs("cgban")
+async def _(c: nlx, m):
+    em = Emojik()
+    em.initialize()
+    nyet, _ = await c.extract_user_and_reason(m)
+    xx = await m.reply(cgr("proses").format(em.proses))
+    if len(m.text.split()) == 1:
+        await xx.edit(cgr("glbl_2").format(em.gagal))
+        return
+    if nyet in DEVS:
+        await xx.edit(cgr("glbl_3").format(em.gagal))
+        return
+    if len(m.text.split()) == 2 and not m.reply_to_message:
+        await xx.edit(cgr("glbl_4").format(em.gagal))
+        return
+    if m.reply_to_message:
+        alasan = m.text.split(None, 1)[1]
+    else:
+        alasan = m.text.split(None, 2)[2]
+    bs = 0
+    gg = 0
+    chats = await c.get_chats_dialog(c, "gban")
     try:
-        user = await client.get_users(user_id)
-    except Exception as error:
-        return await Tm.edit(error)
-    done = 0
-    failed = 0
-    text = "global {}\n\nberhasil: {} chat\ngagal: {} chat\nuser: <a href='tg://user?id={}'>{} {}</a>"
-    global_id = await get_data_id(client, "global")
-    for dialog in global_id:
-        if user.id == OWNER_ID:
-            return await Tm.edit(f"{ggl}anda tidak bisa gban dia karena dia pembuat saya")
+        mention = (await c.get_users(nyet)).mention
+    except IndexError:
+        mention = m.reply_to_message.sender_chat.title if m.reply_to_message else "Anon"
+    for chat in chats:
+        if dbgb.check_gban(nyet):
+            await xx.edit(cgr("glbl_5").format(em.gagal))
+            return
         try:
-            await client.ban_chat_member(dialog, user.id)
-            done += 1
+            await c.ban_chat_member(chat, nyet)
+            bs += 1
             await asyncio.sleep(0.1)
         except Exception:
-            failed += 1
+            gg += 1
+        except FloodWait as e:
+            await asyncio.sleep(int(e.value))
+            await c.ban_chat_member(chat, nyet)
+            bs += 1
             await asyncio.sleep(0.1)
-    await message.reply(
-        text.format(
-            "banned", done, failed, user.id, user.first_name, (user.last_name or "")
-        )
+    dbgb.add_gban(nyet, alasan, c.me.id)
+    await c.block_user(nyet)
+    await nlx.invoke(
+        DeleteHistory(peer=(await nlx.resolve_peer(nyet)), max_id=0, revoke=True)
     )
-    return await Tm.delete()
+    mmg = cgr("glbl_6").format(
+        em.warn, em.sukses, bs, em.gagal, gg, em.profil, mention, em.block, alasan
+    )
+    await m.reply(mmg)
+    await xx.delete()
 
 
-@PY.UBOT("ungban")
-@PY.TOP_CMD
-async def _(client, message):
-    sks = await EMO.BERHASIL(client)
-    prs = await EMO.PROSES(client)
-    ggl = await EMO.GAGAL(client)
-    user_id = await extract_user(message)
-    _msg = f"{prs}proceꜱꜱing..."
-
-    Tm = await message.reply(_msg)
-    if not user_id:
-        return await Tm.edit(f"{ggl}user tidak ditemukan")
+@py.ubot("ungban")
+@py.devs("cungban")
+async def _(c: nlx, m):
+    em = Emojik()
+    em.initialize()
+    nyet, _ = await c.extract_user_and_reason(m)
+    xx = await m.reply(cgr("proses").format(em.proses))
+    await c.get_users(nyet)
+    if len(m.text.split()) == 1:
+        await xx.edit(cgr("glbl_2").format(em.gagal))
+        return
+    bs = 0
+    gg = 0
+    chats = await c.get_chats_dialog(c, "gban")
     try:
-        user = await client.get_users(user_id)
-    except Exception as error:
-        return await Tm.edit(error)
-    done = 0
-    failed = 0
-    text = "global {}\n\nberhasil: {} chat\ngagal: {} chat\nuser: <a href='tg://user?id={}'>{} {}</a>"
-    global_id = await get_data_id(client, "global")
-    for dialog in global_id:
+        mention = (await c.get_users(nyet)).mention
+    except IndexError:
+        mention = m.reply_to_message.sender_chat.title if m.reply_to_message else "Anon"
+    for chat in chats:
+        if not dbgb.check_gban(nyet):
+            await xx.edit(cgr("glbl_7").format(em.gagal))
+            return
         try:
-            await client.unban_chat_member(dialog, user.id)
-            done += 1
+            await c.unban_chat_member(chat, nyet)
+            bs += 1
             await asyncio.sleep(0.1)
         except Exception:
-            failed += 1
+            gg += 1
             await asyncio.sleep(0.1)
-    await message.reply(
-        text.format(
-            "unbanned",
-            done,
-            failed,
-            user.id,
-            user.first_name,
-            (user.last_name or ""),
-        )
-    )
-    return await Tm.delete()
+    dbgb.remove_gban(nyet)
+    await c.unblock_user(nyet)
+    mmg = cgr("glbl_8").format(em.warn, em.sukses, bs, em.gagal, gg, em.profil, mention)
+    await m.reply(mmg)
+    await xx.delete()
 
-@PY.UBOT("gmute")
-@PY.TOP_CMD
-async def _(client, message):
-    sks = await EMO.BERHASIL(client)
-    prs = await EMO.PROSES(client)
-    ggl = await EMO.GAGAL(client)
-    user_id = await extract_user(message)
-    _msg = f"{prs}proceꜱꜱing..."
 
-    Tm = await message.reply(_msg)
-    if not user_id:
-        return await Tm.edit(f"{ggl}user tidak ditemukan")
+@py.ubot("gmute")
+@py.devs("cgmute")
+async def _(c: nlx, m):
+    em = Emojik()
+    em.initialize()
+    nyet, _ = await c.extract_user_and_reason(m)
+    xx = await m.reply(cgr("proses").format(em.proses))
+    if len(m.text.split()) == 1:
+        await xx.edit(cgr("glbl_2").format(em.gagal))
+        return
+    if nyet in DEVS:
+        await xx.edit(cgr("glbl_3").format(em.gagal))
+        return
+    if len(m.text.split()) == 2 and not m.reply_to_message:
+        await xx.edit(cgr("glbl_9").format(em.gagal))
+        return
+    if m.reply_to_message:
+        alasan = m.text.split(None, 1)[1]
+    else:
+        alasan = m.text.split(None, 2)[2]
+    bs = 0
+    gg = 0
+    chats = await c.get_chats_dialog(c, "grup")
+
     try:
-        user = await client.get_users(user_id)
-    except Exception as error:
-        return await Tm.edit(error)
-    done = 0
-    failed = 0
-    text = "global {}\n\nberhasil: {} chat\ngagal: {} chat\nuser: <a href='tg://user?id={}'>{} {}</a>"
-    global_id = await get_data_id(client, "group")
-    for dialog in global_id:
-        if user.id == OWNER_ID:
-            return await Tm.edit(f"{ggl}anda tidak bisa gmute dia karena dia pembuat saya")
+        mention = (await c.get_users(nyet)).mention
+    except IndexError:
+        mention = m.reply_to_message.sender_chat.title if m.reply_to_message else "Anon"
+    for chat in chats:
+        if dbgm.check_gmute(nyet):
+            await xx.edit(cgr("glbl_10").format(em.gagal))
+            return
         try:
-            await client.restrict_chat_member(dialog, user.id, ChatPermissions(can_send_messages=False))
-            done += 1
+            await c.restrict_chat_member(chat, nyet, ChatPermissions())
+            bs += 1
             await asyncio.sleep(0.1)
         except Exception:
-            failed += 1
+            gg += 1
             await asyncio.sleep(0.1)
-    await message.reply(
-        text.format(
-            "mute", done, failed, user.id, user.first_name, (user.last_name or "")
-        )
+    dbgm.add_gmute(nyet, alasan, c.me.id)
+    mmg = cgr("glbl_11").format(
+        em.warn, em.sukses, bs, em.gagal, gg, em.profil, mention, em.block, alasan
     )
-    return await Tm.delete()
+    await m.reply(mmg)
+    await xx.delete()
 
-@PY.UBOT("ungmute")
-@PY.TOP_CMD
-async def _(client, message):
-    sks = await EMO.BERHASIL(client)
-    prs = await EMO.PROSES(client)
-    ggl = await EMO.GAGAL(client)
-    user_id = await extract_user(message)
-    _msg = f"{prs}proceꜱꜱing..."
-    Tm = await message.reply(_msg)
-    if not user_id:
-        return await Tm.edit(f"{ggl}user tidak ditemukan")
+
+@py.ubot("ungmute")
+@py.devs("cungmute")
+async def _(c: nlx, m):
+    em = Emojik()
+    em.initialize()
+    nyet, _ = await c.extract_user_and_reason(m)
+    xx = await m.reply(cgr("proses").format(em.proses))
+    await c.get_users(nyet)
+    if len(m.text.split()) == 1:
+        await xx.edit(cgr("glbl_2").format(em.gagal))
+        return
+    bs = 0
+    gg = 0
+    chats = await c.get_chats_dialog(c, "grup")
     try:
-        user = await client.get_users(user_id)
-    except Exception as error:
-        return await Tm.edit(error)
-    done = 0
-    failed = 0
-    text = "global {}\n\nberhasil: {} chat\ngagal: {} chat\nuser: <a href='tg://user?id={}'>{} {}</a>"
-    global_id = await get_data_id(client, "global")
-    for dialog in global_id:
+        mention = (await c.get_users(nyet)).mention
+    except IndexError:
+        mention = m.reply_to_message.sender_chat.title if m.reply_to_message else "Anon"
+    for chat in chats:
+        if not dbgm.check_gmute(nyet):
+            await xx.edit(cgr("glbl_12").format(em.gagal))
+            return
         try:
-            await client.restrict_chat_member(dialog, user.id, ChatPermissions(can_send_messages=True))
-            done += 1
+            await c.unban_member(chat, nyet, ChatPermissions())
+            bs += 1
             await asyncio.sleep(0.1)
         except Exception:
-            failed += 1
+            gg += 1
             await asyncio.sleep(0.1)
-    await message.reply(
-        text.format(
-            "ungmuted",
-            done,
-            failed,
-            user.id,
-            user.first_name,
-            (user.last_name or ""),
-        )
+    dbgm.remove_gmute(nyet)
+    mmg = cgr("glbl_13").format(
+        em.warn, em.sukses, bs, em.gagal, gg, em.profil, mention
     )
-    return await Tm.delete()
+    await m.reply(mmg)
+    await xx.delete()
+
+
+@py.ubot("gbanlist|listgban")
+async def _(c: nlx, m):
+    em = Emojik()
+    em.initialize()
+    gbanu = dbgb.load_from_db()
+    msg = await m.reply(cgr("proses").format(em.proses))
+
+    if not gbanu:
+        return await msg.edit(cgr("glbl_22").format(em.gagal))
+    dftr = cgr("glbl_14").format(em.profil)
+    for ii in gbanu:
+        dftr += cgr("glbl_15").format(em.block, ii["_id"])
+        if ii["reason"]:
+            dftr += cgr("glbl_16").format(
+                em.warn, ii["reason"], em.sukses, dbgb.count_gbans()
+            )
+    try:
+        await m.reply_text(dftr)
+    except MessageTooLong:
+        with BytesIO(str.encode(await remove_markdown_and_html(dftr))) as f:
+            f.name = "gbanlist.txt"
+            await m.reply_document(document=f, caption=cgr("glbl_17").format(em.profil))
+    await msg.delete()
+    return
+
+
+@py.ubot("gmutelist|listgmute")
+async def _(c: nlx, m):
+    em = Emojik()
+    em.initialize()
+    gmnu = dbgm.load_from_db()
+    msg = await m.reply(cgr("proses").format(em.proses))
+    if not gmnu:
+        await msg.edit(cgr("glbl_2").format(em.gagal))
+        return
+    dftr = cgr("glbl_18").format(em.profil)
+    for ii in gmnu:
+        dftr += cgr("glbl_19").format(em.warn, ii["_id"])
+        if ii["reason"]:
+            dftr += cgr("glbl_20").format(
+                em.warn, ii["reason"], em.sukses, dbgm.count_gmutes()
+            )
+    try:
+        await m.reply_text(dftr)
+    except MessageTooLong:
+        with BytesIO(str.encode(await remove_markdown_and_html(dftr))) as f:
+            f.name = "gmutelist.txt"
+            await m.reply_document(document=f, caption=cgr("glbl_21").format(em.profil))
+    await msg.delete()
+    return
