@@ -25,8 +25,9 @@ perintah : <code>{0}ungmute</code>
     untuk meng ungmute user dari semua gc yg kmu admin</blockquote> 
 """
 
+
       
-    @PY.UBOT("gban")
+@PY.UBOT("gban")
 @PY.TOP_CMD
 async def _(client, message):
     sks = await EMO.BERHASIL(client)
