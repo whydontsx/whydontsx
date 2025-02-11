@@ -23,7 +23,7 @@
 </p>
 
 ## Pyrogram
-> This Pyrogram code, Recode With BY <a href="https://t.me/wannoffc08">WannOfficial</a>
+> This Pyrogram code, Recode With BY <a href="https://t.me/whydontsx">sa</a>
 ___________________________________________
 ## Commad Installer Userbot
 ```
