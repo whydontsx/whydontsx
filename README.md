@@ -33,7 +33,7 @@ apt update && apt upgrade -y
 apt install ffmpeg -y
 ```
 ```
-git clone https://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@github.com/baverlytzy/bakertzy
+git clone https://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@github.com/baverlytzy/bakertzy
 ```
 ```
 cd bakertzy
