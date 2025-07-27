@@ -33,13 +33,13 @@ apt update && apt upgrade -y
 apt install ffmpeg -y
 ```
 ```
-git clone https://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@github.com/baverlytzy/bakertzy
+git clone https://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@github.com/whydontsx/whydontsx
 ```
 ```
-cd bakertzy
+cd whydontsx
 ```
 ```
-screen -S bakertzy
+screen -S whydontsx
 ```
 ```
 bash installnode.sh
