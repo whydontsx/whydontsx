@@ -6,22 +6,22 @@ __MODULE__ = "ɴᴏᴛᴇ"
 __HELP__ = """
 <blockquote>Bantuan Untuk Notes
 
-perintah : <code>{0}addnote</code> [name]
+perintah : <code>{0}save</code> [name]
     menyimpan sebuah catatan
 
-perintah : <code>{0}addcb</code> [name]
+perintah : <code>{0}savecb</code> [name]
     menyimpan sebuah callback
 
 perintah : <code>{0}get</code> [name]
     mendapatkan catatan yang di simpan
  
-perintah : <code>{0}delnote</code> [name]
+perintah : <code>{0}del</code> [name]
     menghapus catatan yang di simpan
 
 perintah : <code>{0}delcb</code> [name]
     menghapus callback yang di simpan
  
-perintah : <code>{0}listnote</code>
+perintah : <code>{0}list</code>
    melihat daftar catatan yang di simpan
 
 perintah : <code>{0}listcb</code>
