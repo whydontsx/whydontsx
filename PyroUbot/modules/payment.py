@@ -22,7 +22,7 @@ async def _(client, callback_query):
             user_id,
             f"""
 <b>💬 sɪʟᴀʜᴋᴀɴ ᴋɪʀɪᴍᴋᴀɴ ʙᴜᴋᴛɪ sᴄʀᴇᴇɴsʜᴏᴛ ᴘᴇᴍʙᴀʏᴀʀᴀɴ ᴀɴᴅᴀ: {full_name}
-ᴊɪᴋᴀ ʙᴇʟᴜᴍ ᴅɪ ᴋᴏɴғɪʀᴍᴀsɪ sɪʟᴀʜᴋᴀɴ ʜᴜʙᴜɴɢɪ @vilaxcza</b></blockquote>
+ᴊɪᴋᴀ ʙᴇʟᴜᴍ ᴅɪ ᴋᴏɴғɪʀᴍᴀsɪ sɪʟᴀʜᴋᴀɴ ʜᴜʙᴜɴɢɪ @WhyDontSx</b></blockquote>
 """,
             timeout=300,
         )
