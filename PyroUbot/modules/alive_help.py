@@ -48,11 +48,11 @@ async def _(client, inline_query):
             get_exp = await get_expired_date(my.me.id)
             exp = get_exp.strftime("%d-%m-%Y") if get_exp else "None"
             if my.me.id == OWNER_ID:
-                status = "ᴠɪʟᴀɪɴ-ᴜʙᴏᴛ ᴠ1  <code>[ᴏᴡɴᴇʀ]</code>"
+                status = "STRDY <code>[ᴏᴡɴᴇʀ]</code>"
             elif my.me.id in await get_list_from_vars(client.me.id, "SELER_USERS"):
-                status = "ᴠɪʟᴀɪɴ-ᴜʙᴏᴛ ᴠ1  </b> <code>[ʀᴇsᴇʟʟᴇʀ]</code>"
+                status = "STRDY </b> <code>[ʀᴇsᴇʟʟᴇʀ]</code>"
             else:
-                status = "ᴠɪʟᴀɪɴ-ᴜʙᴏᴛ ᴠ1  </b> <code>[ᴘʀᴇᴍɪᴜᴍ]</code>"
+                status = "STRDY </b> <code>[ᴘʀᴇᴍɪᴜᴍ]</code>"
             button = BTN.ALIVE(get_id)
             start = datetime.now()
             await my.invoke(Ping(ping_id=0))
