@@ -37,7 +37,7 @@ contoh menggunakan callback/tombol : <a href='https://t.me/halopyrogram/174'>tut
 """
 
 
-@PY.UBOT("addnote|addcb")
+@PY.UBOT("save|savecb")
 @PY.TOP_CMD
 async def _(client, message):
     brhsl = await EMO.BERHASIL(client)
@@ -89,7 +89,7 @@ async def _(client, message):
         )
 
 
-@PY.UBOT("delnote|delcb")
+@PY.UBOT("del|delcb")
 @PY.TOP_CMD
 async def _(client, message):
     brhsl = await EMO.BERHASIL(client)
